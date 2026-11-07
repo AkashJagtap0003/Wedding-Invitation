@@ -8,7 +8,12 @@
 <meta name="description" content="Akash Jagtap & Akshada Kharade — Maratha wedding invitation · आकाश ❤ अक्षदा शुभविवाह">
 <meta property="og:title" content="शुभविवाह · Akash & Akshada">
 <meta property="og:description" content="आपणांस सप्रेम निमंत्रण · You are invited · Punyai Garden, Mandavgan Pharata">
-<meta property="og:image" content="assets/cartoon-hero.webp">
+<meta property="og:image" content="https://akashjagtap0003.github.io/Wedding-Invitation/assets/og-preview.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:url" content="https://akashjagtap0003.github.io/Wedding-Invitation/">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="preload" as="image" href="assets/cartoon-hero.webp" fetchpriority="high">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -835,7 +840,7 @@ body.pal-pearl .parch,body.pal-lavender .parch,body.pal-blue .parch,body.pal-kes
 
 <footer>
  <div class="mr">लग्नाला नक्की यायचं हं! 🙏</div>
- <small>Akash &amp; Akshada · 07.02.2027 · Made with love</small>
+ <small>Akash &amp; Akshada · Made with love</small>
 </footer>
 
 <button class="sound" id="soundBtn" aria-label="Toggle sounds" title="Sound on/off">🔔</button>
@@ -1010,7 +1015,7 @@ $("#akBtn").addEventListener("click",()=>{shower();chime();ak++;localStorage.set
 
 /* ---------- share ---------- */
 $("#shareBtn").addEventListener("click",async()=>{
-  const data={title:"शुभविवाह · Akash & Akshada",text:"आकाश ❤ अक्षदा यांच्या लग्नाचे निमंत्रण · 7 Feb 2027 · Punyai Garden, Mandavgan Pharata",url:location.href};
+  const data={title:"शुभविवाह · Akash & Akshada",text:"आकाश ❤ अक्षदा यांच्या लग्नाचे सप्रेम निमंत्रण 💌 तारीख पाहण्यासाठी कार्ड घासा! · Open the invite and scratch to reveal the date ✨",url:location.href};
   track("shared");try{if(navigator.share){await navigator.share(data)}else{await navigator.clipboard.writeText(location.href);toast("लिंक कॉपी झाली! 🔗")}}catch(e){}
 });
 

@@ -11,11 +11,11 @@
 <meta property="og:image" content="assets/cartoon-hero.webp">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Alex+Brush&family=Amita:wght@400;700&family=Martel:wght@400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Alex+Brush&family=Tillana:wght@500;700&family=Kalam:wght@400;700&display=swap" rel="stylesheet">
 <style>
 :root{
  --wine:#8a1c34;--wine-d:#6a1226;--saffron:#f08a24;--gold:#c69a52;--ink:#3d1036;--paper:#fbefd9;
- --script:'Alex Brush',cursive;--serif:'Cormorant Garamond',Georgia,serif;--mr:'Martel','Noto Serif Devanagari',serif;--mr-d:'Amita','Martel',serif;
+ --script:'Alex Brush',cursive;--serif:'Cormorant Garamond',Georgia,serif;--mr:'Kalam','Noto Sans Devanagari',cursive;--mr-d:'Tillana','Kalam',cursive;
  --pink:#d6246e;--pink-l:#fde0ec;--marigold:#f4a300;--marigold-l:#fff1cc;--peacock:#0e7c86;--peacock-l:#dcf3f1;--leaf:#3f8f3a;--leaf-l:#e3f3dc;
 }
 *{box-sizing:border-box}
@@ -691,7 +691,7 @@ $$(".bell").forEach(b=>b.addEventListener("click",e=>{b.classList.remove("ring")
   function paint(){const r=wrap.getBoundingClientRect(),dpr=devicePixelRatio||1;c.width=r.width*dpr;c.height=r.height*dpr;g.scale(dpr,dpr);
     const grd=g.createLinearGradient(0,0,r.width,r.height);grd.addColorStop(0,"#f7a8c8");grd.addColorStop(.5,"#ffe08a");grd.addColorStop(1,"#f48fb1");
     g.fillStyle=grd;g.fillRect(0,0,r.width,r.height);
-    g.fillStyle="#7a1240";g.textAlign="center";g.font="700 24px 'Amita', serif";g.fillText("इथे घासा ✨",r.width/2,r.height/2-4);
+    g.fillStyle="#7a1240";g.textAlign="center";g.font="700 24px 'Tillana', cursive";g.fillText("इथे घासा ✨",r.width/2,r.height/2-4);
     g.font="italic 16px 'Cormorant Garamond', serif";g.fillText("scratch to reveal the date",r.width/2,r.height/2+20);drawn=true}
   const pos=e=>{const r=c.getBoundingClientRect();return[e.clientX-r.left,e.clientY-r.top]};
   function scratch(e){if(!down)return;const[x,y]=pos(e);g.globalCompositeOperation="destination-out";g.beginPath();g.arc(x,y,22,0,7);g.fill();

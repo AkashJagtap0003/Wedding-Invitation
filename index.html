@@ -478,7 +478,7 @@ footer small{color:#e9d9c0}
    FINAL ROYAL THEME: one set of variables; palette chosen by body class
    ===================================================================== */
 body{--t-deep:#2a1050;--t-mid:#4a1d80;--t-glow:#6b2fb0;--t-accent:#c2185b;--t-accent-l:#e0307a;--t-accent2:#f0a12c;
-  --t-on:#fff8ec;--t-on-soft:#eadcf5;--t-head1:#f6e3a1;--t-head2:#d4af37;--t-head3:#a8771f;--t-card:#fffaf0;--t-card-text:#2a1036;
+  --t-on:#fff8ec;--t-on-soft:#eadcf5;--t-head1:#f6e3a1;--t-head2:#d4af37;--t-head3:#a8771f;--t-card:#fffaf0;--t-card-text:#2a1036;--t-ink:#3a1250;--t-ink2:#5a2a7a;
   --r-wine:var(--t-deep);--r-maroon:var(--t-accent);--r-ruby:var(--t-accent-l);--r-emerald:var(--t-mid);
   --goldgrad:linear-gradient(135deg,var(--t-head1) 0%,var(--t-head2) 32%,var(--t-head3) 52%,var(--t-head1) 72%,var(--t-head2) 100%)}
 /* palette 1: Royal Purple (Peshwai jamuni) + gold + rani pink */
@@ -487,7 +487,7 @@ body.pal-purple{--t-deep:#240b45;--t-mid:#3d1670;--t-glow:#6a2fb4;--t-accent:#c2
 body.pal-navy{--t-deep:#0a1438;--t-mid:#14286b;--t-glow:#2a4fc4;--t-accent:#c2185b;--t-accent-l:#e0307a;--t-accent2:#f0a12c;--t-on-soft:#d9e2f7}
 /* palette 3: Palace Ivory + gold + rani pink + purple text (light) */
 body.pal-ivory{--t-deep:#fff9ef;--t-mid:#fdeedd;--t-glow:#ffd6e6;--t-accent:#b0124f;--t-accent-l:#d42a6c;--t-accent2:#d9761a;
-  --t-on:#3a1250;--t-on-soft:#5e3a6e;--t-head1:#c9962e;--t-head2:#9c6b12;--t-head3:#6e4806}
+  --t-on:var(--t-ink);--t-on-soft:#5e3a6e;--t-head1:#c9962e;--t-head2:#9c6b12;--t-head3:#6e4806}
 /* palette 4: Royal Rani (deep magenta) + gold */
 body.pal-rani{--t-deep:#4a0a2e;--t-mid:#7a1048;--t-glow:#b0186a;--t-accent:#f0a12c;--t-accent-l:#ffb94d;--t-accent2:#ffd27a;--t-on-soft:#f5dbe8}
 
@@ -535,7 +535,7 @@ nav a.on,nav a:hover{color:var(--t-head2);border-color:var(--t-head2)}
 .scene .sky{background:radial-gradient(ellipse at 50% 30%,#fffdf8,#fbefe0 55%,#f8d8e4)}
 .scene:after{background:linear-gradient(to bottom,transparent,#f8dbe6 85%)}
 .scene .hint{background:color-mix(in srgb,var(--t-deep) 90%,transparent);color:var(--t-head1);border-color:var(--t-head2)}
-body.pal-ivory .scene .hint{color:#fff8ec;background:#3a1250e0}
+body.pal-ivory .scene .hint{color:#fff8ec;background:color-mix(in srgb,var(--t-ink) 88%,transparent)}
 
 /* ivory cards with filigree corners */
 .parch{color:var(--t-card-text);
@@ -546,29 +546,29 @@ body.pal-ivory .scene .hint{color:#fff8ec;background:#3a1250e0}
    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 60 60'%3E%3Cg fill='none' stroke='%23b8862f' stroke-width='1.4' transform='rotate(180 30 30)'%3E%3Cpath d='M4 56 V22 Q4 4 22 4 H56'/%3E%3Cpath d='M10 56 V26 Q10 10 26 10 H56'/%3E%3Cpath d='M18 18 q8 -2 10 6 q-8 2 -10 -6Z' fill='%23c2185b' fill-opacity='.6'/%3E%3C/g%3E%3C/svg%3E") right 14px bottom 14px/58px no-repeat,
    linear-gradient(160deg,#fffdf7,var(--t-card) 50%,#fbf1e2);
   box-shadow:0 22px 50px #0007,inset 0 0 0 6px var(--t-card),inset 0 0 0 8px var(--t-head2),inset 0 0 0 9px var(--t-card),inset 0 0 0 10px var(--t-accent)}
-body.pal-ivory .parch{box-shadow:0 18px 40px #6a3b1a2a,inset 0 0 0 6px var(--t-card),inset 0 0 0 8px #c9962e,inset 0 0 0 9px var(--t-card),inset 0 0 0 10px var(--t-accent)}
-.parch .script,.parch .h2{color:#3a1250;-webkit-text-fill-color:#3a1250;background:none}
-.parch .h2-mr{color:#b0124f}
+body.pal-ivory .parch{box-shadow:0 18px 40px #6a3b1a2a,inset 0 0 0 6px var(--t-card),inset 0 0 0 8px var(--t-head2),inset 0 0 0 9px var(--t-card),inset 0 0 0 10px var(--t-accent)}
+.parch .script,.parch .h2{color:var(--t-ink);-webkit-text-fill-color:var(--t-ink);background:none}
+.parch .h2-mr{color:var(--t-accent)}
 .parch .poem{color:var(--t-card-text)}
-.fact svg{color:#b0124f}
-.fact .mr{color:#5a2a7a}
+.fact svg{color:var(--t-accent)}
+.fact .mr{color:var(--t-ink2)}
 
 /* countdown, buttons, steps */
 .countdown div:nth-child(n){background:linear-gradient(180deg,var(--t-mid),var(--t-deep));border:1px solid var(--t-head2)}
-body.pal-ivory .countdown div:nth-child(n){background:linear-gradient(180deg,#5a2a7a,#3a1250)}
+body.pal-ivory .countdown div:nth-child(n){background:linear-gradient(180deg,var(--t-ink2),var(--t-ink))}
 .countdown div:nth-child(n) b{color:var(--t-head1)}
 body.pal-ivory .countdown div:nth-child(n) b{color:#f6e3a1}
 .countdown small{color:#f3e6d4}
-.btn{background:linear-gradient(180deg,#e0307a,#a3124c);border-color:#d4af37;color:#fff8ec}
-.btn.ghost{background:#fffaf0;color:#3a1250}
+.btn{background:linear-gradient(180deg,var(--t-accent-l),var(--t-accent));border-color:#d4af37;color:#fff8ec}
+.btn.ghost{background:#fffaf0;color:var(--t-ink)}
 .hero-text .btn,.wall .btn{background:var(--goldgrad);color:#2a1036;border-color:#f6e3a1}
-.fab button{background:linear-gradient(180deg,#e0307a,#a3124c);border-color:#d4af37}
-.fab button.share{background:linear-gradient(180deg,#5a2a7a,#3a1250)}
-.fab .count,.sound,.toast{background:#3a1250;border-color:#d4af37;color:#f6e3a1}
+.fab button{background:linear-gradient(180deg,var(--t-accent-l),var(--t-accent));border-color:#d4af37}
+.fab button.share{background:linear-gradient(180deg,var(--t-ink2),var(--t-ink))}
+.fab .count,.sound,.toast{background:var(--t-ink);border-color:#d4af37;color:#f6e3a1}
 .steps:before{background:linear-gradient(var(--t-head2),var(--t-accent))}
 .steps li:nth-child(n) i{background:var(--t-accent);border-color:var(--t-head2)}
 .polaroid,.polaroid:nth-child(n){box-shadow:0 0 0 2px #d4af37,0 18px 34px #0007}
-.polaroid span{color:#b0124f}
+.polaroid span{color:var(--t-accent)}
 .chip,.chip:nth-child(n){border-color:var(--t-head2);color:var(--t-head2)}
 .petal,.petal:nth-child(n){background:linear-gradient(135deg,#ff6aa2,#c2185b)}
 .petal:nth-child(3n){background:linear-gradient(135deg,#f6e3a1,#c9a24a);border-radius:50%;width:7px;height:7px}
@@ -579,6 +579,36 @@ body.pal-ivory .countdown div:nth-child(n) b{color:#f6e3a1}
   radial-gradient(ellipse at 50% 45%,#6a2fb4,#3d1670 45%,#240b45)}
 .cover .door.l{box-shadow:inset -10px 0 0 #c2185b,inset -12px 0 0 #d4af37}
 .cover .door.r{box-shadow:inset 10px 0 0 #c2185b,inset 12px 0 0 #d4af37}
+
+/* ---- light palace variants ---- */
+body.pal-ivory,body.pal-pearl,body.pal-lavender,body.pal-blue,body.pal-kesari,body.pal-marble{--t-on:var(--t-ink);--t-on-soft:color-mix(in srgb,var(--t-ink) 75%,#fff)}
+/* A: Palace Ivory: blush ivory, rani pink, gold, plum */
+body.pal-ivory{--t-ink:#3a1250;--t-ink2:#5a2a7a}
+/* B: Pearl & Rose Gold: pearl white, rose gold, blush, deep plum */
+body.pal-pearl{--t-deep:#fffdfb;--t-mid:#fbeef0;--t-glow:#f7d4dc;--t-accent:#b85a6e;--t-accent-l:#d47c8e;--t-accent2:#c4785a;
+  --t-head1:#e8b9a6;--t-head2:#b7765f;--t-head3:#8a4f3c;--t-ink:#4a1f3a;--t-ink2:#7a3a5c}
+/* C: Ivory & Royal Purple: ivory with lavender glow, purple frames, gold */
+body.pal-lavender{--t-deep:#fdfaff;--t-mid:#f1e8fb;--t-glow:#e2d0f7;--t-accent:#6a2fb4;--t-accent-l:#8a4fd4;--t-accent2:#d9761a;
+  --t-head1:#c9962e;--t-head2:#9c6b12;--t-head3:#6e4806;--t-ink:#2e1050;--t-ink2:#4d2380}
+/* D: Ivory & Royal Blue: ivory with sky glow, royal blue, gold */
+body.pal-blue{--t-deep:#fbfcff;--t-mid:#eaf0fb;--t-glow:#d3e0f7;--t-accent:#1d3f9a;--t-accent-l:#3460c9;--t-accent2:#d9761a;
+  --t-head1:#c9962e;--t-head2:#9c6b12;--t-head3:#6e4806;--t-ink:#0f1f4d;--t-ink2:#24397a}
+/* E: Ivory & Kesari: ivory with saffron glow, Maratha saffron, rani, gold */
+body.pal-kesari{--t-deep:#fffbf5;--t-mid:#fff0e0;--t-glow:#ffd9b8;--t-accent:#d2541a;--t-accent-l:#ee7a2e;--t-accent2:#c2185b;
+  --t-head1:#d4a33a;--t-head2:#a8741a;--t-head3:#74500a;--t-ink:#4a1a10;--t-ink2:#7a2e1a}
+/* F: White Marble & Ruby: cool white marble, ruby red, gold */
+body.pal-marble{--t-deep:#ffffff;--t-mid:#f3f2f5;--t-glow:#f6dde2;--t-accent:#a3123a;--t-accent-l:#c92a55;--t-accent2:#d9761a;
+  --t-head1:#c9962e;--t-head2:#9c6b12;--t-head3:#6e4806;--t-ink:#2a1a2e;--t-ink2:#4a2a4e}
+body.pal-ivory .scene .hint,body.pal-pearl .scene .hint,body.pal-lavender .scene .hint,body.pal-blue .scene .hint,body.pal-kesari .scene .hint,body.pal-marble .scene .hint{color:#fff8ec;background:color-mix(in srgb,var(--t-ink) 88%,transparent)}
+body.pal-pearl .countdown div:nth-child(n),body.pal-lavender .countdown div:nth-child(n),body.pal-blue .countdown div:nth-child(n),body.pal-kesari .countdown div:nth-child(n),body.pal-marble .countdown div:nth-child(n){background:linear-gradient(180deg,var(--t-ink2),var(--t-ink))}
+body.pal-pearl .countdown div:nth-child(n) b,body.pal-lavender .countdown div:nth-child(n) b,body.pal-blue .countdown div:nth-child(n) b,body.pal-kesari .countdown div:nth-child(n) b,body.pal-marble .countdown div:nth-child(n) b{color:#f6e3a1}
+body.pal-pearl .parch,body.pal-lavender .parch,body.pal-blue .parch,body.pal-kesari .parch,body.pal-marble .parch{box-shadow:0 18px 40px #3a1a3a22,inset 0 0 0 6px var(--t-card),inset 0 0 0 8px var(--t-head2),inset 0 0 0 9px var(--t-card),inset 0 0 0 10px var(--t-accent)}
+.scene{box-shadow:0 0 0 6px var(--t-accent),0 0 0 8px var(--t-head2),0 0 0 14px color-mix(in srgb,var(--t-deep) 70%,transparent),0 0 0 15px var(--t-head3),0 26px 54px #0005}
+.cover .door,.cover .door.r{background:
+  url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80'%3E%3Cpath d='M40 6 C48 22 58 28 74 40 C58 52 48 58 40 74 C32 58 22 52 6 40 C22 28 32 22 40 6Z' fill='none' stroke='%23d4af37' stroke-opacity='.3'/%3E%3C/svg%3E"),
+  radial-gradient(ellipse at 50% 45%,var(--t-ink2),var(--t-ink) 60%)}
+.cover .door.l{box-shadow:inset -10px 0 0 var(--t-accent),inset -12px 0 0 #d4af37}
+.cover .door.r{box-shadow:inset 10px 0 0 var(--t-accent),inset 12px 0 0 #d4af37}
 
 @media (max-width:820px){
  .hero,.bless,.story{grid-template-columns:1fr}
@@ -602,7 +632,7 @@ body.pal-ivory .countdown div:nth-child(n) b{color:#f6e3a1}
 }
 </style>
 </head>
-<body class="pal-purple">
+<body class="pal-ivory">
 
 <!-- ===== Opening doors ===== -->
 <div class="cover" id="cover" role="button" tabindex="0" aria-label="Open the invitation">

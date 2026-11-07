@@ -35,12 +35,24 @@ calendar + countdown, maps link, optional WhatsApp number to receive blessings).
 ## Deploy
 Pushing to `main` deploys via `.github/workflows/static.yml` (GitHub Pages).
 
-## Analytics (who opened the invite)
-The page uses [GoatCounter](https://www.goatcounter.com): free, no cookies, no consent banner.
-1. Sign up at https://www.goatcounter.com/signup with site code **`akash-akshada`**
-   (if that's taken, pick another and change `goatcounter:` in the `wedding` object in `index.html`).
-2. Open your dashboard at https://akash-akshada.goatcounter.com
+## Private dashboard: blessings + analytics (password protected)
+GitHub Pages can't store data, so a free **Google Sheet + Apps Script** acts as the backend.
+Guests' blessings and visit stats are saved in *your* sheet; only `admin.html` with your password can read them.
 
-You'll see visits, devices, cities/countries and referrers (e.g. WhatsApp), plus these events:
-`invite-opened`, `date-scratched`, `maps-opened`, `calendar-added`, `shared`, `akshata`,
-`whatsapp-blessing-akash`, `whatsapp-blessing-akshada`, and `blessing` (the event title shows the guest's name and message).
+**One-time setup (about 5 minutes):**
+1. Go to https://sheets.new (signed in to your Google account) and name the sheet "Wedding Invitation".
+2. In the sheet: **Extensions → Apps Script**. Delete the sample code, paste all of `apps-script/Code.gs`, and save.
+3. In Apps Script: **Project Settings (⚙) → Script properties → Add script property**
+   - Property: `ADMIN_PASSWORD`, Value: *your secret password*. Save.
+4. **Deploy → New deployment → Select type: Web app**
+   - Execute as: **Me**. Who has access: **Anyone**. Click **Deploy**, allow the permissions, and copy the **Web app URL**
+     (`https://script.google.com/macros/s/.../exec`).
+5. Paste that URL into `backendUrl` in **both** `index.html` (in the `wedding` object) and `admin.html`, then push to `main`.
+
+**Using it:** open `https://akashjagtap0003.github.io/Wedding-Invitation/admin.html`, enter your password.
+You'll see unique visitors, page views, visitors per day, where guests came from (WhatsApp, Instagram, …), devices,
+every tracked action (opened invite, map, calendar, share, akshata, …), and all blessings (searchable, downloadable as CSV).
+The raw data is also in the Google Sheet tabs `Blessings` and `Events`.
+
+To change the password later, edit the `ADMIN_PASSWORD` script property; no redeploy is needed.
+If you edit `Code.gs`, use **Deploy → Manage deployments → Edit → New version** so the URL stays the same.

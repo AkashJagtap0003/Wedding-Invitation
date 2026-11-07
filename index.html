@@ -121,7 +121,7 @@ nav a.on,nav a:hover{color:var(--wine);border-color:var(--wine)}
 .muhurat{font-size:1rem;color:#6b4a3e;margin:-2px 0 14px}
 .countdown{display:flex;gap:8px;justify-content:center;margin-top:18px}
 .countdown div{min-width:64px;padding:8px 6px;border-radius:12px;background:#fff8ecc0;border:1px solid #e3c08a}
-.countdown b{display:block;font-size:1.6rem;color:var(--wine);line-height:1;font-variant-numeric:tabular-nums}
+.countdown b{display:block;font-size:1.6rem;color:var(--wine);line-height:1;font-variant-numeric:lining-nums tabular-nums}
 .countdown small{font-family:var(--mr);font-size:.78rem}
 
 .section{max-width:1180px;margin:0 auto;padding:clamp(60px,8vw,96px) clamp(14px,4vw,40px) 0;text-align:center}
@@ -166,10 +166,6 @@ nav a.on,nav a:hover{color:var(--wine);border-color:var(--wine)}
 .chips{display:flex;flex-wrap:wrap;gap:8px;justify-content:center}
 .chip{font-family:var(--mr);font-size:.9rem;padding:5px 12px;border-radius:999px;border:1px solid #e3c08a;background:#fff8ec;color:var(--wine);cursor:pointer}
 .chip:hover{background:#fde3c3}
-.wa-panel{margin:18px auto 0;max-width:520px;padding:16px;border-radius:16px;background:#eafaf0;border:1.5px solid #8fd3a8}
-.wa-panel .mr{color:#1f7a45;font-size:1.1rem}
-.btn.wa{background:linear-gradient(180deg,#2fbf62,#1d9a4b);border-color:#c9f0d6;box-shadow:0 0 0 1.5px #1d9a4b,0 8px 18px #1d9a4b33}
-.btn.wa.sent{opacity:.65}
 .wishes{display:flex;flex-wrap:wrap;gap:14px;justify-content:center;margin-top:24px}
 .wish{width:min(100%,220px);padding:14px 14px 12px;background:#fff6c9;box-shadow:0 8px 16px #4a2a2422;transform:rotate(var(--r));text-align:left;animation:pop .5s cubic-bezier(.3,1.6,.5,1)}
 .wish p{font-size:1.05rem;line-height:1.35}
@@ -432,6 +428,7 @@ footer small{display:block;margin-top:6px;color:#7a5a4a}
  <section class="section wall" id="wishes">
   <h2 class="script h2">Send Your Blessings</h2>
   <div class="h2-mr">तुमच्या शुभेच्छा लिहा</div>
+  <p style="font-size:1.05rem;color:#6b4a3e;margin-top:6px">Your blessing goes straight to Akash &amp; Akshada 💌</p>
   <form class="wish-form" id="wishForm">
    <div class="chips" id="chips">
     <button type="button" class="chip">सुखी संसार!</button>
@@ -445,14 +442,6 @@ footer small{display:block;margin-top:6px;color:#7a5a4a}
     <button class="btn" type="submit">Send Blessing <span class="mr">· शुभेच्छा पाठवा</span></button>
    </div>
   </form>
-  <div class="wa-panel" id="waPanel" hidden>
-   <p class="mr">तुमच्या शुभेच्छा WhatsApp वर पाठवा 💌</p>
-   <p style="font-size:1rem;color:#6b4a3e">Tap both to send your blessing to Akash &amp; Akshada</p>
-   <div class="actions">
-    <button class="btn wa" type="button" data-to="akash">💬 Send to Akash</button>
-    <button class="btn wa" type="button" data-to="akshada">💬 Send to Akshada</button>
-   </div>
-  </div>
   <div class="wishes" id="wishes"></div>
  </section>
 </main>
@@ -481,11 +470,9 @@ const wedding = {
   mapsUrl: "https://maps.app.goo.gl/RrxUrqnNSgxxGrMb8",
   start: "2027-02-07T10:00:00+05:30",   // countdown + calendar
   end:   "2027-02-07T16:00:00+05:30",
-  whatsapp: {                            // blessings are sent here: country code + number, digits only
-    akash:   "",                         // e.g. "919876543210"
-    akshada: ""
-  },
-  goatcounter: "akash-akshada"           // GoatCounter site code → stats at https://akash-akshada.goatcounter.com ("" = off)
+  // Private backend (Google Apps Script web-app URL, see README "Private dashboard").
+  // Blessings + visit stats are saved there; only admin.html with your password can read them.
+  backendUrl: ""
 };
 /* =========================================================== */
 
@@ -494,17 +481,24 @@ const reduced = matchMedia("(prefers-reduced-motion: reduce)").matches;
 $("#muhurat").textContent = wedding.muhurat;
 $("#mapsBtn").href = wedding.mapsUrl;
 
-/* ---------- analytics (GoatCounter: free, no cookies) ---------- */
-if (wedding.goatcounter) {
-  const sc = document.createElement("script");
-  sc.async = true; sc.src = "https://gc.zgo.at/count.js";
-  sc.dataset.goatcounter = `https://${wedding.goatcounter}.goatcounter.com/count`;
-  document.head.appendChild(sc);
+/* ---------- private analytics + blessings backend ---------- */
+const visitor = localStorage.getItem("vid") || (crypto.randomUUID ? crypto.randomUUID() : String(Date.now()) + Math.random()).slice(0, 36);
+localStorage.setItem("vid", visitor);
+const device = /iPad|Tablet/i.test(navigator.userAgent) ? "tablet" : /Mobi|Android|iPhone/i.test(navigator.userAgent) ? "mobile" : "desktop";
+function send(payload){
+  if (!wedding.backendUrl) return Promise.resolve(false);
+  // text/plain keeps this a "simple" request (no CORS preflight) — Apps Script accepts it.
+  return fetch(wedding.backendUrl, { method: "POST", mode: "no-cors", keepalive: true, body: JSON.stringify(payload) })
+    .then(() => true).catch(() => false);
 }
-function track(name, title){
-  try { if (window.goatcounter && window.goatcounter.count) window.goatcounter.count({ path: name, title: (title || name).slice(0, 250), event: true }); } catch (e) {}
+const tracked = {};
+function track(event, once){
+  if (once !== false && tracked[event]) return;   // count each action once per page view
+  tracked[event] = true;
+  send({ action: "event", event, visitor, device, referrer: document.referrer, lang: navigator.language });
 }
-$("#mapsBtn").addEventListener("click", () => track("maps-opened", "Opened venue on Maps"));
+track("visit");
+$("#mapsBtn").addEventListener("click", () => track("maps-opened"));
 
 /* ---------- toast ---------- */
 function toast(msg){const t=$("#toast");t.textContent=msg;t.classList.add("on");clearTimeout(t._h);t._h=setTimeout(()=>t.classList.remove("on"),2200)}
@@ -558,7 +552,7 @@ function hearts(x,y){ burst(x,y,14,["heart"]); }
 /* ---------- cover doors ---------- */
 const cover=$("#cover");
 document.body.style.overflow="hidden";
-function openCover(){ if(cover.classList.contains("open"))return; cover.classList.add("open"); track("invite-opened","Opened the invitation"); document.body.style.overflow=""; bell(); setTimeout(()=>{chime();shower(90)},500); setTimeout(()=>cover.remove(),1400); }
+function openCover(){ if(cover.classList.contains("open"))return; cover.classList.add("open"); track("invite-opened"); document.body.style.overflow=""; bell(); setTimeout(()=>{chime();shower(90)},500); setTimeout(()=>cover.remove(),1400); }
 cover.addEventListener("click",openCover);
 cover.addEventListener("keydown",e=>{if(e.key==="Enter"||e.key===" "){e.preventDefault();openCover()}});
 
@@ -579,8 +573,8 @@ if(window.DeviceOrientationEvent && !reduced){
   addEventListener("deviceorientation",e=>{if(e.gamma==null)return;const px=Math.max(-.5,Math.min(.5,e.gamma/40)),py=Math.max(-.5,Math.min(.5,(e.beta-45)/60));
     $$("[data-parallax] [data-depth]").forEach(l=>{const d=+l.dataset.depth;const base=l.classList.contains("couple")?"translateX(-50%) ":"";const flip=l.classList.contains("l")?" scaleX(-1)":"";l.style.transform=`${base}translate(${px*d}px,${py*d*.6}px)${flip}`})});
 }
-$$("[data-hearts]").forEach(img=>img.addEventListener("click",e=>{hearts(e.clientX,e.clientY);chime();const h=img.closest(".scene").querySelector(".hint");if(h)h.remove()}));
-$$(".bell").forEach(b=>b.addEventListener("click",e=>{b.classList.remove("ring");void b.offsetWidth;b.classList.add("ring");bell();burst(e.clientX,e.clientY,26,["pet","pet","rice"])}));
+$$("[data-hearts]").forEach(img=>img.addEventListener("click",e=>{hearts(e.clientX,e.clientY);chime();track("couple-tapped");const h=img.closest(".scene").querySelector(".hint");if(h)h.remove()}));
+$$(".bell").forEach(b=>b.addEventListener("click",e=>{b.classList.remove("ring");void b.offsetWidth;b.classList.add("ring");bell();track("bell-rung");burst(e.clientX,e.clientY,26,["pet","pet","rice"])}));
 
 /* ---------- scratch card ---------- */
 (function(){
@@ -593,7 +587,7 @@ $$(".bell").forEach(b=>b.addEventListener("click",e=>{b.classList.remove("ring")
   const pos=e=>{const r=c.getBoundingClientRect();return[e.clientX-r.left,e.clientY-r.top]};
   function scratch(e){if(!down)return;const[x,y]=pos(e);g.globalCompositeOperation="destination-out";g.beginPath();g.arc(x,y,22,0,7);g.fill();
     if(++checks%12===0){const d=g.getImageData(0,0,c.width,c.height).data;let clear=0;for(let i=3;i<d.length;i+=32)if(d[i]===0)clear++;
-      if(clear/(d.length/32)>.45&&!wrap.classList.contains("done")){wrap.classList.add("done");track("date-scratched","Scratched to reveal date");const r=wrap.getBoundingClientRect();burst(r.left+r.width/2,r.top+r.height/2,50);chime();toast("तारीख लक्षात ठेवा! 🎉")}}}
+      if(clear/(d.length/32)>.45&&!wrap.classList.contains("done")){wrap.classList.add("done");track("date-scratched");const r=wrap.getBoundingClientRect();burst(r.left+r.width/2,r.top+r.height/2,50);chime();toast("तारीख लक्षात ठेवा! 🎉")}}}
   c.addEventListener("pointerdown",e=>{down=true;c.setPointerCapture(e.pointerId);scratch(e)});
   c.addEventListener("pointermove",scratch);
   addEventListener("pointerup",()=>down=false);
@@ -605,7 +599,7 @@ $("#calBtn").addEventListener("click",()=>{
   const fmt=d=>new Date(d).toISOString().replace(/[-:]/g,"").split(".")[0]+"Z";
   const q=new URLSearchParams({action:"TEMPLATE",text:`शुभविवाह · ${wedding.groom} & ${wedding.bride}`,dates:`${fmt(wedding.start)}/${fmt(wedding.end)}`,
     details:`Wedding of ${wedding.groom} & ${wedding.bride}. शुभमुहूर्त: ${wedding.muhurat}. आपली उपस्थिती प्रार्थनीय!`,location:wedding.venue});
-  track("calendar-added","Added to calendar");
+  track("calendar-added");
   window.open("https://calendar.google.com/calendar/render?"+q,"_blank","noopener");
 });
 
@@ -620,17 +614,17 @@ const pad=n=>String(n).padStart(2,"0");
 let ak=+localStorage.getItem("akshata")||0;
 const showAk=()=>$("#akCount").textContent=ak?`तुम्ही ${ak} वेळा अक्षता टाकल्या 🌾`:"";
 showAk();
-$("#akBtn").addEventListener("click",()=>{shower();chime();ak++;localStorage.setItem("akshata",ak);track("akshata","Threw akshata");showAk();if(ak===1)toast("आशीर्वादाबद्दल धन्यवाद! 🙏")});
+$("#akBtn").addEventListener("click",()=>{shower();chime();ak++;localStorage.setItem("akshata",ak);track("akshata");showAk();if(ak===1)toast("आशीर्वादाबद्दल धन्यवाद! 🙏")});
 
 /* ---------- share ---------- */
 $("#shareBtn").addEventListener("click",async()=>{
   const data={title:"शुभविवाह · Akash & Akshada",text:"आकाश ❤ अक्षदा यांच्या लग्नाचे निमंत्रण · 7 Feb 2027 · Punyai Garden, Mandavgan Pharata",url:location.href};
-  track("shared","Shared the invite");try{if(navigator.share){await navigator.share(data)}else{await navigator.clipboard.writeText(location.href);toast("लिंक कॉपी झाली! 🔗")}}catch(e){}
+  track("shared");try{if(navigator.share){await navigator.share(data)}else{await navigator.clipboard.writeText(location.href);toast("लिंक कॉपी झाली! 🔗")}}catch(e){}
 });
 
 /* ---------- lightbox ---------- */
 const lb=$("#lightbox");
-$$(".polaroid").forEach(p=>p.addEventListener("click",()=>{lb.querySelector("img").src=p.dataset.full;lb.querySelector("img").alt=p.querySelector("img").alt;lb.classList.add("on")}));
+$$(".polaroid").forEach(p=>p.addEventListener("click",()=>{lb.querySelector("img").src=p.dataset.full;lb.querySelector("img").alt=p.querySelector("img").alt;lb.classList.add("on");track("photo-opened")}));
 lb.addEventListener("click",()=>lb.classList.remove("on"));
 addEventListener("keydown",e=>{if(e.key==="Escape")lb.classList.remove("on")});
 
@@ -641,18 +635,13 @@ function addWish(w){const d=document.createElement("div");d.className="wish";d.s
   d.innerHTML=`<p>${esc(w.text)}</p><b>— ${esc(w.name)}</b>`;wishesEl.prepend(d)}
 wishes.forEach(addWish);
 $$("#chips .chip").forEach(c=>c.addEventListener("click",()=>{const t=$("#wishText");t.value=(t.value?t.value+" ":"")+c.textContent;t.focus()}));
-$("#wishForm").addEventListener("submit",e=>{e.preventDefault();const w={name:$("#wishName").value.trim(),text:$("#wishText").value.trim()};if(!w.name||!w.text)return;
-  wishes.push(w);localStorage.setItem("wishes",JSON.stringify(wishes.slice(-30)));addWish(w);track("blessing",`Blessing from ${w.name}: ${w.text}`);lastWish=w;$("#wishText").value="";const wp=$("#waPanel");wp.hidden=false;wp.querySelectorAll(".btn.wa").forEach(b=>{b.classList.remove("sent");b.textContent="💬 Send to "+(b.dataset.to==="akash"?"Akash":"Akshada")});wp.scrollIntoView({behavior:"smooth",block:"center"});
-  const r=wishesEl.getBoundingClientRect();hearts(innerWidth/2,Math.min(r.top+40,innerHeight-80));chime();toast("शुभेच्छांबद्दल धन्यवाद! 💕")});
-let lastWish=null;
-$$(".btn.wa").forEach(btn=>btn.addEventListener("click",()=>{
-  const w=lastWish||{name:$("#wishName").value.trim(),text:$("#wishText").value.trim()||"शुभमंगल सावधान! 💐"};
-  const who=btn.dataset.to, num=(wedding.whatsapp[who]||"").replace(/\D/g,"");
-  const msg=`💐 आकाश & अक्षदा यांना शुभेच्छा 💐\n\n${w.text}\n\n— ${w.name||"A guest"}\n(from your wedding invitation)`;
-  track("whatsapp-blessing-"+who,`WhatsApp blessing to ${who} from ${w.name}`);
-  window.open(`https://wa.me/${num}?text=${encodeURIComponent(msg)}`,"_blank","noopener");
-  btn.classList.add("sent");btn.textContent="✓ Sent to "+(who==="akash"?"Akash":"Akshada");
-}));
+$("#wishForm").addEventListener("submit",async e=>{e.preventDefault();const w={name:$("#wishName").value.trim(),text:$("#wishText").value.trim()};if(!w.name||!w.text)return;
+  const btn=e.submitter||$("#wishForm button[type=submit]");btn.disabled=true;
+  const ok=await send({action:"blessing",name:w.name,message:w.text,visitor,device});
+  btn.disabled=false;
+  if(wedding.backendUrl&&!ok){toast("नेटवर्क अडचण — पुन्हा प्रयत्न करा 🙏");return}
+  wishes.push(w);localStorage.setItem("wishes",JSON.stringify(wishes.slice(-30)));addWish(w);$("#wishText").value="";
+  const r=wishesEl.getBoundingClientRect();hearts(innerWidth/2,Math.min(r.top+40,innerHeight-80));chime();toast("शुभेच्छा पोहोचल्या! धन्यवाद 💕")});
 
 /* ---------- ambient petals ---------- */
 const petals=$("#petals");

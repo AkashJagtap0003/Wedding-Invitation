@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#8a1c34">
+<title>Admin · Akash & Akshada</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Great+Vibes&family=Tiro+Devanagari+Marathi&display=swap" rel="stylesheet">
+<style>
+:root{--wine:#8a1c34;--wine-d:#6a1226;--gold:#c69a52;--ink:#3e2520;--muted:#7a5a4a;--paper:#fbefd9;--card:#fffaf1;--line:#ead6b4;
+ --serif:'Cormorant Garamond',Georgia,serif;--mr:'Tiro Devanagari Marathi',serif;--script:'Great Vibes',cursive}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+body{margin:0;font-family:var(--serif);font-size:17px;font-variant-numeric:lining-nums;color:var(--ink);background:var(--paper);min-height:100vh}
+button,input{font:inherit}
+.mr{font-family:var(--mr)}
+.wrap{max-width:1100px;margin:0 auto;padding:20px clamp(14px,4vw,32px) 60px}
+header{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px;margin-bottom:18px}
+header h1{font-family:var(--script);font-weight:400;color:var(--wine);font-size:2.4rem;margin:0;line-height:1}
+header small{display:block;color:var(--muted);font-size:.95rem}
+.btn{border:1.5px solid var(--wine);background:var(--wine);color:#fff6e6;border-radius:999px;padding:8px 18px;cursor:pointer;font-weight:600}
+.btn.ghost{background:transparent;color:var(--wine)}
+.btn:disabled{opacity:.6;cursor:wait}
+
+/* login */
+.login{min-height:100vh;display:grid;place-items:center;padding:20px}
+.login form{width:min(100%,360px);background:var(--card);border:1px solid var(--line);border-radius:20px;padding:30px 26px;text-align:center;box-shadow:0 18px 40px #6a3b1a1f}
+.login h1{font-family:var(--script);font-weight:400;color:var(--wine);font-size:2.6rem;margin:0}
+.login p{color:var(--muted);margin:4px 0 18px}
+.login input{width:100%;padding:12px 14px;border-radius:12px;border:1.5px solid var(--line);background:#fff;margin-bottom:12px;font-size:1.05rem}
+.login input:focus{outline:2px solid #c69a5288;border-color:var(--wine)}
+.err{color:#b3261e;min-height:1.4em;font-size:.98rem;margin-top:8px}
+
+/* tiles */
+.tiles{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:12px}
+.tile{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:14px 16px}
+.tile .v{font-size:2.1rem;font-weight:700;color:var(--ink);line-height:1.05;font-variant-numeric:lining-nums tabular-nums}
+.tile .k{color:var(--muted);font-size:.98rem;margin-top:2px}
+.tile.hero{background:linear-gradient(160deg,#fff4e2,#fde3c3);border-color:#e3c08a}
+.tile.hero .v{color:var(--wine)}
+
+.grid2{display:grid;grid-template-columns:2fr 1fr;gap:14px;margin-top:14px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:16px 18px}
+.card h2{font-size:1.25rem;margin:0 0 10px;color:var(--ink)}
+.card h2 small{font-weight:500;color:var(--muted);font-size:.9rem;margin-left:6px}
+
+/* bar chart (single series: daily unique visitors) */
+.chart{position:relative;height:200px;display:flex;align-items:flex-end;gap:2px;padding:0 0 22px;border-bottom:1px solid var(--line)}
+.chart .bar{flex:1;min-width:4px;max-width:36px;position:relative;height:100%;display:flex;align-items:flex-end;cursor:default}
+.chart .bar i{display:block;width:100%;background:var(--wine);border-radius:4px 4px 0 0;min-height:2px}
+.chart .bar:hover i{background:var(--wine-d)}
+.chart .bar span{position:absolute;bottom:-20px;left:50%;transform:translateX(-50%);font-size:.72rem;color:var(--muted);white-space:nowrap}
+.gridline{position:absolute;left:0;right:0;border-top:1px dashed #ead6b499;font-size:.72rem;color:var(--muted)}
+.gridline b{position:absolute;right:0;top:-16px;font-weight:500}
+.tip{position:fixed;pointer-events:none;background:var(--ink);color:#fff;padding:6px 10px;border-radius:8px;font-size:.9rem;transform:translate(-50%,-120%);display:none;z-index:9;white-space:nowrap}
+.empty{color:var(--muted);font-style:italic;padding:20px 0;text-align:center}
+
+/* breakdown tables */
+table{width:100%;border-collapse:collapse}
+td{padding:6px 0;border-bottom:1px solid #f0e2c8;font-size:1rem}
+td.n{text-align:right;font-variant-numeric:lining-nums tabular-nums;width:3.5em;font-weight:600}
+.meter{height:6px;background:#f3e4c9;border-radius:3px;margin-top:4px;overflow:hidden}
+.meter i{display:block;height:100%;background:var(--gold);border-radius:3px}
+
+/* blessings */
+.btools{display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:space-between;margin-bottom:10px}
+.btools input{padding:8px 12px;border-radius:999px;border:1.5px solid var(--line);background:#fff;min-width:220px}
+.blessings{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:12px}
+.b{background:#fff6c9;border-radius:6px;padding:14px;box-shadow:0 4px 10px #4a2a2418}
+.b p{margin:0 0 8px;font-size:1.08rem;line-height:1.4;white-space:pre-wrap;word-break:break-word}
+.b .who{font-family:var(--script);color:var(--wine);font-size:1.45rem;line-height:1}
+.b time{display:block;color:var(--muted);font-size:.85rem;margin-top:4px}
+.updated{color:var(--muted);font-size:.9rem}
+.setup{background:#fff3f0;border:1px solid #f0c0b8;border-radius:12px;padding:12px 14px;margin-bottom:14px}
+@media(max-width:760px){.grid2{grid-template-columns:1fr}.chart{height:160px}}
+</style>
+</head>
+<body>
+
+<section class="login" id="login">
+ <form id="loginForm">
+  <h1>Akash &amp; Akshada</h1>
+  <p>Private dashboard · <span class="mr">फक्त आमच्यासाठी</span></p>
+  <input type="password" id="pw" placeholder="Password" autocomplete="current-password" required autofocus>
+  <button class="btn" type="submit" style="width:100%">Open dashboard</button>
+  <div class="err" id="err" role="alert"></div>
+ </form>
+</section>
+
+<div class="wrap" id="app" hidden>
+ <header>
+  <div><h1>Wedding Dashboard</h1><small class="updated" id="updated"></small></div>
+  <div style="display:flex;gap:8px">
+   <button class="btn ghost" id="refresh">↻ Refresh</button>
+   <button class="btn ghost" id="logout">Log out</button>
+  </div>
+ </header>
+
+ <div class="tiles" id="tiles"></div>
+
+ <div class="grid2">
+  <div class="card">
+   <h2>Visitors per day <small>unique people who opened the link (IST)</small></h2>
+   <div class="chart" id="chart"></div>
+  </div>
+  <div class="card">
+   <h2>Where they came from</h2>
+   <table id="refs"></table>
+   <h2 style="margin-top:18px">Devices</h2>
+   <table id="devs"></table>
+  </div>
+ </div>
+
+ <div class="card" style="margin-top:14px">
+  <div class="btools">
+   <h2 style="margin:0">Blessings <small id="bcount"></small></h2>
+   <div style="display:flex;gap:8px;flex-wrap:wrap">
+    <input type="search" id="q" placeholder="Search name or message">
+    <button class="btn ghost" id="csv">⬇ Download CSV</button>
+   </div>
+  </div>
+  <div class="blessings" id="blessings"></div>
+ </div>
+</div>
+<div class="tip" id="tip"></div>
+
+<script>
+/* Same Google Apps Script web-app URL as in index.html */
+const backendUrl = "";
+
+const $ = s => document.querySelector(s);
+const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+const fmtTime = t => new Date(t).toLocaleString("en-IN", { timeZone: "Asia/Kolkata", day: "numeric", month: "short", hour: "numeric", minute: "2-digit" });
+let data = null;
+
+const LABELS = [
+  ["uniqueVisitors", "Unique visitors", true],
+  ["visit", "Total page views"],
+  ["invite-opened", "Opened the invitation"],
+  ["blessings", "Blessings received", true],
+  ["maps-opened", "Opened venue map"],
+  ["calendar-added", "Added to calendar"],
+  ["shared", "Shared the invite"],
+  ["date-scratched", "Scratched the date"],
+  ["akshata", "Threw akshata 🌾"],
+  ["couple-tapped", "Tapped the couple 💕"],
+  ["bell-rung", "Rang the bell 🔔"],
+  ["photo-opened", "Opened a photo"]
+];
+
+async function load(password) {
+  if (!backendUrl) throw new Error("setup");
+  const res = await fetch(backendUrl, { method: "POST", body: JSON.stringify({ action: "admin", password }) });
+  const j = await res.json();
+  if (!j.ok) throw new Error(j.error || "failed");
+  return j;
+}
+
+async function login(pw, silent) {
+  const btn = $("#loginForm button"); btn.disabled = true; $("#err").textContent = silent ? "" : "Checking…";
+  try {
+    data = await load(pw);
+    sessionStorage.setItem("pw", pw);
+    $("#login").hidden = true; $("#app").hidden = false;
+    render();
+  } catch (e) {
+    sessionStorage.removeItem("pw");
+    $("#err").textContent = e.message === "wrong-password" ? "Wrong password." :
+      e.message === "setup" ? "Backend URL not set in admin.html yet." :
+      e.message === "password-not-set" ? "Set ADMIN_PASSWORD in the Apps Script properties." :
+      "Couldn't reach the backend. Check your connection.";
+  } finally { btn.disabled = false; }
+}
+
+function render() {
+  $("#updated").textContent = "Updated " + fmtTime(data.generated);
+  const val = k => k === "uniqueVisitors" ? data.uniqueVisitors : k === "blessings" ? data.blessings.length : (data.counts[k] || 0);
+  $("#tiles").innerHTML = LABELS.map(([k, label, hero]) =>
+    `<div class="tile${hero ? " hero" : ""}"><div class="v">${val(k).toLocaleString("en-IN")}</div><div class="k">${label}</div></div>`).join("");
+  renderChart(data.daily);
+  renderTable("#refs", data.referrers);
+  renderTable("#devs", data.devices);
+  renderBlessings();
+}
+
+function renderChart(daily) {
+  const el = $("#chart");
+  if (!daily.length) { el.innerHTML = '<div class="empty" style="width:100%">No visits yet</div>'; return; }
+  const days = daily.slice(-30);
+  const max = Math.max(...days.map(d => d.visitors));
+  const top = Math.max(1, Math.ceil(max / 5) * 5);
+  const every = Math.ceil(days.length / 7);
+  el.innerHTML =
+    [top, top / 2].map(v => `<div class="gridline" style="bottom:${22 + (v / top) * (el.clientHeight - 22)}px"><b>${v}</b></div>`).join("") +
+    days.map((d, i) => {
+      const lbl = new Date(d.day + "T00:00:00+05:30").toLocaleDateString("en-IN", { day: "numeric", month: "short", timeZone: "Asia/Kolkata" });
+      return `<div class="bar" data-tip="${esc(lbl)}: ${d.visitors} visitor${d.visitors === 1 ? "" : "s"}"><i style="height:${(d.visitors / top) * 100}%"></i>${i % every === 0 ? `<span>${esc(lbl)}</span>` : ""}</div>`;
+    }).join("");
+}
+
+function renderTable(sel, obj) {
+  const rows = Object.entries(obj || {}).sort((a, b) => b[1] - a[1]).slice(0, 8);
+  const total = rows.reduce((s, r) => s + r[1], 0) || 1;
+  $(sel).innerHTML = rows.length ? rows.map(([k, n]) =>
+    `<tr><td>${esc(k)}<div class="meter"><i style="width:${(n / total) * 100}%"></i></div></td><td class="n">${n}</td></tr>`).join("")
+    : '<tr><td class="empty">No data yet</td></tr>';
+}
+
+function renderBlessings() {
+  const q = $("#q").value.trim().toLowerCase();
+  const list = data.blessings.filter(b => !q || (b.name + " " + b.message).toLowerCase().includes(q));
+  $("#bcount").textContent = `${data.blessings.length} total`;
+  $("#blessings").innerHTML = list.length ? list.map(b =>
+    `<div class="b"><p>${esc(b.message)}</p><div class="who">— ${esc(b.name)}</div><time>${fmtTime(b.time)} · ${esc(b.device || "")}</time></div>`).join("")
+    : `<div class="empty">${q ? "No matches" : "No blessings yet"}</div>`;
+}
+
+function downloadCsv() {
+  const cell = v => `"${String(v ?? "").replace(/"/g, '""')}"`;
+  const lines = [["Time (IST)", "Name", "Message", "Device"].map(cell).join(",")]
+    .concat(data.blessings.map(b => [fmtTime(b.time), b.name, b.message, b.device].map(cell).join(",")));
+  const a = document.createElement("a");
+  a.href = URL.createObjectURL(new Blob(["﻿" + lines.join("\n")], { type: "text/csv;charset=utf-8" }));
+  a.download = "blessings.csv"; a.click(); URL.revokeObjectURL(a.href);
+}
+
+/* tooltip */
+const tip = $("#tip");
+$("#chart").addEventListener("pointermove", e => {
+  const bar = e.target.closest(".bar");
+  if (!bar) { tip.style.display = "none"; return; }
+  tip.textContent = bar.dataset.tip; tip.style.display = "block";
+  const r = bar.getBoundingClientRect(); tip.style.left = (r.left + r.width / 2) + "px"; tip.style.top = (r.top + r.height - bar.querySelector("i").offsetHeight) + "px";
+});
+$("#chart").addEventListener("pointerleave", () => tip.style.display = "none");
+
+$("#loginForm").addEventListener("submit", e => { e.preventDefault(); login($("#pw").value); });
+$("#refresh").addEventListener("click", async e => { e.target.disabled = true; try { data = await load(sessionStorage.getItem("pw")); render(); } catch (_) { location.reload(); } e.target.disabled = false; });
+$("#logout").addEventListener("click", () => { sessionStorage.removeItem("pw"); location.reload(); });
+$("#q").addEventListener("input", renderBlessings);
+$("#csv").addEventListener("click", downloadCsv);
+
+const saved = sessionStorage.getItem("pw");
+if (saved) login(saved, true);
+</script>
+</body>
+</html>

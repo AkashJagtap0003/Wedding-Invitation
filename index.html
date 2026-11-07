@@ -1,83 +1,635 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="mr">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#7b1e2b">
-<title>Akash & Akshada — Wedding Invitation</title>
+<meta name="theme-color" content="#8a1c34">
+<title>शुभविवाह · Akash &amp; Akshada · 7 February 2027</title>
+<meta name="description" content="Akash Jagtap & Akshada Kharade — Maratha wedding invitation · आकाश ❤ अक्षदा शुभविवाह, ७ फेब्रुवारी २०२७">
+<meta property="og:title" content="शुभविवाह · Akash & Akshada">
+<meta property="og:description" content="रविवार, ७ फेब्रुवारी २०२७ · Punyai Garden, Mandavgan Pharata">
+<meta property="og:image" content="assets/cartoon-hero.webp">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Great+Vibes&family=Tiro+Devanagari+Marathi&display=swap" rel="stylesheet">
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Great+Vibes&display=swap');
-:root{--wine:#65172b;--gold:#c69a52;--cream:#fff7e9;--ink:#4d2630}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;color:var(--ink);font-family:'Cormorant Garamond',Georgia,serif;background:#ead7bf}
-.story{min-height:100svh;display:grid;place-items:center;padding:clamp(10px,3vw,28px);background:radial-gradient(circle at 50% 0,#fff4dc,#f1d5bd 55%,#dcb28b)}
-.story:before{content:"";position:fixed;inset:10px;border:1px solid #b98a48;border-radius:24px;pointer-events:none;z-index:3}
-.card{position:relative;overflow:hidden;width:min(100%,760px);min-height:84svh;background:linear-gradient(145deg,#fff9edee,#fff0dbee);border:1px solid #c49a5b;border-radius:24px;padding:clamp(22px,5vw,52px);text-align:center;box-shadow:0 24px 70px #501a2b22;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:14px}
-.card:before,.card:after{content:"❧";position:absolute;color:#c79a55;font-size:32px;opacity:.65}.card:before{top:10px;left:18px}.card:after{bottom:10px;right:18px;transform:rotate(180deg)}
-.kicker{letter-spacing:.16em;text-transform:uppercase;font-size:.8rem;color:#a16b35;font-weight:600}
-h1,h2{color:var(--wine);margin:0;line-height:1.08;font-weight:600}h1{font-size:clamp(2.6rem,9vw,5rem)}h2{font-size:clamp(2rem,7vw,3.6rem)}
-p{font-size:clamp(1.1rem,3.6vw,1.5rem);line-height:1.45;margin:0;max-width:34ch}
-.ornament{color:var(--gold);font-size:1.6rem;letter-spacing:.2em}
-.art{width:min(100%,390px);height:auto;position:relative;display:grid;place-items:center;margin:0 auto;z-index:1}.art img{display:block;width:100%;max-height:43svh;object-fit:contain;filter:drop-shadow(0 12px 15px #7b3b2820)}
-.btn{border:1px solid #8b263b;background:linear-gradient(135deg,#8b263b,#5f1427);color:#fff7e9;padding:13px 25px;border-radius:999px;font-family:inherit;font-weight:600;font-size:1.12rem;cursor:pointer;box-shadow:0 8px 20px #6d1b3028}.btn.secondary{background:transparent;color:var(--wine);border:1px solid var(--gold)}
-.nav{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin-top:8px}.scene{display:none}.scene.active{display:flex;animation:fade .65s ease both}@keyframes fade{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
-.details{display:grid;gap:12px;width:100%;max-width:480px;text-align:left}.detail{padding:14px 18px;border:1px solid #dfbf8b;border-radius:14px;background:#fffaf1;box-shadow:0 4px 12px #6c29300b}.detail strong{display:block;color:var(--wine);margin-bottom:4px;font-size:1.15rem}
-.dots{display:flex;gap:7px;justify-content:center;margin:12px}.dot{height:7px;width:7px;border-radius:50%;background:#d9b78a}.dot.active{background:var(--wine);width:22px;border-radius:5px}footer{padding:14px;text-align:center;font-size:.85rem;color:#7d5948}
-@media(max-width:480px){.card{min-height:88svh;padding:24px 18px}.art img{max-height:37svh}.story:before{inset:5px}}
+:root{
+ --wine:#8a1c34;--wine-d:#6a1226;--saffron:#f08a24;--gold:#c69a52;--ink:#4a2a24;--paper:#fbefd9;
+ --script:'Great Vibes',cursive;--serif:'Cormorant Garamond',Georgia,serif;--mr:'Tiro Devanagari Marathi','Noto Serif Devanagari',serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;color:var(--ink);font-family:var(--serif);font-size:18px;line-height:1.5;overflow-x:hidden;
+ background:
+  radial-gradient(ellipse 60% 40% at 15% 10%,#fde7c9aa,transparent 70%),
+  radial-gradient(ellipse 50% 40% at 90% 40%,#f8d9d2aa,transparent 70%),
+  radial-gradient(ellipse 60% 40% at 20% 85%,#dfe6f0aa,transparent 70%),
+  var(--paper);}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;z-index:0;opacity:.35;
+ background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='3'/%3E%3CfeColorMatrix values='0 0 0 0 .55 0 0 0 0 .4 0 0 0 0 .25 0 0 0 .18 0'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)'/%3E%3C/svg%3E");}
+main,nav,footer{position:relative;z-index:1}
+.mr{font-family:var(--mr);font-weight:400}
+.script{font-family:var(--script);font-weight:400;color:var(--wine);line-height:1.05}
+p{margin:0}
+img{display:block;max-width:100%}
+button{font:inherit}
 
-/* refinement: storybook Maratha wedding styling */
-body{background:radial-gradient(ellipse at top,#fff1d9 0%,#ead0b4 58%,#d4a982 100%)}
-.story{background:transparent}
-.card{background:linear-gradient(145deg,rgba(255,250,240,.97),rgba(255,239,218,.96));border:1px solid #b98a48;box-shadow:0 24px 70px #501a2b25, inset 0 0 0 5px #fff8e9;}
-.card:before,.card:after{font-size:38px;color:#a96c36}
-.kicker{font-size:.78rem;letter-spacing:.18em;color:#9a5d2d}
-.art{width:min(100%,360px);margin:3px auto 4px}
-.art img{max-height:38svh;border-radius:18px;object-fit:contain;background:radial-gradient(ellipse,#fff8ed 0%,#f8e5ca 72%,transparent 73%);}
-h1,h2{letter-spacing:.01em;text-wrap:balance}
-p{text-wrap:pretty}
-.detail{background:rgba(255,250,241,.88)}
-.btn{transition:transform .18s ease,box-shadow .18s ease}.btn:hover{transform:translateY(-2px);box-shadow:0 11px 24px #6d1b3033}
-@media(max-width:480px){.card{border-radius:18px}.art img{max-height:34svh}}
+.divider{display:flex;align-items:center;justify-content:center;gap:10px;color:var(--wine);margin:10px auto}
+.divider:before,.divider:after{content:"";height:1.5px;width:min(90px,22vw);background:linear-gradient(90deg,transparent,var(--wine))}
+.divider:after{transform:scaleX(-1)}
 
+.btn{display:inline-flex;align-items:center;gap:.5em;padding:.62em 1.5em;border-radius:999px;border:2px solid #f3d7a4;
+ background:linear-gradient(180deg,#9c2340,var(--wine-d));color:#fff6e6;font:600 1.12rem var(--serif);text-decoration:none;cursor:pointer;
+ box-shadow:0 0 0 1.5px var(--wine-d),0 8px 18px #6a122633;transition:transform .2s,box-shadow .2s}
+.btn:hover{transform:translateY(-2px);box-shadow:0 0 0 1.5px var(--wine-d),0 12px 24px #6a122644}
+.btn:active{transform:scale(.97)}
+.btn.ghost{background:#fff8ec;color:var(--wine);border-color:var(--gold);box-shadow:0 4px 12px #6a12261a}
+.btn .mr{font-size:.85em;opacity:.9}
+
+/* nav */
+nav{position:sticky;top:0;z-index:20;display:flex;justify-content:flex-end;gap:clamp(10px,3vw,28px);padding:10px clamp(14px,4vw,48px);
+ background:linear-gradient(#fbefd9f2,#fbefd9cc 70%,transparent)}
+nav a{color:var(--ink);text-decoration:none;text-align:center;font-size:1.02rem;line-height:1.1;padding-bottom:4px;border-bottom:2px solid transparent;transition:border-color .3s,color .3s}
+nav a small{display:block;font-family:var(--mr);font-size:.78rem;color:var(--wine)}
+nav a.on,nav a:hover{color:var(--wine);border-color:var(--wine)}
+
+/* ===== painted scene (parallax layers) ===== */
+.scene{position:relative;aspect-ratio:1/1.02;width:100%;max-width:600px;margin:0 auto;touch-action:pan-y}
+.scene>*{position:absolute}
+.scene .sky{inset:4% 2% 8%;border-radius:46% 54% 40% 60%/50% 44% 56% 50%;
+ background:radial-gradient(ellipse at 70% 25%,#fff4e0,transparent 55%),radial-gradient(ellipse at 30% 30%,#f7cfc0,transparent 60%),linear-gradient(#cfdcec,#f6e2cc 70%);
+ filter:blur(2px);opacity:.95}
+.scene .land{left:0;right:0;bottom:6%;width:100%;height:auto}
+.scene .couple{left:50%;bottom:4%;height:86%;width:auto;max-width:none;transform:translateX(-50%);cursor:pointer;
+ -webkit-mask-image:linear-gradient(#000 80%,transparent 99%);mask-image:linear-gradient(#000 80%,transparent 99%);
+ filter:drop-shadow(0 8px 14px #6a3b1a30);transition:transform .25s}
+.scene .flowers{width:30%;mix-blend-mode:multiply;pointer-events:none}
+.scene .flowers.r{right:-2%;bottom:0;-webkit-mask-image:radial-gradient(circle at 100% 100%,#000 55%,transparent 75%);mask-image:radial-gradient(circle at 100% 100%,#000 55%,transparent 75%)}
+.scene .flowers.l{left:-2%;bottom:0;transform:scaleX(-1);-webkit-mask-image:radial-gradient(circle at 100% 100%,#000 55%,transparent 75%);mask-image:radial-gradient(circle at 100% 100%,#000 55%,transparent 75%)}
+.scene .bell{left:6%;top:0;width:13%;cursor:pointer;transform-origin:50% 0;animation:sway 3.6s ease-in-out infinite;background:none;border:0;padding:0}
+.scene .bell.ring{animation:ring .9s ease-out}
+@keyframes sway{0%,100%{transform:rotate(-3deg)}50%{transform:rotate(3deg)}}
+@keyframes ring{0%{transform:rotate(0)}15%{transform:rotate(22deg)}35%{transform:rotate(-18deg)}55%{transform:rotate(12deg)}75%{transform:rotate(-6deg)}100%{transform:rotate(0)}}
+.scene .hint{right:4%;top:6%;font-family:var(--mr);font-size:.82rem;color:var(--wine);background:#fff8ecd9;border:1px solid #e3c08a;padding:4px 10px;border-radius:999px;pointer-events:none;animation:bob 2.4s ease-in-out infinite}
+@keyframes bob{50%{transform:translateY(-5px)}}
+.flag{animation:wave 1.6s ease-in-out infinite;transform-origin:0 50%;transform-box:fill-box}
+@keyframes wave{0%,100%{transform:skewY(0) scaleX(1)}50%{transform:skewY(-6deg) scaleX(.9)}}
+.cloud{animation:drift 26s linear infinite}
+@keyframes drift{from{transform:translateX(-60px)}to{transform:translateX(60px)}}
+
+/* hero */
+.hero{display:grid;grid-template-columns:1.05fr 1fr;align-items:center;gap:10px;max-width:1180px;margin:0 auto;padding:0 clamp(14px,4vw,40px);min-height:min(90vh,780px)}
+.hero-text{text-align:center;padding:10px 0 30px}
+.shree{font-family:var(--mr);color:#b4542a;font-size:1.05rem}
+.subhead{font-family:var(--mr);color:var(--wine);font-size:clamp(1.6rem,4vw,2.3rem);margin:4px 0 0}
+.names{font-size:clamp(3rem,7.4vw,5.4rem);margin:6px 0}
+.names .amp{display:block;font-size:.7em;margin:.05em 0}
+.names-mr{font-family:var(--mr);font-size:clamp(1.05rem,2.4vw,1.3rem)}
+.names-mr b{color:var(--wine);font-weight:400}
+.tag{font-style:italic;font-size:clamp(1.25rem,2.6vw,1.6rem);line-height:1.35;margin-top:14px}
+.tag-mr{font-family:var(--mr);font-size:1.05rem;color:#7a4a3a;margin-top:4px}
+.typed:after{content:"|";animation:caret 1s steps(1) infinite;color:var(--wine)}
+@keyframes caret{50%{opacity:0}}
+
+/* scroll cards */
+.scrolls{display:grid;grid-template-columns:1fr 1.15fr;gap:clamp(14px,3vw,30px);max-width:1180px;margin:0 auto;padding:0 clamp(14px,4vw,40px)}
+.parch{position:relative;padding:clamp(30px,5vw,52px) clamp(20px,4vw,46px);text-align:center;border-radius:6px;
+ background:radial-gradient(ellipse at 30% 20%,#fffaf0,transparent 60%),radial-gradient(ellipse at 80% 90%,#f1d3a6aa,transparent 60%),linear-gradient(160deg,#fdf1db,#f5ddb6);
+ box-shadow:0 18px 40px #6a3b1a26,inset 0 0 40px #c9965a44,inset 0 0 0 1px #e6c48f}
+.parch:before,.parch:after{content:"";position:absolute;left:-8px;right:-8px;height:18px;border-radius:10px;background:linear-gradient(180deg,#f7e3bf,#d9b27a 60%,#f2d7a8);box-shadow:0 3px 6px #6a3b1a33}
+.parch:before{top:-9px}.parch:after{bottom:-9px}
+.poem{font-style:italic;font-size:clamp(1.2rem,2.4vw,1.45rem);line-height:1.5}
+.poem+.poem{margin-top:14px}
+.poem-mr{font-family:var(--mr);font-size:1.02rem;color:#7a4a3a;line-height:1.7;margin-top:14px}
+.h2{font-size:clamp(2.5rem,5.4vw,3.6rem);margin:0}
+.h2-mr{font-family:var(--mr);color:var(--wine);font-size:clamp(1.2rem,2.8vw,1.6rem);margin-top:2px}
+
+/* scratch card */
+.scratch{position:relative;width:min(100%,360px);height:118px;margin:18px auto 8px;border-radius:14px;overflow:hidden;border:1.5px dashed #c69a52;background:#fff8ec}
+.scratch .under{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:center;align-items:center;line-height:1.2}
+.scratch .under b{font-size:1.7rem;color:var(--wine)}
+.scratch canvas{position:absolute;inset:0;width:100%;height:100%;cursor:grab;touch-action:none;transition:opacity .6s}
+.scratch.done canvas{opacity:0;pointer-events:none}
+.facts{display:grid;grid-template-columns:1fr auto 1fr;gap:16px;align-items:center;margin:16px auto;max-width:470px;text-align:left}
+.facts .sep{width:1.5px;height:64px;background:var(--wine);opacity:.6}
+.fact{display:flex;gap:10px;align-items:flex-start}
+.fact svg{flex:none;width:30px;height:30px;color:var(--wine);margin-top:2px}
+.fact b{display:block;font-size:1.15rem;font-weight:600;line-height:1.2}
+.fact span{font-size:1rem;color:#6b4a3e}
+.fact .mr{display:block;font-size:.88rem;color:var(--wine);margin-top:2px}
+.actions{display:flex;flex-wrap:wrap;gap:10px;justify-content:center}
+.muhurat{font-size:1rem;color:#6b4a3e;margin:-2px 0 14px}
+.countdown{display:flex;gap:8px;justify-content:center;margin-top:18px}
+.countdown div{min-width:64px;padding:8px 6px;border-radius:12px;background:#fff8ecc0;border:1px solid #e3c08a}
+.countdown b{display:block;font-size:1.6rem;color:var(--wine);line-height:1;font-variant-numeric:tabular-nums}
+.countdown small{font-family:var(--mr);font-size:.78rem}
+
+.section{max-width:1180px;margin:0 auto;padding:clamp(60px,8vw,96px) clamp(14px,4vw,40px) 0;text-align:center}
+
+/* story */
+.story{display:grid;grid-template-columns:1fr 1fr;gap:20px;align-items:center;text-align:left}
+.story .scene{max-width:440px;aspect-ratio:1/1.15}
+.steps{list-style:none;padding:0;margin:0;position:relative}
+.steps:before{content:"";position:absolute;left:19px;top:10px;bottom:10px;width:2px;background:linear-gradient(var(--gold),var(--wine))}
+.steps li{position:relative;padding:0 0 22px 56px}
+.steps li i{position:absolute;left:0;top:0;width:40px;height:40px;border-radius:50%;display:grid;place-items:center;font-style:normal;background:#fff8ec;border:2px solid var(--gold);font-size:1.2rem;transition:transform .4s,background .4s}
+.steps li.in i{background:#fde3c3;transform:scale(1.08)}
+.steps b{display:block;color:var(--wine);font-size:1.25rem}
+.steps .mr{font-size:.95rem;color:#7a4a3a}
+
+/* moments */
+.photos{display:flex;flex-wrap:wrap;justify-content:center;gap:clamp(14px,3vw,28px);margin-top:26px}
+.polaroid{background:#fffdf7;padding:10px 10px 12px;width:min(42vw,230px);margin:0;box-shadow:0 12px 26px #4a2a2433;transform:rotate(var(--r));transition:transform .3s;cursor:zoom-in;border:0;text-align:center}
+.polaroid:hover{transform:rotate(0) scale(1.05)}
+.polaroid img{aspect-ratio:4/5;object-fit:cover;width:100%}
+.polaroid span{display:block;font-family:var(--mr);color:var(--wine);font-size:.98rem;margin-top:8px}
+.polaroid small{display:block;font-family:var(--script);font-size:1.3rem;color:var(--ink);line-height:1}
+.lightbox{position:fixed;inset:0;z-index:60;background:#2a0d14e6;display:none;place-items:center;padding:20px;cursor:zoom-out}
+.lightbox.on{display:grid;animation:fadein .3s}
+.lightbox img{max-height:86vh;border:8px solid #fffdf7;box-shadow:0 20px 50px #000a}
+@keyframes fadein{from{opacity:0}}
+
+/* blessings */
+.bless{display:grid;grid-template-columns:1.05fr 1fr;align-items:center;gap:10px;max-width:1180px;margin:0 auto;padding:clamp(50px,7vw,80px) clamp(14px,4vw,40px) 10px}
+.bless-text{text-align:center}
+.invite{margin:22px auto 0;max-width:440px;padding:16px 18px;border-top:1.5px solid #c69a5299;border-bottom:1.5px solid #c69a5299}
+.invite .mr{font-size:1.08rem;line-height:1.75}
+.invite .families{font-family:var(--mr);color:var(--wine);font-size:1.15rem;margin-top:8px}
+.jay{font-family:var(--mr);color:#c0571d;font-size:1.25rem;margin-top:16px}
+
+/* wishes wall */
+.wall{max-width:760px;margin:0 auto}
+.wish-form{display:grid;gap:10px;margin:20px auto 0;max-width:520px}
+.wish-form input,.wish-form textarea{width:100%;padding:12px 14px;border-radius:12px;border:1.5px solid #e3c08a;background:#fffaf1;font:1.05rem var(--serif);color:var(--ink)}
+.wish-form textarea{min-height:84px;resize:vertical}
+.wish-form input:focus,.wish-form textarea:focus{outline:2px solid #c69a5288;border-color:var(--wine)}
+.chips{display:flex;flex-wrap:wrap;gap:8px;justify-content:center}
+.chip{font-family:var(--mr);font-size:.9rem;padding:5px 12px;border-radius:999px;border:1px solid #e3c08a;background:#fff8ec;color:var(--wine);cursor:pointer}
+.chip:hover{background:#fde3c3}
+.wishes{display:flex;flex-wrap:wrap;gap:14px;justify-content:center;margin-top:24px}
+.wish{width:min(100%,220px);padding:14px 14px 12px;background:#fff6c9;box-shadow:0 8px 16px #4a2a2422;transform:rotate(var(--r));text-align:left;animation:pop .5s cubic-bezier(.3,1.6,.5,1)}
+.wish p{font-size:1.05rem;line-height:1.35}
+.wish b{display:block;margin-top:8px;color:var(--wine);font-family:var(--script);font-size:1.4rem;font-weight:400}
+@keyframes pop{from{transform:scale(.4) rotate(var(--r));opacity:0}}
+
+footer{text-align:center;padding:50px 16px 110px}
+footer .mr{color:var(--wine);font-size:1.35rem}
+footer small{display:block;margin-top:6px;color:#7a5a4a}
+
+/* floating akshata button */
+.fab{position:fixed;right:16px;bottom:16px;z-index:30;display:flex;flex-direction:column;gap:10px;align-items:flex-end}
+.fab button{display:flex;align-items:center;gap:8px;border:2px solid #f3d7a4;border-radius:999px;padding:10px 16px;cursor:pointer;
+ background:linear-gradient(180deg,#f39a3a,#d66a12);color:#fff;box-shadow:0 8px 20px #6a122640;font:600 1rem var(--serif)}
+.fab button .mr{font-size:.95rem}
+.fab button.share{background:linear-gradient(180deg,#9c2340,var(--wine-d))}
+.fab .count:empty{display:none}
+.fab .count{font-family:var(--mr);font-size:.8rem;background:#fff8ec;color:var(--wine);border:1px solid #e3c08a;border-radius:999px;padding:2px 10px}
+
+/* particles */
+.fx{position:fixed;inset:0;pointer-events:none;z-index:40;overflow:hidden}
+.fx i{position:absolute;display:block;will-change:transform,opacity}
+.fx .rice{width:5px;height:9px;border-radius:50%;background:#f7e7a0;box-shadow:inset -1px -1px 0 #d8b44a}
+.fx .rice.k{background:#f2b03a}
+.fx .pet{width:12px;height:9px;border-radius:12px 0 12px 0;background:linear-gradient(135deg,#f78fae,#e0436d)}
+.fx .heart{font-style:normal;font-size:22px;color:#e0436d}
+.petals{position:fixed;inset:0;pointer-events:none;z-index:15;overflow:hidden}
+.petal{position:absolute;top:-30px;width:12px;height:9px;border-radius:12px 0 12px 0;background:linear-gradient(135deg,#f78fae,#e0436d);opacity:.7;animation:fall linear infinite}
+@keyframes fall{to{transform:translate(var(--dx),110vh) rotate(540deg)}}
+
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .9s ease,transform .9s ease}
+.reveal.in{opacity:1;transform:none}
+
+.toast{position:fixed;left:50%;bottom:90px;transform:translate(-50%,20px);z-index:70;background:var(--wine);color:#fff6e6;padding:10px 18px;border-radius:999px;font-family:var(--mr);opacity:0;transition:.4s;pointer-events:none}
+.toast.on{opacity:1;transform:translate(-50%,0)}
+
+/* cover */
+.cover{position:fixed;inset:0;z-index:80;display:grid;place-items:center;text-align:center;cursor:pointer;color:#fbe7c4;transition:visibility 1.2s}
+.cover .door{position:absolute;top:0;bottom:0;width:50%;background:radial-gradient(ellipse at 100% 45%,#a8273f,#6a1226 70%,#4a0c1a);transition:transform 1.2s cubic-bezier(.7,0,.3,1)}
+.cover .door.l{left:0;border-right:2px solid #e6c48f66}
+.cover .door.r{right:0;transform-origin:right;background:radial-gradient(ellipse at 0 45%,#a8273f,#6a1226 70%,#4a0c1a);border-left:2px solid #e6c48f66}
+.cover.open{visibility:hidden}
+.cover.open .door.l{transform:translateX(-102%)}
+.cover.open .door.r{transform:translateX(102%)}
+.cover-inner{position:relative;border:1.5px solid #e6c48f88;outline:1.5px solid #e6c48f44;outline-offset:8px;border-radius:200px 200px 18px 18px;width:min(86vw,380px);padding:50px 22px 32px;transition:opacity .5s}
+.cover.open .cover-inner{opacity:0}
+.cover .lamp{font-size:2.4rem;line-height:1;animation:bob 2.4s ease-in-out infinite}
+.cover .mr.top{color:#f6c86f;font-size:1.05rem;margin-top:6px}
+.cover h1{font-family:var(--mr);font-weight:400;font-size:clamp(2.4rem,9vw,3.2rem);margin:12px 0 2px;color:#fff1d6}
+.cover .script{color:#f6d79c;font-size:2.4rem}
+.cover .tap{margin-top:24px;display:inline-block;padding:10px 22px;border-radius:999px;border:1.5px solid #f6c86f;color:#fff1d6;animation:pulse 2s ease-in-out infinite}
+.cover .tap .mr{display:block;font-size:.85rem;color:#f6c86f}
+@keyframes pulse{50%{box-shadow:0 0 0 12px #f6c86f22}}
+.sound{position:fixed;left:14px;bottom:16px;z-index:30;width:44px;height:44px;border-radius:50%;border:2px solid #e3c08a;background:#fff8ec;color:var(--wine);font-size:1.2rem;cursor:pointer;box-shadow:0 6px 14px #6a122626}
+
+@media (max-width:820px){
+ .hero,.bless,.story{grid-template-columns:1fr}
+ .hero-text{margin-top:-10px}
+ .scrolls{grid-template-columns:1fr;gap:36px}
+ .bless .scene{order:2}
+ .story .scene{order:-1}
+ nav{justify-content:center}
+}
+@media (max-width:440px){
+ body{font-size:17px}
+ .facts{grid-template-columns:1fr;gap:12px;max-width:270px}
+ .facts .sep{width:100%;height:1.5px}
+ nav a{font-size:.9rem}
+ .fab button{padding:9px 13px}
+}
+@media (prefers-reduced-motion:reduce){
+ .petals{display:none}.reveal{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}
+ .flag,.cloud,.scene .bell{animation:none}
+}
 </style>
 </head>
 <body>
-<main class="story">
-<section class="card scene active" id="scene0">
-<div class="kicker">A little story • A forever beginning</div>
-<div class="art"><img src="assets/maratha-couple.png" alt="Illustrated Akash and Akshada in traditional Marathi wedding attire"></div>
-<div class="ornament">❧ ♥ ❧</div><h1>Two Hearts,<br>One Beautiful Journey</h1><p>Where two paths meet beneath auspicious skies, a quiet promise gently starts to rise.</p><div class="nav"><button class="btn" onclick="next()">Open our story ♥</button></div>
-</section>
-<section class="card scene" id="scene1"><div class="kicker">Our story</div><div class="art"><img src="assets/maratha-couple.png" alt="Akash and Akshada illustrated in Maratha wedding attire"></div><div class="ornament">॥ शुभमंगल सावधान ॥</div><h2>Two Paths, One Promise</h2><p>Not all beginnings need a thousand days;<br>Some bloom in trust, in tender, thoughtful ways.</p><p>May each dream find room to soar;<br>May joy be ours, forevermore.</p><div class="nav"><button class="btn" onclick="next()">The big news →</button></div></section>
-<section class="card scene" id="scene2"><div class="kicker">With the blessings of our families</div><div class="art"><img src="assets/maratha-couple.png" alt="Akash and Akshada in Maratha royal wedding attire"></div><div class="ornament">॥ श्री गणेशाय नमः ॥</div><h1>We’re getting<br>married!</h1><h2>Save the Date</h2><p id="dateDisplay">7 February 2027</p><p id="timeDisplay">[Wedding Time]</p><div class="nav"><button class="btn" onclick="next()">Wedding details →</button></div></section>
-<section class="card scene" id="scene3"><div class="kicker">The celebration</div><div class="art"><img src="assets/maratha-couple.png" alt="Maratha wedding couple"></div><h2>Wedding Details</h2><div class="ornament">❧ ✦ ❧</div><div class="details"><div class="detail"><strong>👰 Bride</strong><span id="brideDisplay">[Bride Name]</span></div><div class="detail"><strong>🤵 Groom</strong><span id="groomDisplay">[Groom Name]</span></div><div class="detail"><strong>📅 Date & Time</strong><span id="dateTimeDisplay">[Date and time]</span></div><div class="detail"><strong>📍 Venue</strong><span id="venueDisplay">[Wedding Venue, City]</span></div></div><div class="nav"><button class="btn" onclick="openMaps()">Get directions ↗</button><button class="btn secondary" onclick="addCalendar()">Add to calendar</button></div><button class="btn" onclick="next()">One last thing ♥</button></section>
-<section class="card scene" id="scene4"><div class="kicker">A heartfelt invitation</div><div class="art"><img src="assets/maratha-couple.png" alt="Akash and Akshada wedding illustration"></div><div class="ornament">♥ ❧ ♥</div><h2>With our families’ blessings, we begin</h2><p>What began with our families’ introduction is becoming a bond we’re excited to nurture.</p><p>We look forward to understanding each other better, supporting one another’s dreams, and building a peaceful, happy life together.</p><h2>आमच्या आनंदात सहभागी व्हा!</h2><p>With love,<br><strong id="signoff">[Groom] & [Bride]</strong></p><div class="nav"><button class="btn secondary" onclick="restart()">↺ Read our story again</button></div></section>
-</main><div class="dots" id="dots"></div><footer>Made with love • A Marathi royal wedding story</footer>
+
+<!-- ===== Opening doors ===== -->
+<div class="cover" id="cover" role="button" tabindex="0" aria-label="Open the invitation">
+ <div class="door l"></div><div class="door r"></div>
+ <div class="cover-inner">
+  <div class="lamp" aria-hidden="true">🪔</div>
+  <div class="mr top">॥ श्री गणेशाय नमः ॥</div>
+  <h1>शुभविवाह</h1>
+  <div class="script">Akash &amp; Akshada</div>
+  <div class="mr" style="margin-top:6px">रविवार, ७ फेब्रुवारी २०२७</div>
+  <div class="tap">Open Invitation<span class="mr">दार उघडा · निमंत्रण पहा</span></div>
+ </div>
+</div>
+
+<!-- shared painted-landscape symbol (fort on hill + bhagwa flag) -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+ <defs>
+  <filter id="wc" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency=".04" numOctaves="3" seed="4"/><feDisplacementMap in="SourceGraphic" scale="6"/></filter>
+  <symbol id="landscape" viewBox="0 0 600 360">
+   <g class="cloud" opacity=".7"><ellipse cx="120" cy="60" rx="60" ry="14" fill="#fff"/><ellipse cx="150" cy="52" rx="34" ry="14" fill="#fff"/><ellipse cx="470" cy="40" rx="50" ry="11" fill="#fff"/></g>
+   <g filter="url(#wc)">
+    <path d="M0 250 C80 200 150 220 220 190 C300 150 360 120 440 130 C520 140 560 170 600 160 L600 360 L0 360Z" fill="#b8c9a3" opacity=".75"/>
+    <!-- Maratha fort: walls + round bastions (buruj) -->
+    <g fill="#d8b28c" stroke="#9a6a4a" stroke-width="1.5">
+     <path d="M330 140 L330 96 L540 96 L540 150 C480 160 400 156 330 140Z"/>
+     <path d="M330 96 h10 v-8 h10 v8 h10 v-8 h10 v8 h10 v-8 h10 v8 h10 v-8 h10 v8 h10 v-8 h10 v8 h10 v-8 h10 v8 h10 v-8 h10 v8 h10 v-8 h10 v8 h10 v-8 h10 v8 h10 v-8 h10 v8 h10 v-8 h10 v8 h10 v-8 h10 v8 h10 v-8 h10 v8 h10 v-8 h10 v8"/>
+     <path d="M318 146 L318 86 Q338 76 358 86 L358 150Z"/>
+     <path d="M420 140 L420 70 Q444 58 468 70 L468 148Z"/>
+     <path d="M520 150 L520 84 Q542 74 564 84 L564 156Z"/>
+     <path d="M318 86 h8 v-6 h8 v6 h8 v-6 h8 v6 h8 M420 70 h8 v-6 h8 v6 h8 v-6 h8 v6 h8 v-6 h8 v6 M520 84 h8 v-6 h8 v6 h8 v-6 h8 v6 h8"/>
+     <path d="M434 148 L434 116 Q444 106 454 116 L454 148Z" fill="#8a5a3a"/>
+    </g>
+    <g fill="#b0866a" opacity=".6"><rect x="340" y="110" width="5" height="8"/><rect x="380" y="112" width="5" height="8"/><rect x="490" y="112" width="5" height="8"/><rect x="536" y="100" width="5" height="8"/></g>
+    <path d="M0 290 C100 250 190 270 260 240 C340 205 420 200 500 215 C550 225 580 240 600 236 L600 360 L0 360Z" fill="#8fae7d" opacity=".8"/>
+    <path d="M0 330 C120 300 260 310 360 290 C460 270 540 290 600 286 L600 360 L0 360Z" fill="#6f9a6a" opacity=".55"/>
+   </g>
+   <!-- bhagwa flag -->
+   <line x1="444" y1="62" x2="444" y2="10" stroke="#6b4a3a" stroke-width="2.5"/>
+   <path class="flag" d="M445 12 L486 18 L470 26 L486 34 L445 38Z" fill="#f08a24"/>
+  </symbol>
+  <symbol id="bellsym" viewBox="0 0 60 120">
+   <path d="M30 0 V34" stroke="#8a6a3a" stroke-width="3"/>
+   <circle cx="30" cy="38" r="5" fill="none" stroke="#b8862f" stroke-width="3"/>
+   <path d="M30 42 C14 42 12 60 12 74 C12 84 6 88 4 92 H56 C54 88 48 84 48 74 C48 60 46 42 30 42Z" fill="#d9a441" stroke="#8a5a1a" stroke-width="2"/>
+   <path d="M18 60 C18 52 22 48 26 47" stroke="#fbe3a4" stroke-width="3" fill="none" stroke-linecap="round"/>
+   <rect x="4" y="88" width="52" height="6" rx="3" fill="#b8862f"/>
+   <circle cx="30" cy="100" r="6" fill="#8a5a1a"/>
+  </symbol>
+ </defs>
+</svg>
+
+<div class="petals" id="petals" aria-hidden="true"></div>
+<div class="fx" id="fx" aria-hidden="true"></div>
+
+<nav id="nav">
+ <a href="#story">Our Story<small>आमची गोष्ट</small></a>
+ <a href="#details">Wedding Details<small>लग्नसोहळा</small></a>
+ <a href="#blessings">Blessings<small>आशीर्वाद</small></a>
+</nav>
+
+<main>
+ <!-- ===== HERO ===== -->
+ <section class="hero" id="top">
+  <div class="scene reveal" data-parallax>
+   <div class="sky" data-depth="4"></div>
+   <svg class="land" data-depth="10" viewBox="0 0 600 360" style="top:18%"><use href="#landscape"/></svg>
+   <img class="couple" data-depth="22" data-hearts src="assets/cartoon-hero.webp" alt="Akash and Akshada — Akash and Akshada holding hands, he in a peacock-embroidered jacket and she in a pink Paithani saree" width="721" height="1000">
+   <img class="flowers r" data-depth="30" src="assets/flowers-corner.jpg" alt="">
+   <img class="flowers l" data-depth="30" src="assets/flowers-corner.jpg" alt="">
+   <button class="bell" data-depth="26" aria-label="Ring the temple bell"><svg viewBox="0 0 60 120"><use href="#bellsym"/></svg></button>
+   <span class="hint">आम्हाला टॅप करा 💕</span>
+  </div>
+  <div class="hero-text reveal">
+   <div class="shree">॥ शुभमंगल सावधान ॥</div>
+   <div class="subhead">शुभविवाह</div>
+   <h1 class="script names">Akash Jagtap<span class="amp">&amp;</span>Akshada Kharade</h1>
+   <p class="names-mr">चि. <b>आकाश</b> &nbsp;❦&nbsp; चि. सौ. कां. <b>अक्षदा</b></p>
+   <p class="tag typed" id="typed" aria-label="Two paths, one journey… A lifetime together."></p>
+   <p class="tag-mr">दोन वाटा, एक प्रवास… आयुष्यभराची साथ.</p>
+   <div class="divider"><span>♡</span></div>
+   <a class="btn" href="#story">Our Story <span class="mr">· आमची गोष्ट</span> →</a>
+  </div>
+ </section>
+
+ <!-- ===== SCROLLS ===== -->
+ <section class="scrolls" style="margin-top:20px">
+  <article class="parch reveal">
+   <div class="h2-mr" style="margin-bottom:12px">दोन शब्द</div>
+   <p class="poem">Not all beginnings need a thousand days,<br>Some bloom in trust, in tender ways.</p>
+   <p class="poem">May each dream find room to soar,<br>May joy be ours, forevermore.</p>
+   <p class="poem-mr">घरच्यांच्या ओळखीतून सुरू झालेली ही गोष्ट,<br>आता आयुष्यभराच्या नात्यात बहरते आहे.</p>
+   <div class="divider"><span>♡</span></div>
+  </article>
+
+  <article class="parch reveal" id="details">
+   <h2 class="script h2">We're Getting Married!</h2>
+   <div class="h2-mr">आमचं लग्न ठरलंय!</div>
+   <div class="scratch" id="scratch">
+    <div class="under"><span class="mr" style="color:#7a4a3a">शुभ दिवस</span><b>7 February 2027</b><span class="mr">रविवार · ७ फेब्रुवारी २०२७</span></div>
+    <canvas id="scratchCanvas" aria-label="Scratch to reveal the wedding date"></canvas>
+   </div>
+   <div class="facts">
+    <div class="fact">
+     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4M7 14h2M11 14h2M15 14h2M7 17h2M11 17h2"/></svg>
+     <div><b>7 February 2027</b><span>(Sunday)</span><span class="mr">रविवार, ७ फेब्रुवारी २०२७</span></div>
+    </div>
+    <div class="sep"></div>
+    <div class="fact">
+     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M12 22s7-7.2 7-12.5A7 7 0 0 0 5 9.5C5 14.8 12 22 12 22Z"/><circle cx="12" cy="9.5" r="2.5"/></svg>
+     <div><b>Punyai Garden</b><span>Kashti Road, Mandavgan Pharata</span><span class="mr">पुण्याई गार्डन, मांडवगण फराटा</span></div>
+    </div>
+   </div>
+   <p class="muhurat"><span class="mr">शुभमुहूर्त</span> · <span id="muhurat"></span></p>
+   <div class="actions">
+    <a class="btn" id="mapsBtn" href="#" target="_blank" rel="noopener">View on Maps →</a>
+    <button class="btn ghost" id="calBtn" type="button">Add to Calendar</button>
+   </div>
+   <div class="countdown" id="countdown" aria-label="Countdown to the wedding">
+    <div><b id="cd-d">–</b><small>दिवस</small></div>
+    <div><b id="cd-h">–</b><small>तास</small></div>
+    <div><b id="cd-m">–</b><small>मिनिटे</small></div>
+    <div><b id="cd-s">–</b><small>सेकंद</small></div>
+   </div>
+  </article>
+ </section>
+
+ <!-- ===== STORY ===== -->
+ <section class="section" id="story">
+  <h2 class="script h2">Our Story</h2>
+  <div class="h2-mr">आमची गोष्ट</div>
+  <div class="divider"><span>✿</span></div>
+  <div class="story" style="margin-top:20px">
+   <div class="scene reveal" data-parallax>
+    <div class="sky" data-depth="4"></div>
+    <svg class="land" data-depth="10" viewBox="0 0 600 360" style="top:22%"><use href="#landscape"/></svg>
+    <img class="couple" data-depth="20" data-hearts src="assets/cartoon-story.webp" alt="Akash and Akshada — Akash and Akshada walking together" width="513" height="1000" loading="lazy" style="height:90%">
+    <img class="flowers r" data-depth="28" src="assets/flowers-corner.jpg" alt="">
+   </div>
+   <ol class="steps">
+    <li class="reveal"><i>🏡</i><b>Families met</b><span class="mr">घरच्यांची ओळख — आणि एका सुंदर नात्याची सुरुवात</span></li>
+    <li class="reveal"><i>☕</i><b>Conversations began</b><span class="mr">गप्पा, हसू आणि एकमेकांना समजून घेणं</span></li>
+    <li class="reveal"><i>💍</i><b>A promise was made</b><span class="mr">"हो" म्हटलं… आणि सगळं ठरलं!</span></li>
+    <li class="reveal"><i>🪔</i><b>7 February 2027</b><span class="mr">शुभमंगल सावधान — आयुष्यभराची साथ</span></li>
+   </ol>
+  </div>
+ </section>
+
+ <!-- ===== MOMENTS ===== -->
+ <section class="section">
+  <h2 class="script h2">Little Moments</h2>
+  <div class="h2-mr">आमचे काही गोड क्षण</div>
+  <div class="photos">
+   <button class="polaroid reveal" style="--r:-4deg" data-full="assets/photos/first-date.jpg"><img style="object-position:50% 85%" src="assets/photos/first-date.jpg" alt="Akash and Akshada smiling at a restaurant" loading="lazy"><span>हसरे क्षण</span><small>happy days</small></button>
+   <button class="polaroid reveal" style="--r:3deg" data-full="assets/photos/together.jpg"><img src="assets/photos/together.jpg" alt="Akash and Akshada in traditional attire" loading="lazy"><span>हातात हात</span><small>hand in hand</small></button>
+   <button class="polaroid reveal" style="--r:-2deg" data-full="assets/photos/walk.jpg"><img src="assets/photos/walk.jpg" alt="Akash and Akshada walking together" loading="lazy"><span>सोबत चालताना</span><small>walking together</small></button>
+   <button class="polaroid reveal" style="--r:4deg" data-full="assets/photos/lean.jpg"><img src="assets/photos/lean.jpg" alt="Akshada leaning on Akash's shoulder" loading="lazy"><span>तुझी साथ</span><small>always with you</small></button>
+  </div>
+ </section>
+
+ <!-- ===== BLESSINGS ===== -->
+ <section class="bless" id="blessings">
+  <div class="scene reveal" data-parallax>
+   <div class="sky" data-depth="4"></div>
+   <svg class="land" data-depth="10" viewBox="0 0 600 360" style="top:16%"><use href="#landscape"/></svg>
+   <img class="couple" data-depth="20" data-hearts src="assets/cartoon-blessing.webp" alt="Akash and Akshada — Akshada leaning on Akash's shoulder" width="779" height="1000" loading="lazy">
+   <img class="flowers r" data-depth="28" src="assets/flowers-corner.jpg" alt="">
+   <img class="flowers l" data-depth="28" src="assets/flowers-corner.jpg" alt="">
+  </div>
+  <div class="bless-text reveal">
+   <h2 class="script h2">With Our Families' Blessings,<br>We Begin</h2>
+   <div class="h2-mr">वडीलधाऱ्यांच्या आशीर्वादाने, नव्या आयुष्याची सुरुवात</div>
+   <div class="divider"><span>✿</span></div>
+   <p class="poem">May every hope be met with grace,<br>May kindness make our home its place,<br>May laughter light the path we tread,<br>And blessings crown the years ahead.</p>
+   <div class="invite">
+    <p class="mr">आमच्या आनंदात सहभागी होऊन<br>नवदांपत्यास शुभाशीर्वाद द्यावेत, ही नम्र विनंती.<br><b style="color:var(--wine);font-weight:400">आपली उपस्थिती प्रार्थनीय.</b></p>
+    <p class="families">— जगताप व खराडे परिवार</p>
+   </div>
+   <p class="jay">॥ जय भवानी · जय शिवाजी ॥</p>
+  </div>
+ </section>
+
+ <!-- ===== WISHES WALL ===== -->
+ <section class="section wall" id="wishes">
+  <h2 class="script h2">Send Your Blessings</h2>
+  <div class="h2-mr">तुमच्या शुभेच्छा लिहा</div>
+  <form class="wish-form" id="wishForm">
+   <div class="chips" id="chips">
+    <button type="button" class="chip">सुखी संसार!</button>
+    <button type="button" class="chip">शुभमंगल सावधान!</button>
+    <button type="button" class="chip">लग्नाला नक्की येणार!</button>
+    <button type="button" class="chip">जोडी नंबर १!</button>
+   </div>
+   <input id="wishName" maxlength="40" placeholder="तुमचं नाव · Your name" required>
+   <textarea id="wishText" maxlength="240" placeholder="शुभेच्छा · Your wishes for Akash & Akshada" required></textarea>
+   <div class="actions">
+    <button class="btn" type="submit">Post Blessing <span class="mr">· पाठवा</span></button>
+    <button class="btn ghost" type="button" id="waBtn">Send on WhatsApp</button>
+   </div>
+  </form>
+  <div class="wishes" id="wishes"></div>
+ </section>
+</main>
+
+<footer>
+ <div class="mr">लग्नाला नक्की यायचं हं! 🙏</div>
+ <small>Akash &amp; Akshada · 07.02.2027 · Made with love</small>
+</footer>
+
+<button class="sound" id="soundBtn" aria-label="Toggle sounds" title="Sound on/off">🔔</button>
+<div class="fab">
+ <span class="count" id="akCount"></span>
+ <button class="share" id="shareBtn" type="button">📤 <span class="mr">शेअर करा</span></button>
+ <button id="akBtn" type="button">🌾 <span class="mr">अक्षता टाका</span></button>
+</div>
+<div class="lightbox" id="lightbox"><img alt=""></div>
+<div class="toast" id="toast"></div>
+
 <script>
-/* EDIT THESE DETAILS BEFORE SHARING */
+/* ============ EDIT THESE DETAILS BEFORE SHARING ============ */
 const wedding = {
- groom: "Akash Jagtap",
- bride: "Akshada Kharade",
- date: "7 February 2027",
- time: "Muhurat time to be announced",
- venue: "Punyai Garden, Mandavgan Pharata, Maharashtra",
- mapsQuery: "https://maps.app.goo.gl/RrxUrqnNSgxxGrMb8",
- calendarStart: "20270207T100000",
- calendarEnd: "20270207T160000"
+  groom: "Akash Jagtap",
+  bride: "Akshada Kharade",
+  muhurat: "वेळ लवकरच कळवू · time to be announced", // e.g. "दुपारी १२:३५ · 12:35 PM"
+  venue: "Punyai Garden, Kashti Road, Mandavgan Pharata, Maharashtra",
+  mapsUrl: "https://maps.app.goo.gl/RrxUrqnNSgxxGrMb8",
+  start: "2027-02-07T10:00:00+05:30",   // countdown + calendar
+  end:   "2027-02-07T16:00:00+05:30",
+  whatsapp: ""                           // e.g. "919876543210" so blessings come to you; empty = guest picks a chat
 };
-document.getElementById("groomDisplay").textContent=wedding.groom;
-document.getElementById("brideDisplay").textContent=wedding.bride;
-document.getElementById("dateDisplay").textContent=wedding.date;
-document.getElementById("timeDisplay").textContent=wedding.time;
-document.getElementById("dateTimeDisplay").textContent=wedding.date+" • "+wedding.time;
-document.getElementById("venueDisplay").textContent=wedding.venue;
-document.getElementById("signoff").textContent=wedding.groom+" & "+wedding.bride;
-let current=0;const scenes=[...document.querySelectorAll(".scene")];
-function renderDots(){document.getElementById("dots").innerHTML=scenes.map((_,i)=>`<span class="dot ${i===current?'active':''}"></span>`).join("")}
-function show(i){current=Math.max(0,Math.min(i,scenes.length-1));scenes.forEach((s,n)=>s.classList.toggle("active",n===current));renderDots();window.scrollTo({top:0,behavior:"smooth"})}
-function next(){show(current+1)}function restart(){show(0)}
-function openMaps(){window.open(wedding.mapsQuery,"_blank")}
-function addCalendar(){const title=encodeURIComponent("Wedding of "+wedding.groom+" & "+wedding.bride);const details=encodeURIComponent("Wedding date: 7 February 2027. Muhurat time to be announced. Venue: Punyai Garden, Mandavgan Pharata.");window.open(`https://calendar.google.com/calendar/render?action=TEMPLATE&text=${title}&dates=${wedding.calendarStart}/${wedding.calendarEnd}&details=${details}&location=${encodeURIComponent(wedding.venue)}`,"_blank")}
-renderDots();
+/* =========================================================== */
+
+const $ = s => document.querySelector(s), $$ = s => [...document.querySelectorAll(s)];
+const reduced = matchMedia("(prefers-reduced-motion: reduce)").matches;
+$("#muhurat").textContent = wedding.muhurat;
+$("#mapsBtn").href = wedding.mapsUrl;
+
+/* ---------- toast ---------- */
+function toast(msg){const t=$("#toast");t.textContent=msg;t.classList.add("on");clearTimeout(t._h);t._h=setTimeout(()=>t.classList.remove("on"),2200)}
+
+/* ---------- sounds (synthesised, no files) ---------- */
+let ac, soundOn = localStorage.getItem("sound") !== "off";
+$("#soundBtn").textContent = soundOn ? "🔔" : "🔕";
+$("#soundBtn").onclick = () => { soundOn = !soundOn; localStorage.setItem("sound", soundOn ? "on" : "off"); $("#soundBtn").textContent = soundOn ? "🔔" : "🔕"; if (soundOn) bell(); };
+function ctx(){ if(!ac) ac = new (window.AudioContext||window.webkitAudioContext)(); return ac; }
+function bell(){
+  if(!soundOn) return; const a=ctx(), t=a.currentTime;
+  [[523,1],[1046,.5],[1568,.3],[2093,.18],[1318,.25]].forEach(([f,g])=>{
+    const o=a.createOscillator(),v=a.createGain(); o.frequency.value=f; o.type="sine";
+    v.gain.setValueAtTime(0,t); v.gain.linearRampToValueAtTime(.18*g,t+.01); v.gain.exponentialRampToValueAtTime(.0001,t+2.6);
+    o.connect(v).connect(a.destination); o.start(t); o.stop(t+2.7);
+  });
+}
+function chime(){ // little rising "tutari"-ish flourish
+  if(!soundOn) return; const a=ctx(), t=a.currentTime;
+  [392,523,659,784].forEach((f,i)=>{const o=a.createOscillator(),v=a.createGain();o.type="triangle";o.frequency.value=f;
+    v.gain.setValueAtTime(0,t+i*.12);v.gain.linearRampToValueAtTime(.12,t+i*.12+.02);v.gain.exponentialRampToValueAtTime(.0001,t+i*.12+.6);
+    o.connect(v).connect(a.destination);o.start(t+i*.12);o.stop(t+i*.12+.65)});
+}
+
+/* ---------- particle bursts ---------- */
+const fx = $("#fx");
+function burst(x, y, n = 40, kinds = ["rice","rice","rice k","pet"]){
+  if (reduced) n = Math.min(n, 8);
+  for (let i=0;i<n;i++){
+    const el=document.createElement("i"); const k=kinds[i%kinds.length];
+    if(k==="heart"){el.className="heart";el.textContent=["❤","💕","♡"][i%3]} else el.className=k;
+    fx.appendChild(el);
+    const ang=Math.random()*Math.PI*2, sp=80+Math.random()*220, dx=Math.cos(ang)*sp, dy=Math.sin(ang)*sp - 120;
+    el.animate([
+      {transform:`translate(${x}px,${y}px) rotate(0)`,opacity:1},
+      {transform:`translate(${x+dx}px,${y+dy}px) rotate(${Math.random()*360}deg)`,opacity:1,offset:.35},
+      {transform:`translate(${x+dx*1.3}px,${y+dy+420}px) rotate(${Math.random()*720}deg)`,opacity:0}
+    ],{duration:1600+Math.random()*1200,easing:"cubic-bezier(.2,.7,.4,1)"}).onfinish=()=>el.remove();
+  }
+}
+function shower(n=70){ // akshata falling from the top
+  for(let i=0;i<n;i++){
+    const el=document.createElement("i"); el.className=["rice","rice","rice k","pet"][i%4]; fx.appendChild(el);
+    const x=Math.random()*innerWidth, d=1800+Math.random()*1800;
+    el.animate([{transform:`translate(${x}px,-20px) rotate(0)`},{transform:`translate(${x+(Math.random()*120-60)}px,${innerHeight+20}px) rotate(${Math.random()*900}deg)`}],
+      {duration:d,delay:Math.random()*700,easing:"ease-in",fill:"backwards"}).onfinish=()=>el.remove();
+  }
+}
+function hearts(x,y){ burst(x,y,14,["heart"]); }
+
+/* ---------- cover doors ---------- */
+const cover=$("#cover");
+document.body.style.overflow="hidden";
+function openCover(){ if(cover.classList.contains("open"))return; cover.classList.add("open"); document.body.style.overflow=""; bell(); setTimeout(()=>{chime();shower(90)},500); setTimeout(()=>cover.remove(),1400); }
+cover.addEventListener("click",openCover);
+cover.addEventListener("keydown",e=>{if(e.key==="Enter"||e.key===" "){e.preventDefault();openCover()}});
+
+/* ---------- typed tagline ---------- */
+(function(){const el=$("#typed"),txt="Two paths, one journey…\nA lifetime together.";let i=0;
+  const go=()=>{el.innerHTML=txt.slice(0,i).replace("\n","<br>");if(i++<txt.length)setTimeout(go,i<2?1600:65);else el.classList.remove("typed")};
+  if(reduced){el.innerHTML=txt.replace("\n","<br>");el.classList.remove("typed")}else go();})();
+
+/* ---------- parallax painted scenes ---------- */
+$$("[data-parallax]").forEach(scene=>{
+  const layers=[...scene.querySelectorAll("[data-depth]")];
+  const set=(px,py)=>layers.forEach(l=>{const d=+l.dataset.depth;const base=l.classList.contains("couple")?"translateX(-50%) ":"";const flip=l.classList.contains("l")?" scaleX(-1)":"";
+    l.style.transform=`${base}translate(${px*d}px,${py*d*.6}px)${flip}`});
+  scene.addEventListener("pointermove",e=>{const r=scene.getBoundingClientRect();set((e.clientX-r.left)/r.width-.5,(e.clientY-r.top)/r.height-.5)});
+  scene.addEventListener("pointerleave",()=>set(0,0));
+});
+if(window.DeviceOrientationEvent && !reduced){
+  addEventListener("deviceorientation",e=>{if(e.gamma==null)return;const px=Math.max(-.5,Math.min(.5,e.gamma/40)),py=Math.max(-.5,Math.min(.5,(e.beta-45)/60));
+    $$("[data-parallax] [data-depth]").forEach(l=>{const d=+l.dataset.depth;const base=l.classList.contains("couple")?"translateX(-50%) ":"";const flip=l.classList.contains("l")?" scaleX(-1)":"";l.style.transform=`${base}translate(${px*d}px,${py*d*.6}px)${flip}`})});
+}
+$$("[data-hearts]").forEach(img=>img.addEventListener("click",e=>{hearts(e.clientX,e.clientY);chime();const h=img.closest(".scene").querySelector(".hint");if(h)h.remove()}));
+$$(".bell").forEach(b=>b.addEventListener("click",e=>{b.classList.remove("ring");void b.offsetWidth;b.classList.add("ring");bell();burst(e.clientX,e.clientY,26,["pet","pet","rice"])}));
+
+/* ---------- scratch card ---------- */
+(function(){
+  const wrap=$("#scratch"),c=$("#scratchCanvas"),g=c.getContext("2d");let drawn=false,down=false,checks=0;
+  function paint(){const r=wrap.getBoundingClientRect(),dpr=devicePixelRatio||1;c.width=r.width*dpr;c.height=r.height*dpr;g.scale(dpr,dpr);
+    const grd=g.createLinearGradient(0,0,r.width,r.height);grd.addColorStop(0,"#d9a441");grd.addColorStop(.5,"#f6d98e");grd.addColorStop(1,"#c68a2e");
+    g.fillStyle=grd;g.fillRect(0,0,r.width,r.height);
+    g.fillStyle="#7a3a14";g.textAlign="center";g.font="22px 'Tiro Devanagari Marathi', serif";g.fillText("इथे घासा ✨",r.width/2,r.height/2-4);
+    g.font="italic 16px 'Cormorant Garamond', serif";g.fillText("scratch to reveal the date",r.width/2,r.height/2+20);drawn=true}
+  const pos=e=>{const r=c.getBoundingClientRect();return[e.clientX-r.left,e.clientY-r.top]};
+  function scratch(e){if(!down)return;const[x,y]=pos(e);g.globalCompositeOperation="destination-out";g.beginPath();g.arc(x,y,22,0,7);g.fill();
+    if(++checks%12===0){const d=g.getImageData(0,0,c.width,c.height).data;let clear=0;for(let i=3;i<d.length;i+=32)if(d[i]===0)clear++;
+      if(clear/(d.length/32)>.45&&!wrap.classList.contains("done")){wrap.classList.add("done");const r=wrap.getBoundingClientRect();burst(r.left+r.width/2,r.top+r.height/2,50);chime();toast("तारीख लक्षात ठेवा! 🎉")}}}
+  c.addEventListener("pointerdown",e=>{down=true;c.setPointerCapture(e.pointerId);scratch(e)});
+  c.addEventListener("pointermove",scratch);
+  addEventListener("pointerup",()=>down=false);
+  (document.fonts?document.fonts.ready:Promise.resolve()).then(paint);
+})();
+
+/* ---------- calendar ---------- */
+$("#calBtn").addEventListener("click",()=>{
+  const fmt=d=>new Date(d).toISOString().replace(/[-:]/g,"").split(".")[0]+"Z";
+  const q=new URLSearchParams({action:"TEMPLATE",text:`शुभविवाह · ${wedding.groom} & ${wedding.bride}`,dates:`${fmt(wedding.start)}/${fmt(wedding.end)}`,
+    details:`Wedding of ${wedding.groom} & ${wedding.bride}. शुभमुहूर्त: ${wedding.muhurat}. आपली उपस्थिती प्रार्थनीय!`,location:wedding.venue});
+  window.open("https://calendar.google.com/calendar/render?"+q,"_blank","noopener");
+});
+
+/* ---------- countdown ---------- */
+const pad=n=>String(n).padStart(2,"0");
+(function tick(){let ms=new Date(wedding.start)-Date.now();
+  if(ms<=0){$("#countdown").innerHTML='<div style="padding:10px 18px"><b class="mr" style="font-size:1.3rem">शुभमंगल सावधान! 🎉</b></div>';return}
+  const s=Math.floor(ms/1000);$("#cd-d").textContent=Math.floor(s/86400);$("#cd-h").textContent=pad(Math.floor(s%86400/3600));
+  $("#cd-m").textContent=pad(Math.floor(s%3600/60));$("#cd-s").textContent=pad(s%60);setTimeout(tick,1000)})();
+
+/* ---------- akshata button ---------- */
+let ak=+localStorage.getItem("akshata")||0;
+const showAk=()=>$("#akCount").textContent=ak?`तुम्ही ${ak} वेळा अक्षता टाकल्या 🌾`:"";
+showAk();
+$("#akBtn").addEventListener("click",()=>{shower();chime();ak++;localStorage.setItem("akshata",ak);showAk();if(ak===1)toast("आशीर्वादाबद्दल धन्यवाद! 🙏")});
+
+/* ---------- share ---------- */
+$("#shareBtn").addEventListener("click",async()=>{
+  const data={title:"शुभविवाह · Akash & Akshada",text:"आकाश ❤ अक्षदा यांच्या लग्नाचे निमंत्रण · 7 Feb 2027 · Punyai Garden, Mandavgan Pharata",url:location.href};
+  try{if(navigator.share){await navigator.share(data)}else{await navigator.clipboard.writeText(location.href);toast("लिंक कॉपी झाली! 🔗")}}catch(e){}
+});
+
+/* ---------- lightbox ---------- */
+const lb=$("#lightbox");
+$$(".polaroid").forEach(p=>p.addEventListener("click",()=>{lb.querySelector("img").src=p.dataset.full;lb.querySelector("img").alt=p.querySelector("img").alt;lb.classList.add("on")}));
+lb.addEventListener("click",()=>lb.classList.remove("on"));
+addEventListener("keydown",e=>{if(e.key==="Escape")lb.classList.remove("on")});
+
+/* ---------- wishes wall (saved on this device) ---------- */
+const wishesEl=$("#wishes");let wishes=JSON.parse(localStorage.getItem("wishes")||"[]");
+const esc=s=>s.replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+function addWish(w){const d=document.createElement("div");d.className="wish";d.style.setProperty("--r",(Math.random()*6-3)+"deg");
+  d.innerHTML=`<p>${esc(w.text)}</p><b>— ${esc(w.name)}</b>`;wishesEl.prepend(d)}
+wishes.forEach(addWish);
+$$("#chips .chip").forEach(c=>c.addEventListener("click",()=>{const t=$("#wishText");t.value=(t.value?t.value+" ":"")+c.textContent;t.focus()}));
+$("#wishForm").addEventListener("submit",e=>{e.preventDefault();const w={name:$("#wishName").value.trim(),text:$("#wishText").value.trim()};if(!w.name||!w.text)return;
+  wishes.push(w);localStorage.setItem("wishes",JSON.stringify(wishes.slice(-30)));addWish(w);$("#wishText").value="";
+  const r=wishesEl.getBoundingClientRect();hearts(innerWidth/2,Math.min(r.top+40,innerHeight-80));chime();toast("शुभेच्छांबद्दल धन्यवाद! 💕")});
+$("#waBtn").addEventListener("click",()=>{const n=$("#wishName").value.trim(),t=$("#wishText").value.trim()||"शुभमंगल सावधान! 💐";
+  const msg=`आकाश & अक्षदा, ${t}${n?" — "+n:""}`;window.open(`https://wa.me/${wedding.whatsapp}?text=${encodeURIComponent(msg)}`,"_blank","noopener")});
+
+/* ---------- ambient petals ---------- */
+const petals=$("#petals");
+for(let i=0;i<14;i++){const p=document.createElement("span");p.className="petal";p.style.left=Math.random()*100+"vw";
+  p.style.setProperty("--dx",(Math.random()*160-80)+"px");p.style.animationDuration=10+Math.random()*10+"s";p.style.animationDelay=-Math.random()*18+"s";
+  p.style.scale=.6+Math.random()*.7;petals.appendChild(p)}
+
+/* ---------- reveal + active nav ---------- */
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target)}}),{threshold:.15});
+$$(".reveal").forEach(el=>io.observe(el));
+const navIo=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)$$("#nav a").forEach(a=>a.classList.toggle("on",a.getAttribute("href")==="#"+e.target.id))}),{rootMargin:"-45% 0px -50% 0px"});
+["story","details","blessings"].forEach(id=>navIo.observe(document.getElementById(id)));
 </script>
 </body>
 </html>

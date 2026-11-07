@@ -465,59 +465,6 @@ footer small{color:#e9d9c0}
 .cover .mr.top,.cover .tap .mr,.cover .script{color:var(--r-gold-l)}
 .cover h1{color:var(--r-ivory)}
 
-/* =====================================================================
-   COLOURFUL ROYAL: sapphire, emerald, amethyst, rani pink + gold, ivory
-   ===================================================================== */
-:root{--j-sapphire:#0d1f5c;--j-sapphire-2:#16348a;--j-emerald:#0b5a45;--j-emerald-2:#11795c;--j-amethyst:#3b1670;--j-amethyst-2:#5a24a3;
-  --j-rani:#c2185b;--j-rani-2:#e0307a;--j-peacock:#0a5f73;--j-peacock-2:#0f8199;
-  --r-wine:var(--j-sapphire);--r-maroon:var(--j-rani);--r-ruby:var(--j-rani-2);--r-emerald:var(--j-emerald)}
-html{background:var(--j-sapphire)}
-body{background:
-  url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120' viewBox='0 0 120 120'%3E%3Cg fill='none' stroke='%23d4af37' stroke-opacity='.13' stroke-width='1.2'%3E%3Cpath d='M60 8 C72 30 90 36 112 60 C90 84 72 90 60 112 C48 90 30 84 8 60 C30 36 48 30 60 8Z'/%3E%3Ccircle cx='60' cy='60' r='12'/%3E%3Cpath d='M60 34 C66 46 74 50 86 60 C74 70 66 74 60 86 C54 74 46 70 34 60 C46 50 54 46 60 34Z'/%3E%3C/g%3E%3C/svg%3E"),
-  linear-gradient(160deg,#0d1f5c 0%,#16348a 45%,#0a5f73 100%);background-repeat:repeat,no-repeat}
-nav{background:linear-gradient(#0d1f5cf2,#0d1f5cd9 75%,transparent)}
-
-/* arch frames */
-.scene{box-shadow:0 0 0 7px #0d1f5c,0 0 0 9px var(--r-gold),0 24px 50px #0008}
-.scene .sky{background:radial-gradient(ellipse at 50% 30%,#fffaf0,#e3f0ff 55%,#ffd9e8)}
-.scene .hint{background:#0d1f5cdd}
-
-/* cards */
-.parch{box-shadow:0 22px 50px #0007,inset 0 0 0 8px var(--r-ivory),inset 0 0 0 10px var(--r-gold),inset 0 0 0 13px var(--r-ivory),inset 0 0 0 14px var(--j-rani)}
-.parch .script,.parch .h2{color:var(--j-sapphire);-webkit-text-fill-color:var(--j-sapphire)}
-.parch .h2-mr{color:var(--j-rani)}
-.fact svg{color:var(--j-rani)}
-.fact .mr{color:var(--j-emerald)}
-
-/* countdown: one jewel per tile */
-.countdown div:nth-child(1){background:linear-gradient(180deg,#e0307a,#a3124c)}
-.countdown div:nth-child(2){background:linear-gradient(180deg,#2a4fc4,#0d1f5c)}
-.countdown div:nth-child(3){background:linear-gradient(180deg,#11795c,#0b4a39)}
-.countdown div:nth-child(4){background:linear-gradient(180deg,#6a2cc0,#3b1670)}
-
-/* buttons */
-.btn{background:linear-gradient(180deg,#e0307a,#a3124c);border-color:var(--r-gold)}
-.btn.ghost{background:var(--r-ivory);color:var(--j-sapphire)}
-.fab button{background:linear-gradient(180deg,#e0307a,#a3124c)}
-.fab button.share{background:linear-gradient(180deg,#11795c,#0b4a39)}
-.fab .count,.sound,.toast{background:var(--j-sapphire)}
-
-/* story steps: jewel per step */
-.steps li:nth-child(1) i{background:#a3124c}
-.steps li:nth-child(2) i{background:#16348a}
-.steps li:nth-child(3) i{background:#5a24a3}
-.steps li:nth-child(4) i{background:#0a5f73}
-.steps li.in i{filter:brightness(1.15)}
-
-/* petals: rani pink + gold */
-.petal,.petal:nth-child(n){background:linear-gradient(135deg,#ff6aa2,#c2185b)}
-.petal:nth-child(3n){background:linear-gradient(135deg,#f6e3a1,#c9a24a)}
-
-/* cover doors: sapphire with gold */
-.cover .door,.cover .door.r{background:
-  url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80'%3E%3Cpath d='M40 6 C48 22 58 28 74 40 C58 52 48 58 40 74 C32 58 22 52 6 40 C22 28 32 22 40 6Z' fill='none' stroke='%23d4af37' stroke-opacity='.25'/%3E%3C/svg%3E"),
-  radial-gradient(ellipse at 50% 45%,#2a4fc4,#16348a 45%,#0d1f5c)}
-
 /* fade the bottom of the cartoon into the frame (no mask on the image itself, which caused a haze) */
 .scene .couple{-webkit-mask-image:none!important;mask-image:none!important}
 .scene:after{content:"";position:absolute;left:0;right:0;bottom:0;height:20%;pointer-events:none;z-index:2;
@@ -526,50 +473,112 @@ nav{background:linear-gradient(#0d1f5cf2,#0d1f5cd9 75%,transparent)}
 .scene .bell{z-index:3}
 
 
+
 /* =====================================================================
-   PAITHANI ROYAL: peacock green + rani pink + gold zari + saffron, ivory
+   FINAL ROYAL THEME: one set of variables; palette chosen by body class
    ===================================================================== */
-:root{--p-green:#073d32;--p-green-2:#0b5d4b;--p-green-3:#11785f;--p-rani:#c2185b;--p-rani-2:#e0307a;--p-saffron:#e8731c;
-  --j-sapphire:var(--p-green);--r-wine:var(--p-green);--r-maroon:var(--p-rani);--r-ruby:var(--p-rani-2);--r-emerald:var(--p-green-2)}
-html{background:var(--p-green)}
-body{background:
-  url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120' viewBox='0 0 120 120'%3E%3Cg fill='none' stroke='%23e9cc7a' stroke-opacity='.13' stroke-width='1.2'%3E%3Cpath d='M60 8 C72 30 90 36 112 60 C90 84 72 90 60 112 C48 90 30 84 8 60 C30 36 48 30 60 8Z'/%3E%3Ccircle cx='60' cy='60' r='12'/%3E%3Cpath d='M60 34 C66 46 74 50 86 60 C74 70 66 74 60 86 C54 74 46 70 34 60 C46 50 54 46 60 34Z'/%3E%3C/g%3E%3C/svg%3E"),
-  radial-gradient(ellipse 90% 40% at 50% 0%,#11785f,transparent 70%),
-  linear-gradient(180deg,#0b5d4b 0%,#073d32 30%,#0a4a3d 60%,#073d32 100%);
-  background-repeat:repeat,no-repeat,no-repeat}
-/* Paithani zari border running along the top */
-nav{background:linear-gradient(#073d32f2,#073d32d9 75%,transparent)}
-nav:before{content:"";position:absolute;left:0;right:0;top:0;height:8px;
-  background:repeating-linear-gradient(90deg,var(--p-rani) 0 18px,#d4af37 18px 22px,var(--p-rani) 22px 26px,#d4af37 26px 30px);opacity:.95}
-.scene{box-shadow:0 0 0 6px var(--p-rani),0 0 0 8px var(--r-gold),0 24px 50px #0009}
-.scene .sky{background:radial-gradient(ellipse at 50% 30%,#fffaf0,#fdf0d8 55%,#ffd6c2)}
-.scene:after{background:linear-gradient(to bottom,transparent,#ffd9c8 85%)}
-.scene .hint{background:#073d32e0}
-.shree,.jay{color:#ffb35c}
-.parch{box-shadow:0 22px 50px #0008,inset 0 0 0 8px var(--r-ivory),inset 0 0 0 10px var(--r-gold),inset 0 0 0 13px var(--r-ivory),inset 0 0 0 15px var(--p-rani)}
-.parch .script,.parch .h2{color:var(--p-green-2);-webkit-text-fill-color:var(--p-green-2)}
-.parch .h2-mr{color:var(--p-rani)}
-.fact svg{color:var(--p-rani)}
-.fact .mr{color:var(--p-green-2)}
-.countdown div:nth-child(n){background:linear-gradient(180deg,#e0307a,#a3124c);border:1px solid var(--r-gold)}
-.countdown div:nth-child(n) b{color:#fff1c9}
-.btn{background:linear-gradient(180deg,#e0307a,#a3124c);border-color:var(--r-gold)}
-.btn.ghost{background:var(--r-ivory);color:var(--p-green-2)}
-.fab button{background:linear-gradient(180deg,#e0307a,#a3124c)}
-.fab button.share{background:linear-gradient(180deg,#f08a2c,#c95a0c)}
-.fab .count,.sound,.toast{background:var(--p-green)}
-.steps li:nth-child(n) i{background:var(--p-rani);border-color:var(--r-gold)}
-.steps:before{background:linear-gradient(var(--r-gold),var(--p-rani))}
-.polaroid,.polaroid:nth-child(n){box-shadow:0 0 0 2px var(--r-gold),0 0 0 6px #c2185b55,0 18px 34px #0008}
-.polaroid span{color:var(--p-rani)}
+body{--t-deep:#2a1050;--t-mid:#4a1d80;--t-glow:#6b2fb0;--t-accent:#c2185b;--t-accent-l:#e0307a;--t-accent2:#f0a12c;
+  --t-on:#fff8ec;--t-on-soft:#eadcf5;--t-head1:#f6e3a1;--t-head2:#d4af37;--t-head3:#a8771f;--t-card:#fffaf0;--t-card-text:#2a1036;
+  --r-wine:var(--t-deep);--r-maroon:var(--t-accent);--r-ruby:var(--t-accent-l);--r-emerald:var(--t-mid);
+  --goldgrad:linear-gradient(135deg,var(--t-head1) 0%,var(--t-head2) 32%,var(--t-head3) 52%,var(--t-head1) 72%,var(--t-head2) 100%)}
+/* palette 1: Royal Purple (Peshwai jamuni) + gold + rani pink */
+body.pal-purple{--t-deep:#240b45;--t-mid:#3d1670;--t-glow:#6a2fb4;--t-accent:#c2185b;--t-accent-l:#e0307a;--t-accent2:#f0a12c;--t-on-soft:#e6d8f5}
+/* palette 2: Royal Navy (Shahi neela) + gold + rani pink */
+body.pal-navy{--t-deep:#0a1438;--t-mid:#14286b;--t-glow:#2a4fc4;--t-accent:#c2185b;--t-accent-l:#e0307a;--t-accent2:#f0a12c;--t-on-soft:#d9e2f7}
+/* palette 3: Palace Ivory + gold + rani pink + purple text (light) */
+body.pal-ivory{--t-deep:#fff9ef;--t-mid:#fdeedd;--t-glow:#ffd6e6;--t-accent:#b0124f;--t-accent-l:#d42a6c;--t-accent2:#d9761a;
+  --t-on:#3a1250;--t-on-soft:#5e3a6e;--t-head1:#c9962e;--t-head2:#9c6b12;--t-head3:#6e4806}
+/* palette 4: Royal Rani (deep magenta) + gold */
+body.pal-rani{--t-deep:#4a0a2e;--t-mid:#7a1048;--t-glow:#b0186a;--t-accent:#f0a12c;--t-accent-l:#ffb94d;--t-accent2:#ffd27a;--t-on-soft:#f5dbe8}
+
+html{background:var(--t-deep)}
+body{color:var(--t-on);background:
+  url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120' viewBox='0 0 120 120'%3E%3Cg fill='none' stroke='%23d4af37' stroke-opacity='.16' stroke-width='1.2'%3E%3Cpath d='M60 8 C72 30 90 36 112 60 C90 84 72 90 60 112 C48 90 30 84 8 60 C30 36 48 30 60 8Z'/%3E%3Ccircle cx='60' cy='60' r='12'/%3E%3Cpath d='M60 34 C66 46 74 50 86 60 C74 70 66 74 60 86 C54 74 46 70 34 60 C46 50 54 46 60 34Z'/%3E%3C/g%3E%3C/svg%3E"),
+  radial-gradient(ellipse 90% 35% at 50% 0%,var(--t-glow),transparent 70%),
+  radial-gradient(ellipse 80% 30% at 50% 100%,var(--t-mid),transparent 70%),
+  linear-gradient(180deg,var(--t-mid),var(--t-deep) 30%,var(--t-deep) 70%,var(--t-mid));
+  background-repeat:repeat,no-repeat,no-repeat,no-repeat}
+nav{background:linear-gradient(var(--t-deep),color-mix(in srgb,var(--t-deep) 85%,transparent) 75%,transparent)}
+nav:before{content:"";position:absolute;left:0;right:0;top:0;height:6px;background:var(--goldgrad)}
+nav a{color:var(--t-on)}
+nav a small{color:var(--t-head2)}
+nav a.on,nav a:hover{color:var(--t-head2);border-color:var(--t-head2)}
+
+/* on-background text */
+.names-mr,.tag,.bless .poem,.invite .mr,footer small,.steps b{color:var(--t-on)}
+.tag-mr,.steps .mr,.wall p{color:var(--t-on-soft)!important}
+.names-mr b,.subhead,.h2-mr,.shree,.jay,.invite .families,footer .mr,nav a small{color:var(--t-head2)}
+.shree,.jay{color:var(--t-accent2)}
+.invite b{color:var(--t-head2)!important}
+.invite{border-color:var(--t-head2)}
+.divider span{color:var(--t-head2)}
+.divider:before,.divider:after{background:linear-gradient(90deg,transparent,var(--t-head2))}
+.names,.section .h2,.bless .h2{background:var(--goldgrad);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.names .amp{-webkit-text-fill-color:var(--t-accent-l);color:var(--t-accent-l)}
+
+/* gold monogram crest */
+.crest{width:92px;height:92px;margin:0 auto 6px;border-radius:50%;display:flex;align-items:center;justify-content:center;gap:2px;
+  font-family:var(--script);font-size:2rem;line-height:1;color:var(--t-head2);
+  background:radial-gradient(circle,transparent 58%,var(--t-head2) 59% 61%,transparent 62% 70%,var(--t-head3) 71% 72%,transparent 73%),
+   url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cg fill='none' stroke='%23d4af37' stroke-width='1.4'%3E%3Cpath d='M50 2 L56 12 L50 10 L44 12Z M50 98 L56 88 L50 90 L44 88Z M2 50 L12 56 L10 50 L12 44Z M98 50 L88 56 L90 50 L88 44Z'/%3E%3C/g%3E%3C/svg%3E") center/100% 100%}
+.crest i{font-style:normal;font-size:1rem;color:var(--t-accent-l);margin:0 2px}
+
+/* palace skyline under the hero */
+.skyline{position:relative;z-index:1;max-width:1180px;margin:-6px auto 34px;padding:0 clamp(14px,4vw,40px);height:70px;opacity:.85}
+.skyline svg{width:100%;height:100%;display:block;overflow:visible}
+.skyline path{fill:none;stroke:var(--t-head2);stroke-width:1.6}
+.skyline .flag{fill:var(--t-accent2);stroke:var(--t-accent2)}
+
+/* arch frames */
+.scene{background:linear-gradient(#fffaf0,#fdeedd);border-color:var(--t-head2);
+  box-shadow:0 0 0 6px var(--t-accent),0 0 0 8px var(--t-head2),0 0 0 14px color-mix(in srgb,var(--t-deep) 70%,transparent),0 0 0 15px var(--t-head3),0 26px 54px #0008}
+.scene .sky{background:radial-gradient(ellipse at 50% 30%,#fffdf8,#fbefe0 55%,#f8d8e4)}
+.scene:after{background:linear-gradient(to bottom,transparent,#f8dbe6 85%)}
+.scene .hint{background:color-mix(in srgb,var(--t-deep) 90%,transparent);color:var(--t-head1);border-color:var(--t-head2)}
+body.pal-ivory .scene .hint{color:#fff8ec;background:#3a1250e0}
+
+/* ivory cards with filigree corners */
+.parch{color:var(--t-card-text);
+  background:
+   url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 60 60'%3E%3Cg fill='none' stroke='%23b8862f' stroke-width='1.4'%3E%3Cpath d='M4 56 V22 Q4 4 22 4 H56'/%3E%3Cpath d='M10 56 V26 Q10 10 26 10 H56'/%3E%3Cpath d='M18 18 q8 -2 10 6 q-8 2 -10 -6Z' fill='%23c2185b' fill-opacity='.6'/%3E%3C/g%3E%3C/svg%3E") left 14px top 14px/58px no-repeat,
+   url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 60 60'%3E%3Cg fill='none' stroke='%23b8862f' stroke-width='1.4' transform='scale(-1 1) translate(-60 0)'%3E%3Cpath d='M4 56 V22 Q4 4 22 4 H56'/%3E%3Cpath d='M10 56 V26 Q10 10 26 10 H56'/%3E%3Cpath d='M18 18 q8 -2 10 6 q-8 2 -10 -6Z' fill='%23c2185b' fill-opacity='.6'/%3E%3C/g%3E%3C/svg%3E") right 14px top 14px/58px no-repeat,
+   url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 60 60'%3E%3Cg fill='none' stroke='%23b8862f' stroke-width='1.4' transform='scale(1 -1) translate(0 -60)'%3E%3Cpath d='M4 56 V22 Q4 4 22 4 H56'/%3E%3Cpath d='M10 56 V26 Q10 10 26 10 H56'/%3E%3Cpath d='M18 18 q8 -2 10 6 q-8 2 -10 -6Z' fill='%23c2185b' fill-opacity='.6'/%3E%3C/g%3E%3C/svg%3E") left 14px bottom 14px/58px no-repeat,
+   url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 60 60'%3E%3Cg fill='none' stroke='%23b8862f' stroke-width='1.4' transform='rotate(180 30 30)'%3E%3Cpath d='M4 56 V22 Q4 4 22 4 H56'/%3E%3Cpath d='M10 56 V26 Q10 10 26 10 H56'/%3E%3Cpath d='M18 18 q8 -2 10 6 q-8 2 -10 -6Z' fill='%23c2185b' fill-opacity='.6'/%3E%3C/g%3E%3C/svg%3E") right 14px bottom 14px/58px no-repeat,
+   linear-gradient(160deg,#fffdf7,var(--t-card) 50%,#fbf1e2);
+  box-shadow:0 22px 50px #0007,inset 0 0 0 6px var(--t-card),inset 0 0 0 8px var(--t-head2),inset 0 0 0 9px var(--t-card),inset 0 0 0 10px var(--t-accent)}
+body.pal-ivory .parch{box-shadow:0 18px 40px #6a3b1a2a,inset 0 0 0 6px var(--t-card),inset 0 0 0 8px #c9962e,inset 0 0 0 9px var(--t-card),inset 0 0 0 10px var(--t-accent)}
+.parch .script,.parch .h2{color:#3a1250;-webkit-text-fill-color:#3a1250;background:none}
+.parch .h2-mr{color:#b0124f}
+.parch .poem{color:var(--t-card-text)}
+.fact svg{color:#b0124f}
+.fact .mr{color:#5a2a7a}
+
+/* countdown, buttons, steps */
+.countdown div:nth-child(n){background:linear-gradient(180deg,var(--t-mid),var(--t-deep));border:1px solid var(--t-head2)}
+body.pal-ivory .countdown div:nth-child(n){background:linear-gradient(180deg,#5a2a7a,#3a1250)}
+.countdown div:nth-child(n) b{color:var(--t-head1)}
+body.pal-ivory .countdown div:nth-child(n) b{color:#f6e3a1}
+.countdown small{color:#f3e6d4}
+.btn{background:linear-gradient(180deg,#e0307a,#a3124c);border-color:#d4af37;color:#fff8ec}
+.btn.ghost{background:#fffaf0;color:#3a1250}
+.hero-text .btn,.wall .btn{background:var(--goldgrad);color:#2a1036;border-color:#f6e3a1}
+.fab button{background:linear-gradient(180deg,#e0307a,#a3124c);border-color:#d4af37}
+.fab button.share{background:linear-gradient(180deg,#5a2a7a,#3a1250)}
+.fab .count,.sound,.toast{background:#3a1250;border-color:#d4af37;color:#f6e3a1}
+.steps:before{background:linear-gradient(var(--t-head2),var(--t-accent))}
+.steps li:nth-child(n) i{background:var(--t-accent);border-color:var(--t-head2)}
+.polaroid,.polaroid:nth-child(n){box-shadow:0 0 0 2px #d4af37,0 18px 34px #0007}
+.polaroid span{color:#b0124f}
+.chip,.chip:nth-child(n){border-color:var(--t-head2);color:var(--t-head2)}
 .petal,.petal:nth-child(n){background:linear-gradient(135deg,#ff6aa2,#c2185b)}
-.petal:nth-child(3n){background:linear-gradient(135deg,#f6e3a1,#c9a24a)}
-.petal:nth-child(4n){background:linear-gradient(135deg,#ffb35c,#e8731c)}
+.petal:nth-child(3n){background:linear-gradient(135deg,#f6e3a1,#c9a24a);border-radius:50%;width:7px;height:7px}
+
+/* opening doors */
 .cover .door,.cover .door.r{background:
-  url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80'%3E%3Cpath d='M40 6 C48 22 58 28 74 40 C58 52 48 58 40 74 C32 58 22 52 6 40 C22 28 32 22 40 6Z' fill='none' stroke='%23d4af37' stroke-opacity='.25'/%3E%3C/svg%3E"),
-  radial-gradient(ellipse at 50% 45%,#11785f,#0b5d4b 45%,#073d32)}
-.cover .door.l{box-shadow:inset -10px 0 0 var(--p-rani),inset -12px 0 0 var(--r-gold)}
-.cover .door.r{box-shadow:inset 10px 0 0 var(--p-rani),inset 12px 0 0 var(--r-gold)}
+  url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80'%3E%3Cpath d='M40 6 C48 22 58 28 74 40 C58 52 48 58 40 74 C32 58 22 52 6 40 C22 28 32 22 40 6Z' fill='none' stroke='%23d4af37' stroke-opacity='.3'/%3E%3C/svg%3E"),
+  radial-gradient(ellipse at 50% 45%,#6a2fb4,#3d1670 45%,#240b45)}
+.cover .door.l{box-shadow:inset -10px 0 0 #c2185b,inset -12px 0 0 #d4af37}
+.cover .door.r{box-shadow:inset 10px 0 0 #c2185b,inset 12px 0 0 #d4af37}
 
 @media (max-width:820px){
  .hero,.bless,.story{grid-template-columns:1fr}
@@ -593,7 +602,7 @@ nav:before{content:"";position:absolute;left:0;right:0;top:0;height:8px;
 }
 </style>
 </head>
-<body>
+<body class="pal-purple">
 
 <!-- ===== Opening doors ===== -->
 <div class="cover" id="cover" role="button" tabindex="0" aria-label="Open the invitation">
@@ -665,6 +674,7 @@ nav:before{content:"";position:absolute;left:0;right:0;top:0;height:8px;
    <span class="hint">आम्हाला टॅप करा 💕</span>
   </div>
   <div class="hero-text reveal">
+   <div class="crest" aria-hidden="true"><span>A</span><i>❦</i><span>A</span></div>
    <div class="shree">॥ शुभमंगल सावधान ॥</div>
    <div class="subhead">शुभविवाह</div>
    <h1 class="script names">Akash Jagtap<span class="amp">&amp;</span>Akshada Kharade</h1>
@@ -676,6 +686,8 @@ nav:before{content:"";position:absolute;left:0;right:0;top:0;height:8px;
   </div>
  </section>
 
+
+ <div class="skyline" aria-hidden="true"><svg viewBox="0 0 1200 90" preserveAspectRatio="none"><path d="M0 90 V70 H60 V58 h10 v-8 h8 v8 h10 V70 H170 V52 q14 -22 28 0 V70 H260 V44 h12 v-6 h6 v-8 h6 v8 h6 v6 h12 V70 H380 V60 h20 V40 q20 -30 40 0 V60 h20 V70 H520 V30 h16 V18 q24 -26 48 0 V30 h16 V70 H660 V60 h20 V40 q20 -30 40 0 V60 h20 V70 H820 V44 h12 v-6 h6 v-8 h6 v8 h6 v6 h12 V70 H930 V52 q14 -22 28 0 V70 H1040 V58 h10 v-8 h8 v8 h10 V70 H1200 V90Z"/><path class="flag" d="M600 -8 v24 M600 -8 l22 5 -22 6Z"/></svg></div>
  <!-- ===== SCROLLS ===== -->
  <section class="scrolls" style="margin-top:20px">
   <article class="parch reveal">

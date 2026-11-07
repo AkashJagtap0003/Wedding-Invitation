@@ -43,4 +43,4 @@ The page uses [GoatCounter](https://www.goatcounter.com): free, no cookies, no c
 
 You'll see visits, devices, cities/countries and referrers (e.g. WhatsApp), plus these events:
 `invite-opened`, `date-scratched`, `maps-opened`, `calendar-added`, `shared`, `akshata`,
-`whatsapp-blessing`, and `blessing` (the event title shows the guest's name and message).
+`whatsapp-blessing-akash`, `whatsapp-blessing-akshada`, and `blessing` (the event title shows the guest's name and message).

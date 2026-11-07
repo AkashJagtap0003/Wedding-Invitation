@@ -4,61 +4,65 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#7b1e2b">
-<title>Our Wedding Invitation</title>
+<title>Akash & Akshada — Wedding Invitation</title>
 <style>
-:root{--maroon:#7b1e2b;--deep:#4d1420;--gold:#c28b3c;--cream:#fff4df;--pink:#f5d7cf;--ink:#54252b}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:#f6e6d2;color:var(--ink);font-family:Georgia,'Times New Roman',serif}
-.story{min-height:100svh;display:grid;place-items:center;padding:20px;position:relative;overflow:hidden;background:radial-gradient(circle at 15% 15%,#fff9e8 0,transparent 30%),linear-gradient(135deg,#f7e5ca,#f5cdbf 55%,#e6b78e)}
-.story:before{content:"";position:absolute;inset:12px;border:1px solid #b77c39;border-radius:28px;pointer-events:none}
-.card{position:relative;width:min(100%,650px);min-height:78svh;background:rgba(255,248,232,.92);border:2px solid #c99b56;border-radius:24px;padding:clamp(22px,5vw,48px);text-align:center;box-shadow:0 18px 45px #602a2a22;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:15px}
-.kicker{letter-spacing:.18em;text-transform:uppercase;font-size:.72rem;color:#9c6534}
-h1,h2{color:var(--maroon);margin:0;line-height:1.12}h1{font-size:clamp(2.2rem,8vw,4rem)}h2{font-size:clamp(1.8rem,6vw,3rem)}
-p{font-size:clamp(1rem,3.5vw,1.25rem);line-height:1.6;margin:0;max-width:40ch}
-.ornament{color:var(--gold);font-size:1.5rem;letter-spacing:.25em}
-.art{width:min(100%,340px);height:270px;position:relative;display:grid;place-items:center;margin:4px auto}
-.fort{position:absolute;bottom:15px;left:0;right:0;height:90px;background:#d8b17c;clip-path:polygon(0 100%,0 40%,8% 40%,8% 20%,18% 20%,18% 45%,30% 45%,30% 0,45% 0,45% 38%,57% 38%,57% 10%,70% 10%,70% 45%,82% 45%,82% 25%,92% 25%,92% 45%,100% 45%,100% 100%);opacity:.65}
-.couple{display:flex;align-items:flex-end;gap:4px;position:relative;z-index:1}
-.person{width:115px;height:175px;position:relative}.head{position:absolute;top:8px;left:31px;width:55px;height:62px;background:#bd805e;border-radius:48% 48% 44% 44%;border:2px solid #5b2b24}
-.hair{position:absolute;top:0;left:27px;width:65px;height:34px;background:#2c1b19;border-radius:50% 50% 25% 25%;z-index:2}
-.body{position:absolute;top:65px;left:12px;width:94px;height:105px;border-radius:35px 35px 8px 8px;background:#f1d7a2;border:2px solid #8a4d2e}
-.bride .body{background:#a9233c}.bride .hair{height:60px;width:72px;left:22px;border-radius:50% 50% 15% 15%}
-.turban{position:absolute;top:-5px;left:22px;width:72px;height:30px;background:#9e1d32;border-radius:50% 50% 10% 10%;z-index:3;border:2px solid #d6a64e}
-.jewel{position:absolute;top:22px;left:53px;width:10px;height:10px;background:#f2c65c;border-radius:50%;z-index:4}
-.saree{position:absolute;top:67px;left:52px;width:38px;height:100px;background:#e9a84c;transform:rotate(-12deg);border:2px solid #f4d17a;z-index:2}
-.btn{border:0;background:var(--maroon);color:#fff8e9;padding:13px 25px;border-radius:999px;font:inherit;font-size:1rem;cursor:pointer;box-shadow:0 6px 16px #7b1e2b25;transition:.2s}
-.btn:hover{transform:translateY(-2px);background:var(--deep)}.btn.secondary{background:transparent;color:var(--maroon);border:1px solid var(--maroon)}
-.nav{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin-top:8px}
-.scene{display:none}.scene.active{display:flex;animation:fade .7s ease both}
-@keyframes fade{from{opacity:0;transform:translateY(15px)}to{opacity:1;transform:none}}
-.details{display:grid;gap:12px;width:100%;max-width:420px;text-align:left}.detail{padding:12px 16px;border:1px solid #dfbf8b;border-radius:14px;background:#fff9ed}.detail strong{display:block;color:var(--maroon);margin-bottom:4px}
-.counter{font-size:1.3rem;color:var(--maroon);font-weight:bold}.small{font-size:.85rem;color:#8d6250}.dots{display:flex;gap:6px;justify-content:center;margin:12px}.dot{height:7px;width:7px;border-radius:50%;background:#d9b78a}.dot.active{background:var(--maroon);width:20px;border-radius:5px}
-footer{padding:14px;text-align:center;font-size:.75rem;color:#8c6a55}
-@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Great+Vibes&display=swap');
+:root{--wine:#65172b;--gold:#c69a52;--cream:#fff7e9;--ink:#4d2630}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;color:var(--ink);font-family:'Cormorant Garamond',Georgia,serif;background:#ead7bf}
+.story{min-height:100svh;display:grid;place-items:center;padding:clamp(10px,3vw,28px);background:radial-gradient(circle at 50% 0,#fff4dc,#f1d5bd 55%,#dcb28b)}
+.story:before{content:"";position:fixed;inset:10px;border:1px solid #b98a48;border-radius:24px;pointer-events:none;z-index:3}
+.card{position:relative;overflow:hidden;width:min(100%,760px);min-height:84svh;background:linear-gradient(145deg,#fff9edee,#fff0dbee);border:1px solid #c49a5b;border-radius:24px;padding:clamp(22px,5vw,52px);text-align:center;box-shadow:0 24px 70px #501a2b22;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:14px}
+.card:before,.card:after{content:"❧";position:absolute;color:#c79a55;font-size:32px;opacity:.65}.card:before{top:10px;left:18px}.card:after{bottom:10px;right:18px;transform:rotate(180deg)}
+.kicker{letter-spacing:.16em;text-transform:uppercase;font-size:.8rem;color:#a16b35;font-weight:600}
+h1,h2{color:var(--wine);margin:0;line-height:1.08;font-weight:600}h1{font-size:clamp(2.6rem,9vw,5rem)}h2{font-size:clamp(2rem,7vw,3.6rem)}
+p{font-size:clamp(1.1rem,3.6vw,1.5rem);line-height:1.45;margin:0;max-width:34ch}
+.ornament{color:var(--gold);font-size:1.6rem;letter-spacing:.2em}
+.art{width:min(100%,390px);height:auto;position:relative;display:grid;place-items:center;margin:0 auto;z-index:1}.art img{display:block;width:100%;max-height:43svh;object-fit:contain;filter:drop-shadow(0 12px 15px #7b3b2820)}
+.btn{border:1px solid #8b263b;background:linear-gradient(135deg,#8b263b,#5f1427);color:#fff7e9;padding:13px 25px;border-radius:999px;font-family:inherit;font-weight:600;font-size:1.12rem;cursor:pointer;box-shadow:0 8px 20px #6d1b3028}.btn.secondary{background:transparent;color:var(--wine);border:1px solid var(--gold)}
+.nav{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin-top:8px}.scene{display:none}.scene.active{display:flex;animation:fade .65s ease both}@keyframes fade{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+.details{display:grid;gap:12px;width:100%;max-width:480px;text-align:left}.detail{padding:14px 18px;border:1px solid #dfbf8b;border-radius:14px;background:#fffaf1;box-shadow:0 4px 12px #6c29300b}.detail strong{display:block;color:var(--wine);margin-bottom:4px;font-size:1.15rem}
+.dots{display:flex;gap:7px;justify-content:center;margin:12px}.dot{height:7px;width:7px;border-radius:50%;background:#d9b78a}.dot.active{background:var(--wine);width:22px;border-radius:5px}footer{padding:14px;text-align:center;font-size:.85rem;color:#7d5948}
+@media(max-width:480px){.card{min-height:88svh;padding:24px 18px}.art img{max-height:37svh}.story:before{inset:5px}}
+
+/* refinement: storybook Maratha wedding styling */
+body{background:radial-gradient(ellipse at top,#fff1d9 0%,#ead0b4 58%,#d4a982 100%)}
+.story{background:transparent}
+.card{background:linear-gradient(145deg,rgba(255,250,240,.97),rgba(255,239,218,.96));border:1px solid #b98a48;box-shadow:0 24px 70px #501a2b25, inset 0 0 0 5px #fff8e9;}
+.card:before,.card:after{font-size:38px;color:#a96c36}
+.kicker{font-size:.78rem;letter-spacing:.18em;color:#9a5d2d}
+.art{width:min(100%,360px);margin:3px auto 4px}
+.art img{max-height:38svh;border-radius:18px;object-fit:contain;background:radial-gradient(ellipse,#fff8ed 0%,#f8e5ca 72%,transparent 73%);}
+h1,h2{letter-spacing:.01em;text-wrap:balance}
+p{text-wrap:pretty}
+.detail{background:rgba(255,250,241,.88)}
+.btn{transition:transform .18s ease,box-shadow .18s ease}.btn:hover{transform:translateY(-2px);box-shadow:0 11px 24px #6d1b3033}
+@media(max-width:480px){.card{border-radius:18px}.art img{max-height:34svh}}
+
 </style>
 </head>
 <body>
 <main class="story">
 <section class="card scene active" id="scene0">
 <div class="kicker">A little story • A forever beginning</div>
-<div class="art"><div class="fort"></div><div class="couple"><div class="person groom"><div class="turban"></div><div class="head"></div><div class="body"></div></div><div class="person bride"><div class="hair"></div><div class="head"></div><div class="body"></div><div class="saree"></div><div class="jewel"></div></div></div></div>
+<div class="art"><img src="assets/maratha-couple.png" alt="Illustrated Akash and Akshada in traditional Marathi wedding attire"></div>
 <div class="ornament">❧ ♥ ❧</div><h1>Two Hearts,<br>One Beautiful Journey</h1><p>Where two paths meet beneath auspicious skies, a quiet promise gently starts to rise.</p><div class="nav"><button class="btn" onclick="next()">Open our story ♥</button></div>
 </section>
-<section class="card scene" id="scene1"><div class="kicker">Our story</div><div class="ornament">✦ महाराष्ट्राची शान ✦</div><h2>Two Paths, One Promise</h2><p>Not all beginnings need a thousand days;<br>Some bloom in trust, in tender, thoughtful ways.</p><p>May each dream find room to soar;<br>May joy be ours, forevermore.</p><div class="nav"><button class="btn" onclick="next()">The big news →</button></div></section>
-<section class="card scene" id="scene2"><div class="kicker">With love & blessings</div><div class="art"><div class="fort"></div><div class="couple"><div class="person groom"><div class="turban"></div><div class="head"></div><div class="body"></div></div><div class="person bride"><div class="hair"></div><div class="head"></div><div class="body"></div><div class="saree"></div></div></div></div><div class="ornament">॥ श्री गणेशाय नमः ॥</div><h1>We’re getting<br>married!</h1><p>And now, beneath our families’ blessings,<br>a new and noble chapter shall begin.</p><h2>Save the Date</h2><p id="dateDisplay">[Wedding Date]</p><p id="timeDisplay">[Wedding Time]</p><div class="nav"><button class="btn" onclick="next()">Wedding details →</button></div></section>
-<section class="card scene" id="scene3"><div class="kicker">The celebration</div><h2>Wedding Details</h2><div class="ornament">❧ ✦ ❧</div><div class="details"><div class="detail"><strong>👰 Bride</strong><span id="brideDisplay">[Bride Name]</span></div><div class="detail"><strong>🤵 Groom</strong><span id="groomDisplay">[Groom Name]</span></div><div class="detail"><strong>📅 Date & Time</strong><span id="dateTimeDisplay">[Date and time]</span></div><div class="detail"><strong>📍 Venue</strong><span id="venueDisplay">[Wedding Venue, City]</span></div></div><div class="nav"><button class="btn" onclick="openMaps()">Get directions ↗</button><button class="btn secondary" onclick="addCalendar()">Add to calendar</button></div><button class="btn" onclick="next()">One last thing ♥</button></section>
-<section class="card scene" id="scene4"><div class="kicker">A heartfelt invitation</div><div class="ornament">♥ ❧ ♥</div><h2>May Our Story Be Kindly Written</h2><p>May every hope be met with grace,<br>May kindness make our home its place.<br>May laughter light the path we tread,<br>And blessings crown the years ahead.</p><h2>आमच्या आनंदात सहभागी व्हा!</h2><p>With love,<br><strong id="signoff">[Groom] & [Bride]</strong></p><div class="nav"><button class="btn secondary" onclick="restart()">↺ Read our story again</button></div></section>
+<section class="card scene" id="scene1"><div class="kicker">Our story</div><div class="art"><img src="assets/maratha-couple.png" alt="Akash and Akshada illustrated in Maratha wedding attire"></div><div class="ornament">॥ शुभमंगल सावधान ॥</div><h2>Two Paths, One Promise</h2><p>Not all beginnings need a thousand days;<br>Some bloom in trust, in tender, thoughtful ways.</p><p>May each dream find room to soar;<br>May joy be ours, forevermore.</p><div class="nav"><button class="btn" onclick="next()">The big news →</button></div></section>
+<section class="card scene" id="scene2"><div class="kicker">With the blessings of our families</div><div class="art"><img src="assets/maratha-couple.png" alt="Akash and Akshada in Maratha royal wedding attire"></div><div class="ornament">॥ श्री गणेशाय नमः ॥</div><h1>We’re getting<br>married!</h1><h2>Save the Date</h2><p id="dateDisplay">7 February 2027</p><p id="timeDisplay">[Wedding Time]</p><div class="nav"><button class="btn" onclick="next()">Wedding details →</button></div></section>
+<section class="card scene" id="scene3"><div class="kicker">The celebration</div><div class="art"><img src="assets/maratha-couple.png" alt="Maratha wedding couple"></div><h2>Wedding Details</h2><div class="ornament">❧ ✦ ❧</div><div class="details"><div class="detail"><strong>👰 Bride</strong><span id="brideDisplay">[Bride Name]</span></div><div class="detail"><strong>🤵 Groom</strong><span id="groomDisplay">[Groom Name]</span></div><div class="detail"><strong>📅 Date & Time</strong><span id="dateTimeDisplay">[Date and time]</span></div><div class="detail"><strong>📍 Venue</strong><span id="venueDisplay">[Wedding Venue, City]</span></div></div><div class="nav"><button class="btn" onclick="openMaps()">Get directions ↗</button><button class="btn secondary" onclick="addCalendar()">Add to calendar</button></div><button class="btn" onclick="next()">One last thing ♥</button></section>
+<section class="card scene" id="scene4"><div class="kicker">A heartfelt invitation</div><div class="art"><img src="assets/maratha-couple.png" alt="Akash and Akshada wedding illustration"></div><div class="ornament">♥ ❧ ♥</div><h2>With our families’ blessings, we begin</h2><p>What began with our families’ introduction is becoming a bond we’re excited to nurture.</p><p>We look forward to understanding each other better, supporting one another’s dreams, and building a peaceful, happy life together.</p><h2>आमच्या आनंदात सहभागी व्हा!</h2><p>With love,<br><strong id="signoff">[Groom] & [Bride]</strong></p><div class="nav"><button class="btn secondary" onclick="restart()">↺ Read our story again</button></div></section>
 </main><div class="dots" id="dots"></div><footer>Made with love • A Marathi royal wedding story</footer>
 <script>
 /* EDIT THESE DETAILS BEFORE SHARING */
 const wedding = {
- groom: "Akash",
- bride: "[Bride Name]",
- date: "[Wedding Date]",
- time: "[Wedding Time]",
- venue: "[Wedding Venue, Pune]",
- mapsQuery: "[Wedding Venue, Pune]",
- calendarStart: "20270101T180000",
- calendarEnd: "20270101T220000"
+ groom: "Akash Jagtap",
+ bride: "Akshada Kharade",
+ date: "7 February 2027",
+ time: "Muhurat time to be announced",
+ venue: "Punyai Garden, Mandavgan Pharata, Maharashtra",
+ mapsQuery: "https://maps.app.goo.gl/RrxUrqnNSgxxGrMb8",
+ calendarStart: "20270207T100000",
+ calendarEnd: "20270207T160000"
 };
 document.getElementById("groomDisplay").textContent=wedding.groom;
 document.getElementById("brideDisplay").textContent=wedding.bride;
@@ -71,8 +75,8 @@ let current=0;const scenes=[...document.querySelectorAll(".scene")];
 function renderDots(){document.getElementById("dots").innerHTML=scenes.map((_,i)=>`<span class="dot ${i===current?'active':''}"></span>`).join("")}
 function show(i){current=Math.max(0,Math.min(i,scenes.length-1));scenes.forEach((s,n)=>s.classList.toggle("active",n===current));renderDots();window.scrollTo({top:0,behavior:"smooth"})}
 function next(){show(current+1)}function restart(){show(0)}
-function openMaps(){window.open("https://www.google.com/maps/search/?api=1&query="+encodeURIComponent(wedding.mapsQuery),"_blank")}
-function addCalendar(){const title=encodeURIComponent("Wedding of "+wedding.groom+" & "+wedding.bride);const details=encodeURIComponent("We would love to celebrate with you!");window.open(`https://calendar.google.com/calendar/render?action=TEMPLATE&text=${title}&dates=${wedding.calendarStart}/${wedding.calendarEnd}&details=${details}&location=${encodeURIComponent(wedding.venue)}`,"_blank")}
+function openMaps(){window.open(wedding.mapsQuery,"_blank")}
+function addCalendar(){const title=encodeURIComponent("Wedding of "+wedding.groom+" & "+wedding.bride);const details=encodeURIComponent("Wedding date: 7 February 2027. Muhurat time to be announced. Venue: Punyai Garden, Mandavgan Pharata.");window.open(`https://calendar.google.com/calendar/render?action=TEMPLATE&text=${title}&dates=${wedding.calendarStart}/${wedding.calendarEnd}&details=${details}&location=${encodeURIComponent(wedding.venue)}`,"_blank")}
 renderDots();
 </script>
 </body>

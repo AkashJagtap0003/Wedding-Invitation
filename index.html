@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#7b1e2b">
+<title>Our Wedding Invitation</title>
+<style>
+:root{--maroon:#7b1e2b;--deep:#4d1420;--gold:#c28b3c;--cream:#fff4df;--pink:#f5d7cf;--ink:#54252b}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:#f6e6d2;color:var(--ink);font-family:Georgia,'Times New Roman',serif}
+.story{min-height:100svh;display:grid;place-items:center;padding:20px;position:relative;overflow:hidden;background:radial-gradient(circle at 15% 15%,#fff9e8 0,transparent 30%),linear-gradient(135deg,#f7e5ca,#f5cdbf 55%,#e6b78e)}
+.story:before{content:"";position:absolute;inset:12px;border:1px solid #b77c39;border-radius:28px;pointer-events:none}
+.card{position:relative;width:min(100%,650px);min-height:78svh;background:rgba(255,248,232,.92);border:2px solid #c99b56;border-radius:24px;padding:clamp(22px,5vw,48px);text-align:center;box-shadow:0 18px 45px #602a2a22;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:15px}
+.kicker{letter-spacing:.18em;text-transform:uppercase;font-size:.72rem;color:#9c6534}
+h1,h2{color:var(--maroon);margin:0;line-height:1.12}h1{font-size:clamp(2.2rem,8vw,4rem)}h2{font-size:clamp(1.8rem,6vw,3rem)}
+p{font-size:clamp(1rem,3.5vw,1.25rem);line-height:1.6;margin:0;max-width:40ch}
+.ornament{color:var(--gold);font-size:1.5rem;letter-spacing:.25em}
+.art{width:min(100%,340px);height:270px;position:relative;display:grid;place-items:center;margin:4px auto}
+.fort{position:absolute;bottom:15px;left:0;right:0;height:90px;background:#d8b17c;clip-path:polygon(0 100%,0 40%,8% 40%,8% 20%,18% 20%,18% 45%,30% 45%,30% 0,45% 0,45% 38%,57% 38%,57% 10%,70% 10%,70% 45%,82% 45%,82% 25%,92% 25%,92% 45%,100% 45%,100% 100%);opacity:.65}
+.couple{display:flex;align-items:flex-end;gap:4px;position:relative;z-index:1}
+.person{width:115px;height:175px;position:relative}.head{position:absolute;top:8px;left:31px;width:55px;height:62px;background:#bd805e;border-radius:48% 48% 44% 44%;border:2px solid #5b2b24}
+.hair{position:absolute;top:0;left:27px;width:65px;height:34px;background:#2c1b19;border-radius:50% 50% 25% 25%;z-index:2}
+.body{position:absolute;top:65px;left:12px;width:94px;height:105px;border-radius:35px 35px 8px 8px;background:#f1d7a2;border:2px solid #8a4d2e}
+.bride .body{background:#a9233c}.bride .hair{height:60px;width:72px;left:22px;border-radius:50% 50% 15% 15%}
+.turban{position:absolute;top:-5px;left:22px;width:72px;height:30px;background:#9e1d32;border-radius:50% 50% 10% 10%;z-index:3;border:2px solid #d6a64e}
+.jewel{position:absolute;top:22px;left:53px;width:10px;height:10px;background:#f2c65c;border-radius:50%;z-index:4}
+.saree{position:absolute;top:67px;left:52px;width:38px;height:100px;background:#e9a84c;transform:rotate(-12deg);border:2px solid #f4d17a;z-index:2}
+.btn{border:0;background:var(--maroon);color:#fff8e9;padding:13px 25px;border-radius:999px;font:inherit;font-size:1rem;cursor:pointer;box-shadow:0 6px 16px #7b1e2b25;transition:.2s}
+.btn:hover{transform:translateY(-2px);background:var(--deep)}.btn.secondary{background:transparent;color:var(--maroon);border:1px solid var(--maroon)}
+.nav{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin-top:8px}
+.scene{display:none}.scene.active{display:flex;animation:fade .7s ease both}
+@keyframes fade{from{opacity:0;transform:translateY(15px)}to{opacity:1;transform:none}}
+.details{display:grid;gap:12px;width:100%;max-width:420px;text-align:left}.detail{padding:12px 16px;border:1px solid #dfbf8b;border-radius:14px;background:#fff9ed}.detail strong{display:block;color:var(--maroon);margin-bottom:4px}
+.counter{font-size:1.3rem;color:var(--maroon);font-weight:bold}.small{font-size:.85rem;color:#8d6250}.dots{display:flex;gap:6px;justify-content:center;margin:12px}.dot{height:7px;width:7px;border-radius:50%;background:#d9b78a}.dot.active{background:var(--maroon);width:20px;border-radius:5px}
+footer{padding:14px;text-align:center;font-size:.75rem;color:#8c6a55}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<main class="story">
+<section class="card scene active" id="scene0">
+<div class="kicker">A little story • A forever beginning</div>
+<div class="art"><div class="fort"></div><div class="couple"><div class="person groom"><div class="turban"></div><div class="head"></div><div class="body"></div></div><div class="person bride"><div class="hair"></div><div class="head"></div><div class="body"></div><div class="saree"></div><div class="jewel"></div></div></div></div>
+<div class="ornament">❧ ♥ ❧</div><h1>Two Hearts,<br>One Beautiful Journey</h1><p>Where two paths meet beneath auspicious skies, a quiet promise gently starts to rise.</p><div class="nav"><button class="btn" onclick="next()">Open our story ♥</button></div>
+</section>
+<section class="card scene" id="scene1"><div class="kicker">Our story</div><div class="ornament">✦ महाराष्ट्राची शान ✦</div><h2>Two Paths, One Promise</h2><p>Not all beginnings need a thousand days;<br>Some bloom in trust, in tender, thoughtful ways.</p><p>May each dream find room to soar;<br>May joy be ours, forevermore.</p><div class="nav"><button class="btn" onclick="next()">The big news →</button></div></section>
+<section class="card scene" id="scene2"><div class="kicker">With love & blessings</div><div class="art"><div class="fort"></div><div class="couple"><div class="person groom"><div class="turban"></div><div class="head"></div><div class="body"></div></div><div class="person bride"><div class="hair"></div><div class="head"></div><div class="body"></div><div class="saree"></div></div></div></div><div class="ornament">॥ श्री गणेशाय नमः ॥</div><h1>We’re getting<br>married!</h1><p>And now, beneath our families’ blessings,<br>a new and noble chapter shall begin.</p><h2>Save the Date</h2><p id="dateDisplay">[Wedding Date]</p><p id="timeDisplay">[Wedding Time]</p><div class="nav"><button class="btn" onclick="next()">Wedding details →</button></div></section>
+<section class="card scene" id="scene3"><div class="kicker">The celebration</div><h2>Wedding Details</h2><div class="ornament">❧ ✦ ❧</div><div class="details"><div class="detail"><strong>👰 Bride</strong><span id="brideDisplay">[Bride Name]</span></div><div class="detail"><strong>🤵 Groom</strong><span id="groomDisplay">[Groom Name]</span></div><div class="detail"><strong>📅 Date & Time</strong><span id="dateTimeDisplay">[Date and time]</span></div><div class="detail"><strong>📍 Venue</strong><span id="venueDisplay">[Wedding Venue, City]</span></div></div><div class="nav"><button class="btn" onclick="openMaps()">Get directions ↗</button><button class="btn secondary" onclick="addCalendar()">Add to calendar</button></div><button class="btn" onclick="next()">One last thing ♥</button></section>
+<section class="card scene" id="scene4"><div class="kicker">A heartfelt invitation</div><div class="ornament">♥ ❧ ♥</div><h2>May Our Story Be Kindly Written</h2><p>May every hope be met with grace,<br>May kindness make our home its place.<br>May laughter light the path we tread,<br>And blessings crown the years ahead.</p><h2>आमच्या आनंदात सहभागी व्हा!</h2><p>With love,<br><strong id="signoff">[Groom] & [Bride]</strong></p><div class="nav"><button class="btn secondary" onclick="restart()">↺ Read our story again</button></div></section>
+</main><div class="dots" id="dots"></div><footer>Made with love • A Marathi royal wedding story</footer>
+<script>
+/* EDIT THESE DETAILS BEFORE SHARING */
+const wedding = {
+ groom: "Akash",
+ bride: "[Bride Name]",
+ date: "[Wedding Date]",
+ time: "[Wedding Time]",
+ venue: "[Wedding Venue, Pune]",
+ mapsQuery: "[Wedding Venue, Pune]",
+ calendarStart: "20270101T180000",
+ calendarEnd: "20270101T220000"
+};
+document.getElementById("groomDisplay").textContent=wedding.groom;
+document.getElementById("brideDisplay").textContent=wedding.bride;
+document.getElementById("dateDisplay").textContent=wedding.date;
+document.getElementById("timeDisplay").textContent=wedding.time;
+document.getElementById("dateTimeDisplay").textContent=wedding.date+" • "+wedding.time;
+document.getElementById("venueDisplay").textContent=wedding.venue;
+document.getElementById("signoff").textContent=wedding.groom+" & "+wedding.bride;
+let current=0;const scenes=[...document.querySelectorAll(".scene")];
+function renderDots(){document.getElementById("dots").innerHTML=scenes.map((_,i)=>`<span class="dot ${i===current?'active':''}"></span>`).join("")}
+function show(i){current=Math.max(0,Math.min(i,scenes.length-1));scenes.forEach((s,n)=>s.classList.toggle("active",n===current));renderDots();window.scrollTo({top:0,behavior:"smooth"})}
+function next(){show(current+1)}function restart(){show(0)}
+function openMaps(){window.open("https://www.google.com/maps/search/?api=1&query="+encodeURIComponent(wedding.mapsQuery),"_blank")}
+function addCalendar(){const title=encodeURIComponent("Wedding of "+wedding.groom+" & "+wedding.bride);const details=encodeURIComponent("We would love to celebrate with you!");window.open(`https://calendar.google.com/calendar/render?action=TEMPLATE&text=${title}&dates=${wedding.calendarStart}/${wedding.calendarEnd}&details=${details}&location=${encodeURIComponent(wedding.venue)}`,"_blank")}
+renderDots();
+</script>
+</body>
+</html>

@@ -470,7 +470,8 @@ const wedding = {
   mapsUrl: "https://maps.app.goo.gl/RrxUrqnNSgxxGrMb8",
   start: "2027-02-07T10:00:00+05:30",   // countdown + calendar
   end:   "2027-02-07T16:00:00+05:30",
-  whatsapp: ""                           // e.g. "919876543210" so blessings come to you; empty = guest picks a chat
+  whatsapp: "",                          // e.g. "919876543210" so blessings come to you; empty = guest picks a chat
+  goatcounter: "akash-akshada"           // GoatCounter site code → stats at https://akash-akshada.goatcounter.com ("" = off)
 };
 /* =========================================================== */
 
@@ -478,6 +479,18 @@ const $ = s => document.querySelector(s), $$ = s => [...document.querySelectorAl
 const reduced = matchMedia("(prefers-reduced-motion: reduce)").matches;
 $("#muhurat").textContent = wedding.muhurat;
 $("#mapsBtn").href = wedding.mapsUrl;
+
+/* ---------- analytics (GoatCounter: free, no cookies) ---------- */
+if (wedding.goatcounter) {
+  const sc = document.createElement("script");
+  sc.async = true; sc.src = "https://gc.zgo.at/count.js";
+  sc.dataset.goatcounter = `https://${wedding.goatcounter}.goatcounter.com/count`;
+  document.head.appendChild(sc);
+}
+function track(name, title){
+  try { if (window.goatcounter && window.goatcounter.count) window.goatcounter.count({ path: name, title: (title || name).slice(0, 250), event: true }); } catch (e) {}
+}
+$("#mapsBtn").addEventListener("click", () => track("maps-opened", "Opened venue on Maps"));
 
 /* ---------- toast ---------- */
 function toast(msg){const t=$("#toast");t.textContent=msg;t.classList.add("on");clearTimeout(t._h);t._h=setTimeout(()=>t.classList.remove("on"),2200)}
@@ -531,7 +544,7 @@ function hearts(x,y){ burst(x,y,14,["heart"]); }
 /* ---------- cover doors ---------- */
 const cover=$("#cover");
 document.body.style.overflow="hidden";
-function openCover(){ if(cover.classList.contains("open"))return; cover.classList.add("open"); document.body.style.overflow=""; bell(); setTimeout(()=>{chime();shower(90)},500); setTimeout(()=>cover.remove(),1400); }
+function openCover(){ if(cover.classList.contains("open"))return; cover.classList.add("open"); track("invite-opened","Opened the invitation"); document.body.style.overflow=""; bell(); setTimeout(()=>{chime();shower(90)},500); setTimeout(()=>cover.remove(),1400); }
 cover.addEventListener("click",openCover);
 cover.addEventListener("keydown",e=>{if(e.key==="Enter"||e.key===" "){e.preventDefault();openCover()}});
 
@@ -566,7 +579,7 @@ $$(".bell").forEach(b=>b.addEventListener("click",e=>{b.classList.remove("ring")
   const pos=e=>{const r=c.getBoundingClientRect();return[e.clientX-r.left,e.clientY-r.top]};
   function scratch(e){if(!down)return;const[x,y]=pos(e);g.globalCompositeOperation="destination-out";g.beginPath();g.arc(x,y,22,0,7);g.fill();
     if(++checks%12===0){const d=g.getImageData(0,0,c.width,c.height).data;let clear=0;for(let i=3;i<d.length;i+=32)if(d[i]===0)clear++;
-      if(clear/(d.length/32)>.45&&!wrap.classList.contains("done")){wrap.classList.add("done");const r=wrap.getBoundingClientRect();burst(r.left+r.width/2,r.top+r.height/2,50);chime();toast("तारीख लक्षात ठेवा! 🎉")}}}
+      if(clear/(d.length/32)>.45&&!wrap.classList.contains("done")){wrap.classList.add("done");track("date-scratched","Scratched to reveal date");const r=wrap.getBoundingClientRect();burst(r.left+r.width/2,r.top+r.height/2,50);chime();toast("तारीख लक्षात ठेवा! 🎉")}}}
   c.addEventListener("pointerdown",e=>{down=true;c.setPointerCapture(e.pointerId);scratch(e)});
   c.addEventListener("pointermove",scratch);
   addEventListener("pointerup",()=>down=false);
@@ -578,6 +591,7 @@ $("#calBtn").addEventListener("click",()=>{
   const fmt=d=>new Date(d).toISOString().replace(/[-:]/g,"").split(".")[0]+"Z";
   const q=new URLSearchParams({action:"TEMPLATE",text:`शुभविवाह · ${wedding.groom} & ${wedding.bride}`,dates:`${fmt(wedding.start)}/${fmt(wedding.end)}`,
     details:`Wedding of ${wedding.groom} & ${wedding.bride}. शुभमुहूर्त: ${wedding.muhurat}. आपली उपस्थिती प्रार्थनीय!`,location:wedding.venue});
+  track("calendar-added","Added to calendar");
   window.open("https://calendar.google.com/calendar/render?"+q,"_blank","noopener");
 });
 
@@ -592,12 +606,12 @@ const pad=n=>String(n).padStart(2,"0");
 let ak=+localStorage.getItem("akshata")||0;
 const showAk=()=>$("#akCount").textContent=ak?`तुम्ही ${ak} वेळा अक्षता टाकल्या 🌾`:"";
 showAk();
-$("#akBtn").addEventListener("click",()=>{shower();chime();ak++;localStorage.setItem("akshata",ak);showAk();if(ak===1)toast("आशीर्वादाबद्दल धन्यवाद! 🙏")});
+$("#akBtn").addEventListener("click",()=>{shower();chime();ak++;localStorage.setItem("akshata",ak);track("akshata","Threw akshata");showAk();if(ak===1)toast("आशीर्वादाबद्दल धन्यवाद! 🙏")});
 
 /* ---------- share ---------- */
 $("#shareBtn").addEventListener("click",async()=>{
   const data={title:"शुभविवाह · Akash & Akshada",text:"आकाश ❤ अक्षदा यांच्या लग्नाचे निमंत्रण · 7 Feb 2027 · Punyai Garden, Mandavgan Pharata",url:location.href};
-  try{if(navigator.share){await navigator.share(data)}else{await navigator.clipboard.writeText(location.href);toast("लिंक कॉपी झाली! 🔗")}}catch(e){}
+  track("shared","Shared the invite");try{if(navigator.share){await navigator.share(data)}else{await navigator.clipboard.writeText(location.href);toast("लिंक कॉपी झाली! 🔗")}}catch(e){}
 });
 
 /* ---------- lightbox ---------- */
@@ -614,10 +628,10 @@ function addWish(w){const d=document.createElement("div");d.className="wish";d.s
 wishes.forEach(addWish);
 $$("#chips .chip").forEach(c=>c.addEventListener("click",()=>{const t=$("#wishText");t.value=(t.value?t.value+" ":"")+c.textContent;t.focus()}));
 $("#wishForm").addEventListener("submit",e=>{e.preventDefault();const w={name:$("#wishName").value.trim(),text:$("#wishText").value.trim()};if(!w.name||!w.text)return;
-  wishes.push(w);localStorage.setItem("wishes",JSON.stringify(wishes.slice(-30)));addWish(w);$("#wishText").value="";
+  wishes.push(w);localStorage.setItem("wishes",JSON.stringify(wishes.slice(-30)));addWish(w);track("blessing",`Blessing from ${w.name}: ${w.text}`);$("#wishText").value="";
   const r=wishesEl.getBoundingClientRect();hearts(innerWidth/2,Math.min(r.top+40,innerHeight-80));chime();toast("शुभेच्छांबद्दल धन्यवाद! 💕")});
 $("#waBtn").addEventListener("click",()=>{const n=$("#wishName").value.trim(),t=$("#wishText").value.trim()||"शुभमंगल सावधान! 💐";
-  const msg=`आकाश & अक्षदा, ${t}${n?" — "+n:""}`;window.open(`https://wa.me/${wedding.whatsapp}?text=${encodeURIComponent(msg)}`,"_blank","noopener")});
+  const msg=`आकाश & अक्षदा, ${t}${n?" — "+n:""}`;track("whatsapp-blessing","Sent blessing on WhatsApp");window.open(`https://wa.me/${wedding.whatsapp}?text=${encodeURIComponent(msg)}`,"_blank","noopener")});
 
 /* ---------- ambient petals ---------- */
 const petals=$("#petals");

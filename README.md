@@ -34,3 +34,13 @@ calendar + countdown, maps link, optional WhatsApp number to receive blessings).
 
 ## Deploy
 Pushing to `main` deploys via `.github/workflows/static.yml` (GitHub Pages).
+
+## Analytics (who opened the invite)
+The page uses [GoatCounter](https://www.goatcounter.com): free, no cookies, no consent banner.
+1. Sign up at https://www.goatcounter.com/signup with site code **`akash-akshada`**
+   (if that's taken, pick another and change `goatcounter:` in the `wedding` object in `index.html`).
+2. Open your dashboard at https://akash-akshada.goatcounter.com
+
+You'll see visits, devices, cities/countries and referrers (e.g. WhatsApp), plus these events:
+`invite-opened`, `date-scratched`, `maps-opened`, `calendar-added`, `shared`, `akshata`,
+`whatsapp-blessing`, and `blessing` (the event title shows the guest's name and message).

@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#8a1c34">
+<meta name="theme-color" content="#3b0a1e">
 <title>शुभविवाह · Akash &amp; Akshada</title>
 <meta name="description" content="Akash Jagtap & Akshada Kharade — Maratha wedding invitation · आकाश ❤ अक्षदा शुभविवाह">
 <meta property="og:title" content="शुभविवाह · Akash & Akshada">
@@ -337,6 +337,132 @@ nav a{color:var(--ink)}
 .subhead{font-size:clamp(1.9rem,4.6vw,2.6rem)}
 .h2-mr{font-size:clamp(1.35rem,3vw,1.8rem)}
 
+/* =====================================================================
+   ROYAL PALETTE: deep wine & maroon, antique gold, ivory, emerald accent
+   ===================================================================== */
+:root{--r-deep:#2a0614;--r-wine:#4a0d22;--r-maroon:#6e1430;--r-ruby:#8f1d3d;--r-emerald:#0f4a3c;
+  --r-gold:#d4af37;--r-gold-l:#f3dc94;--r-gold-d:#9a7424;--r-ivory:#fffaf0;--r-ivory-2:#f8efdc;--r-text:#3a0a1c;
+  --goldgrad:linear-gradient(135deg,#f6e3a1 0%,#d4af37 30%,#a8771f 52%,#e9cc7a 72%,#c9a24a 100%)}
+body{color:var(--r-ivory);background:
+  radial-gradient(ellipse 80% 60% at 50% 0%,#7a1838 0%,transparent 70%),
+  radial-gradient(ellipse 70% 60% at 50% 100%,#5c1230 0%,transparent 70%),
+  url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120' viewBox='0 0 120 120'%3E%3Cg fill='none' stroke='%23d4af37' stroke-opacity='.10' stroke-width='1.2'%3E%3Cpath d='M60 8 C72 30 90 36 112 60 C90 84 72 90 60 112 C48 90 30 84 8 60 C30 36 48 30 60 8Z'/%3E%3Ccircle cx='60' cy='60' r='12'/%3E%3Cpath d='M60 34 C66 46 74 50 86 60 C74 70 66 74 60 86 C54 74 46 70 34 60 C46 50 54 46 60 34Z'/%3E%3Ccircle cx='0' cy='0' r='8'/%3E%3Ccircle cx='120' cy='0' r='8'/%3E%3Ccircle cx='0' cy='120' r='8'/%3E%3Ccircle cx='120' cy='120' r='8'/%3E%3C/g%3E%3C/svg%3E"),
+  linear-gradient(180deg,#3b0a1e,#2a0614 50%,#3b0a1e);background-attachment:scroll;background-repeat:no-repeat,no-repeat,repeat,no-repeat}
+html{background:#2a0614}
+body:before{display:none}
+
+/* nav */
+nav{padding-top:12px;background:linear-gradient(#2a0614f2,#2a0614d9 75%,transparent)}
+nav a{color:var(--r-ivory)}
+nav a small{color:var(--r-gold)}
+nav a.on,nav a:hover{color:var(--r-gold-l);border-color:var(--r-gold)}
+
+/* gold text helpers */
+.script{color:var(--r-gold)}
+.names,.section .h2,.bless .h2{background:var(--goldgrad);-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent}
+.names .amp{color:var(--r-ivory);-webkit-text-fill-color:var(--r-ivory);opacity:.9}
+.shree{color:var(--r-gold)}
+.subhead{color:var(--r-gold-l)}
+.h2-mr{color:var(--r-gold-l)}
+.names-mr{color:var(--r-ivory)}
+.names-mr b{color:var(--r-gold)}
+.tag{color:var(--r-ivory)}
+.tag-mr{color:#e9d9c0}
+.typed:after{color:var(--r-gold)}
+.divider span{color:var(--r-gold)}
+.divider:before,.divider:after{background:linear-gradient(90deg,transparent,var(--r-gold))}
+.divider:after{transform:scaleX(-1)}
+
+/* jharokha (palace window) arch frames for the cartoon scenes */
+.scene{border-radius:999px 999px 18px 18px;overflow:hidden;background:linear-gradient(#fff6e2,#fdebc8);
+  border:3px solid var(--r-gold);box-shadow:0 0 0 7px var(--r-wine),0 0 0 9px var(--r-gold-d),0 24px 50px #0008}
+.scene .sky{inset:0;border-radius:0;filter:none;opacity:1;background:radial-gradient(ellipse at 50% 30%,#fffaf0,#fde9c2 55%,#f5cf8f)}
+.hero .scene{max-width:520px}
+.story .scene{max-width:400px}
+.scene .hint{top:auto;bottom:6%;right:50%;transform:translateX(50%);white-space:nowrap;animation:none;background:#2a0614d9;color:var(--r-gold-l);border-color:var(--r-gold)}
+.scene .bell{top:-6px}
+
+/* ivory cards with gold frames (replace parchment scrolls) */
+.parch{color:var(--r-text);background:linear-gradient(160deg,#fffdf7,var(--r-ivory) 50%,var(--r-ivory-2));
+  box-shadow:0 22px 50px #0007,inset 0 0 0 8px var(--r-ivory),inset 0 0 0 10px var(--r-gold),inset 0 0 0 13px var(--r-ivory),inset 0 0 0 14px var(--r-maroon)}
+.parch:before,.parch:after{content:"❖";left:50%;right:auto;width:auto;height:auto;transform:translateX(-50%);background:var(--r-ivory);
+  box-shadow:none;border-radius:0;color:var(--r-gold-d);font-size:1.4rem;padding:0 10px;line-height:1}
+.parch:before{top:-1px}.parch:after{bottom:-1px}
+.parch .script,.parch .h2{background:none;color:var(--r-maroon);-webkit-text-fill-color:var(--r-maroon)}
+.parch .h2-mr{color:var(--r-emerald)}
+.parch .poem{color:var(--r-text)}
+.parch .poem-mr,.parch .muhurat{color:#6b3a4a}
+.parch .divider span{color:var(--r-maroon)}
+.parch .divider:before,.parch .divider:after{background:linear-gradient(90deg,transparent,var(--r-gold-d))}
+.fact svg{color:var(--r-maroon)}
+.fact b{color:var(--r-text)}
+.fact span{color:#6b3a4a}
+.fact .mr{color:var(--r-emerald)}
+.facts .sep{background:var(--r-gold-d)}
+.scratch{border:1.5px solid var(--r-gold-d);background:var(--r-ivory)}
+.scratch .under b{color:var(--r-maroon)}
+.countdown div{background:var(--r-wine);border:1px solid var(--r-gold);box-shadow:none}
+.countdown div:nth-child(n) b{color:var(--r-gold-l)}
+.countdown div:nth-child(n){background:linear-gradient(180deg,var(--r-maroon),var(--r-wine))}
+.countdown small{color:#f0dfc0}
+
+/* buttons */
+.btn{background:linear-gradient(180deg,var(--r-ruby),var(--r-wine));color:var(--r-ivory);border:1.5px solid var(--r-gold);
+  box-shadow:0 0 0 3px #2a061433,0 10px 22px #0006}
+.btn:hover{box-shadow:0 0 0 3px #d4af3744,0 14px 26px #0007}
+.btn.ghost{background:var(--r-ivory);color:var(--r-maroon);border-color:var(--r-gold-d);box-shadow:0 6px 14px #0003}
+.hero-text .btn,.wall .btn{background:var(--goldgrad);color:var(--r-deep);border-color:#f6e3a1}
+
+/* story timeline */
+.steps:before{background:linear-gradient(var(--r-gold),var(--r-gold-d))}
+.steps li i,.steps li:nth-child(n) i{background:var(--r-wine);border-color:var(--r-gold);color:var(--r-gold)}
+.steps li.in i{background:var(--r-maroon)}
+.steps b{color:var(--r-gold-l)}
+.steps .mr{color:#e9d9c0}
+
+/* moments */
+.polaroid,.polaroid:nth-child(n){background:var(--r-ivory);border:0;border-bottom:0;box-shadow:0 0 0 2px var(--r-gold),0 18px 34px #0008}
+.polaroid span{color:var(--r-maroon)}
+.polaroid small{color:var(--r-text)}
+
+/* blessings section */
+.bless .poem{color:var(--r-ivory)}
+.invite{border-top:1.5px solid var(--r-gold);border-bottom:1.5px solid var(--r-gold)}
+.invite .mr{color:var(--r-ivory)}
+.invite .families{color:var(--r-gold)}
+.invite b{color:var(--r-gold-l)!important}
+.jay{color:var(--r-gold)}
+.wall p{color:#e9d9c0!important}
+.chip,.chip:nth-child(n){background:transparent;border:1px solid var(--r-gold);color:var(--r-gold-l)}
+.chip:hover{background:#d4af3722}
+.wish-form input,.wish-form textarea{background:var(--r-ivory);border:1.5px solid var(--r-gold-d);color:var(--r-text)}
+.wish-form input:focus,.wish-form textarea:focus{outline:2px solid #d4af3788;border-color:var(--r-gold)}
+footer .mr{color:var(--r-gold)}
+footer small{color:#e9d9c0}
+
+/* floating controls */
+.fab button{background:linear-gradient(180deg,var(--r-ruby),var(--r-wine));border:1.5px solid var(--r-gold);color:var(--r-ivory)}
+.fab button.share{background:linear-gradient(180deg,#16614f,var(--r-emerald));border-color:var(--r-gold)}
+.fab .count{background:var(--r-wine);border-color:var(--r-gold);color:var(--r-gold-l)}
+.sound{background:var(--r-wine);border-color:var(--r-gold);color:var(--r-gold)}
+.toast{background:var(--r-wine);border:1px solid var(--r-gold);color:var(--r-gold-l)}
+.lightbox img{border-color:var(--r-ivory);box-shadow:0 0 0 3px var(--r-gold),0 20px 50px #000a}
+
+/* petals: deep rose + gold flakes */
+.petal,.petal:nth-child(n){background:linear-gradient(135deg,#b3214a,#6e1430);opacity:.75}
+.petal:nth-child(3n){background:linear-gradient(135deg,#f6e3a1,#c9a24a);border-radius:50%;width:7px;height:7px}
+
+/* cover doors */
+.cover .door,.cover .door.r{background:
+  url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80'%3E%3Cpath d='M40 6 C48 22 58 28 74 40 C58 52 48 58 40 74 C32 58 22 52 6 40 C22 28 32 22 40 6Z' fill='none' stroke='%23d4af37' stroke-opacity='.22'/%3E%3C/svg%3E"),
+  radial-gradient(ellipse at 50% 45%,#7a1838,#4a0d22 60%,#2a0614)}
+.cover .door.l{border-right:2px solid var(--r-gold)}
+.cover .door.r{border-left:2px solid var(--r-gold)}
+.cover-inner{border-color:var(--r-gold);outline-color:#d4af3766}
+.cover .tap{border-color:var(--r-gold);color:var(--r-ivory)}
+.cover .mr.top,.cover .tap .mr,.cover .script{color:var(--r-gold-l)}
+.cover h1{color:var(--r-ivory)}
+
 @media (max-width:820px){
  .hero,.bless,.story{grid-template-columns:1fr}
  .hero-text{margin-top:-10px}
@@ -347,6 +473,7 @@ nav a{color:var(--ink)}
 }
 @media (max-width:440px){
  body{font-size:17px}
+ .scene{width:calc(100% - 22px)}
  .facts{grid-template-columns:1fr;gap:12px;max-width:270px}
  .facts .sep{width:100%;height:1.5px}
  nav a{font-size:.9rem}
@@ -413,7 +540,6 @@ nav a{color:var(--ink)}
 <div class="petals" id="petals" aria-hidden="true"></div>
 <div class="fx" id="fx" aria-hidden="true"></div>
 
-<div class="toran" aria-hidden="true"></div>
 <nav id="nav">
  <a href="#story">Our Story<small>आमची गोष्ट</small></a>
  <a href="#details">Wedding Details<small>लग्नसोहळा</small></a>
@@ -427,8 +553,6 @@ nav a{color:var(--ink)}
    <div class="sky" data-depth="4"></div>
    <svg class="land" data-depth="10" viewBox="0 0 600 360" style="top:18%"><use href="#landscape"/></svg>
    <img class="couple" data-depth="22" data-hearts src="assets/cartoon-hero.webp" alt="Cartoon of Akash and Akshada holding hands, he in a peacock-embroidered jacket and she in a pink Paithani saree" width="721" height="1000">
-   <img class="flowers r" data-depth="30" src="assets/flowers-corner.jpg" alt="">
-   <img class="flowers l" data-depth="30" src="assets/flowers-corner.jpg" alt="">
    <button class="bell" data-depth="26" aria-label="Ring the temple bell"><svg viewBox="0 0 60 120"><use href="#bellsym"/></svg></button>
    <span class="hint">आम्हाला टॅप करा 💕</span>
   </div>
@@ -458,7 +582,7 @@ nav a{color:var(--ink)}
    <h2 class="script h2">We're Getting Married!</h2>
    <div class="h2-mr">आमचं लग्न ठरलंय!</div>
    <div class="scratch" id="scratch">
-    <div class="under"><span class="mr" style="color:#6b3a5e">शुभ दिवस</span><b>7 February 2027</b><span class="mr">रविवार · ७ फेब्रुवारी २०२७</span></div>
+    <div class="under"><span class="mr" style="color:#8a6a1f">शुभ दिवस</span><b>7 February 2027</b><span class="mr">रविवार · ७ फेब्रुवारी २०२७</span></div>
     <canvas id="scratchCanvas" tabindex="0" role="button" aria-label="Scratch to reveal the wedding date (or press Enter)"></canvas>
    </div>
    <div class="facts">
@@ -496,7 +620,6 @@ nav a{color:var(--ink)}
     <div class="sky" data-depth="4"></div>
     <svg class="land" data-depth="10" viewBox="0 0 600 360" style="top:22%"><use href="#landscape"/></svg>
     <img class="couple" data-depth="20" data-hearts src="assets/cartoon-story.webp" alt="Cartoon of Akash with his arm around Akshada" width="513" height="1000" loading="lazy" style="height:90%">
-    <img class="flowers r" data-depth="28" src="assets/flowers-corner.jpg" alt="">
    </div>
    <ol class="steps">
     <li class="reveal"><i>🏡</i><b>Families met</b><span class="mr">घरच्यांची ओळख — आणि एका सुंदर नात्याची सुरुवात</span></li>
@@ -525,8 +648,6 @@ nav a{color:var(--ink)}
    <div class="sky" data-depth="4"></div>
    <svg class="land" data-depth="10" viewBox="0 0 600 360" style="top:16%"><use href="#landscape"/></svg>
    <img class="couple" data-depth="20" data-hearts src="assets/cartoon-blessing.webp" alt="Cartoon of Akshada leaning on Akash's shoulder" width="779" height="1000" loading="lazy">
-   <img class="flowers r" data-depth="28" src="assets/flowers-corner.jpg" alt="">
-   <img class="flowers l" data-depth="28" src="assets/flowers-corner.jpg" alt="">
   </div>
   <div class="bless-text reveal">
    <h2 class="script h2">With Our Families' Blessings,<br>We Begin</h2>
@@ -696,9 +817,9 @@ $$(".bell").forEach(b=>b.addEventListener("click",e=>{b.classList.remove("ring")
 (function(){
   const wrap=$("#scratch"),c=$("#scratchCanvas"),g=c.getContext("2d");let drawn=false,down=false,checks=0;
   function paint(){const r=wrap.getBoundingClientRect(),dpr=devicePixelRatio||1;c.width=r.width*dpr;c.height=r.height*dpr;g.scale(dpr,dpr);
-    const grd=g.createLinearGradient(0,0,r.width,r.height);grd.addColorStop(0,"#f7a8c8");grd.addColorStop(.5,"#ffe08a");grd.addColorStop(1,"#f48fb1");
+    const grd=g.createLinearGradient(0,0,r.width,r.height);grd.addColorStop(0,"#b8862f");grd.addColorStop(.45,"#f6e3a1");grd.addColorStop(.55,"#e9cc7a");grd.addColorStop(1,"#a8771f");
     g.fillStyle=grd;g.fillRect(0,0,r.width,r.height);
-    g.fillStyle="#7a1240";g.textAlign="center";g.font="italic 26px 'Gotu', serif";g.fillText("इथे घासा ✨",r.width/2,r.height/2-4);
+    g.fillStyle="#4a0d22";g.textAlign="center";g.font="italic 26px 'Gotu', serif";g.fillText("इथे घासा ✨",r.width/2,r.height/2-4);
     g.font="italic 16px 'Cormorant Garamond', serif";g.fillText("scratch to reveal the date",r.width/2,r.height/2+20);drawn=true}
   const pos=e=>{const r=c.getBoundingClientRect();return[e.clientX-r.left,e.clientY-r.top]};
   function scratch(e){if(!down)return;const[x,y]=pos(e);g.globalCompositeOperation="destination-out";g.beginPath();g.arc(x,y,22,0,7);g.fill();

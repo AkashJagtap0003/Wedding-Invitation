@@ -11,11 +11,12 @@
 <meta property="og:image" content="assets/cartoon-hero.webp">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Great+Vibes&family=Tiro+Devanagari+Marathi&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Alex+Brush&family=Amita:wght@400;700&family=Martel:wght@400;600&display=swap" rel="stylesheet">
 <style>
 :root{
- --wine:#8a1c34;--wine-d:#6a1226;--saffron:#f08a24;--gold:#c69a52;--ink:#4a2a24;--paper:#fbefd9;
- --script:'Great Vibes',cursive;--serif:'Cormorant Garamond',Georgia,serif;--mr:'Tiro Devanagari Marathi','Noto Serif Devanagari',serif;
+ --wine:#8a1c34;--wine-d:#6a1226;--saffron:#f08a24;--gold:#c69a52;--ink:#3d1036;--paper:#fbefd9;
+ --script:'Alex Brush',cursive;--serif:'Cormorant Garamond',Georgia,serif;--mr:'Martel','Noto Serif Devanagari',serif;--mr-d:'Amita','Martel',serif;
+ --pink:#d6246e;--pink-l:#fde0ec;--marigold:#f4a300;--marigold-l:#fff1cc;--peacock:#0e7c86;--peacock-l:#dcf3f1;--leaf:#3f8f3a;--leaf-l:#e3f3dc;
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
@@ -80,14 +81,14 @@ nav a.on,nav a:hover{color:var(--wine);border-color:var(--wine)}
 /* hero */
 .hero{display:grid;grid-template-columns:1.05fr 1fr;align-items:center;gap:10px;max-width:1180px;margin:0 auto;padding:0 clamp(14px,4vw,40px);min-height:min(90vh,780px)}
 .hero-text{text-align:center;padding:10px 0 30px}
-.shree{font-family:var(--mr);color:#b4542a;font-size:1.05rem}
+.shree{font-family:var(--mr);color:#e86a00;font-size:1.05rem}
 .subhead{font-family:var(--mr);color:var(--wine);font-size:clamp(1.6rem,4vw,2.3rem);margin:4px 0 0}
 .names{font-size:clamp(3rem,7.4vw,5.4rem);margin:6px 0}
 .names .amp{display:block;font-size:.7em;margin:.05em 0}
 .names-mr{font-family:var(--mr);font-size:clamp(1.05rem,2.4vw,1.3rem)}
 .names-mr b{color:var(--wine);font-weight:400}
 .tag{font-style:italic;font-size:clamp(1.25rem,2.6vw,1.6rem);line-height:1.35;margin-top:14px}
-.tag-mr{font-family:var(--mr);font-size:1.05rem;color:#7a4a3a;margin-top:4px}
+.tag-mr{font-family:var(--mr);font-size:1.05rem;color:#6b3a5e;margin-top:4px}
 .typed:after{content:"|";animation:caret 1s steps(1) infinite;color:var(--wine)}
 @keyframes caret{50%{opacity:0}}
 
@@ -100,7 +101,7 @@ nav a.on,nav a:hover{color:var(--wine);border-color:var(--wine)}
 .parch:before{top:-9px}.parch:after{bottom:-9px}
 .poem{font-style:italic;font-size:clamp(1.2rem,2.4vw,1.45rem);line-height:1.5}
 .poem+.poem{margin-top:14px}
-.poem-mr{font-family:var(--mr);font-size:1.02rem;color:#7a4a3a;line-height:1.7;margin-top:14px}
+.poem-mr{font-family:var(--mr);font-size:1.02rem;color:#6b3a5e;line-height:1.7;margin-top:14px}
 .h2{font-size:clamp(2.5rem,5.4vw,3.6rem);margin:0}
 .h2-mr{font-family:var(--mr);color:var(--wine);font-size:clamp(1.2rem,2.8vw,1.6rem);margin-top:2px}
 
@@ -118,10 +119,10 @@ nav a.on,nav a:hover{color:var(--wine);border-color:var(--wine)}
 .fact{display:flex;gap:10px;align-items:flex-start}
 .fact svg{flex:none;width:30px;height:30px;color:var(--wine);margin-top:2px}
 .fact b{display:block;font-size:1.15rem;font-weight:600;line-height:1.2}
-.fact span{font-size:1rem;color:#6b4a3e}
+.fact span{font-size:1rem;color:#6b3a5e}
 .fact .mr{display:block;font-size:.88rem;color:var(--wine);margin-top:2px}
 .actions{display:flex;flex-wrap:wrap;gap:10px;justify-content:center}
-.muhurat{font-size:1rem;color:#6b4a3e;margin:-2px 0 14px}
+.muhurat{font-size:1rem;color:#6b3a5e;margin:-2px 0 14px}
 .countdown{display:flex;gap:8px;justify-content:center;margin-top:18px}
 .countdown div{min-width:64px;padding:8px 6px;border-radius:12px;background:#fff8ecc0;border:1px solid #e3c08a}
 .countdown b{display:block;font-size:1.6rem;color:var(--wine);line-height:1;font-variant-numeric:lining-nums tabular-nums}
@@ -138,7 +139,7 @@ nav a.on,nav a:hover{color:var(--wine);border-color:var(--wine)}
 .steps li i{position:absolute;left:0;top:0;width:40px;height:40px;border-radius:50%;display:grid;place-items:center;font-style:normal;background:#fff8ec;border:2px solid var(--gold);font-size:1.2rem;transition:transform .4s,background .4s}
 .steps li.in i{background:#fde3c3;transform:scale(1.08)}
 .steps b{display:block;color:var(--wine);font-size:1.25rem}
-.steps .mr{font-size:.95rem;color:#7a4a3a}
+.steps .mr{font-size:.95rem;color:#6b3a5e}
 
 /* moments */
 .photos{display:flex;flex-wrap:wrap;justify-content:center;gap:clamp(14px,3vw,28px);margin-top:26px}
@@ -177,7 +178,7 @@ nav a.on,nav a:hover{color:var(--wine);border-color:var(--wine)}
 
 footer{text-align:center;padding:50px 16px 110px}
 footer .mr{color:var(--wine);font-size:1.35rem}
-footer small{display:block;margin-top:6px;color:#7a5a4a}
+footer small{display:block;margin-top:6px;color:#6b3a5e}
 
 /* floating akshata button */
 .fab{position:fixed;right:16px;bottom:16px;z-index:30;display:flex;flex-direction:column;gap:10px;align-items:flex-end}
@@ -223,6 +224,111 @@ footer small{display:block;margin-top:6px;color:#7a5a4a}
 .cover .tap .mr{display:block;font-size:.85rem;color:#f6c86f}
 @keyframes pulse{50%{box-shadow:0 0 0 12px #f6c86f22}}
 .sound{position:fixed;left:14px;bottom:16px;z-index:30;width:44px;height:44px;border-radius:50%;border:2px solid #e3c08a;background:#fff8ec;color:var(--wine);font-size:1.2rem;cursor:pointer;box-shadow:0 6px 14px #6a122626}
+
+/* ===== colourful theme ===== */
+body{background:
+  radial-gradient(ellipse 55% 35% at 8% 6%,#ffd9e8cc,transparent 70%),
+  radial-gradient(ellipse 45% 35% at 95% 22%,#fff0c2cc,transparent 70%),
+  radial-gradient(ellipse 50% 35% at 92% 62%,#d3f1ee99,transparent 70%),
+  radial-gradient(ellipse 55% 35% at 6% 78%,#e3f3dccc,transparent 70%),
+  radial-gradient(ellipse 50% 30% at 60% 98%,#ffd9e8aa,transparent 70%),
+  #fdf2df}
+.toran{position:relative;z-index:21;height:46px;margin-bottom:-46px;pointer-events:none;
+  background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='72' height='46'%3E%3Cpath d='M0 6 Q36 22 72 6' stroke='%23b8862f' stroke-width='2' fill='none'/%3E%3Cpath d='M18 12 q-6 14 0 28 q6 -14 0 -28Z' fill='%233f8f3a'/%3E%3Cpath d='M54 12 q-6 14 0 28 q6 -14 0 -28Z' fill='%23559e3f'/%3E%3Ccircle cx='36' cy='18' r='8' fill='%23f4a300'/%3E%3Ccircle cx='36' cy='18' r='4.5' fill='%23f07c00'/%3E%3Ccircle cx='36' cy='30' r='6' fill='%23f4a300'/%3E%3Ccircle cx='36' cy='30' r='3' fill='%23e86a00'/%3E%3Ccircle cx='0' cy='8' r='6' fill='%23d6246e'/%3E%3Ccircle cx='72' cy='8' r='6' fill='%23d6246e'/%3E%3C/svg%3E") repeat-x top/72px 46px;
+  filter:drop-shadow(0 3px 3px #6a3b1a30)}
+nav{padding-top:40px;background:linear-gradient(#fdf2dff5,#fdf2dfd9 75%,transparent)}
+nav a small{font-family:var(--mr);font-size:.72rem;color:var(--pink)}
+nav a.on,nav a:hover{color:var(--pink);border-color:var(--pink)}
+
+.script{color:var(--wine)}
+.names{background:linear-gradient(100deg,#8a1c34 0%,#d6246e 45%,#b8326a 60%,#8a1c34 100%);-webkit-background-clip:text;background-clip:text;color:transparent;padding:0 .12em;line-height:1.15}
+.names .amp{color:var(--marigold);-webkit-text-fill-color:var(--marigold)}
+.shree{font-family:var(--mr-d);font-weight:700;color:#e86a00;letter-spacing:.02em}
+.subhead,.h2-mr,.cover h1,.jay,footer .mr{font-family:var(--mr-d);font-weight:700}
+.subhead{color:var(--pink)}
+.h2-mr{color:var(--peacock)}
+.names-mr{font-family:var(--mr);font-size:clamp(1rem,2.2vw,1.18rem)}
+.names-mr b{color:var(--pink);font-weight:600}
+.tag-mr,.poem-mr{font-family:var(--mr);font-size:.98rem;color:#6b3a5e}
+.jay{color:#e86a00}
+footer .mr{color:var(--pink)}
+
+.divider:before{background:linear-gradient(90deg,transparent,var(--marigold),var(--pink))}
+.divider:after{background:linear-gradient(90deg,transparent,var(--marigold),var(--pink))}
+.divider span{color:var(--pink)}
+
+.btn{background:linear-gradient(180deg,#e0397f,#a8174e);box-shadow:0 0 0 1.5px #a8174e,0 8px 18px #a8174e40}
+.btn:hover{box-shadow:0 0 0 1.5px #a8174e,0 12px 24px #a8174e55}
+.btn.ghost{background:#fff;color:var(--peacock);border-color:#8fd3cf;box-shadow:0 0 0 1.5px var(--peacock),0 4px 12px #0e7c8622}
+
+.parch{box-shadow:0 18px 40px #6a3b1a26,inset 0 0 0 7px #fdf1db,inset 0 0 0 9px var(--marigold),inset 0 0 0 12px #fdf1db,inset 0 0 0 14px var(--pink),inset 0 0 40px #c9965a44}
+.parch:before,.parch:after{background:linear-gradient(180deg,#ffd77a,#e09a1a 55%,#ffcf6a)}
+
+.countdown div{border:0;box-shadow:0 4px 10px #4a2a2414}
+.countdown div:nth-child(1){background:var(--pink-l)}.countdown div:nth-child(1) b{color:var(--pink)}
+.countdown div:nth-child(2){background:var(--marigold-l)}.countdown div:nth-child(2) b{color:#c46a00}
+.countdown div:nth-child(3){background:var(--peacock-l)}.countdown div:nth-child(3) b{color:var(--peacock)}
+.countdown div:nth-child(4){background:var(--leaf-l)}.countdown div:nth-child(4) b{color:var(--leaf)}
+.countdown small{font-family:var(--mr)}
+.fact svg{color:var(--pink)}
+.fact .mr{color:var(--peacock)}
+.scratch{border-color:var(--pink);background:linear-gradient(135deg,#fff,#ffeaf2)}
+.scratch .under b{color:var(--pink)}
+
+.steps:before{background:linear-gradient(var(--marigold),var(--pink),var(--peacock),var(--leaf))}
+.steps li:nth-child(1) i{border-color:var(--marigold);background:var(--marigold-l)}
+.steps li:nth-child(2) i{border-color:var(--pink);background:var(--pink-l)}
+.steps li:nth-child(3) i{border-color:var(--peacock);background:var(--peacock-l)}
+.steps li:nth-child(4) i{border-color:var(--leaf);background:var(--leaf-l)}
+.steps b{color:var(--pink)}
+
+.polaroid:nth-child(1){border-bottom:5px solid var(--marigold)}
+.polaroid:nth-child(2){border-bottom:5px solid var(--pink)}
+.polaroid:nth-child(3){border-bottom:5px solid var(--peacock)}
+.polaroid:nth-child(4){border-bottom:5px solid var(--leaf)}
+.polaroid span{font-family:var(--mr-d);font-weight:700;color:var(--pink)}
+
+.invite{border-top:2px solid var(--marigold);border-bottom:2px solid var(--pink)}
+.invite .families{font-family:var(--mr-d);font-weight:700;color:var(--peacock)}
+.chip{border-color:#f3b6cf;background:#fff;color:var(--pink);font-family:var(--mr);font-size:.85rem}
+.chip:nth-child(2){border-color:#f6d48a;color:#c46a00}
+.chip:nth-child(3){border-color:#8fd3cf;color:var(--peacock)}
+.chip:nth-child(4){border-color:#a9d79c;color:var(--leaf)}
+.wish-form input,.wish-form textarea{background:#fff;border-color:#f3c3d6}
+.wish-form input:focus,.wish-form textarea:focus{outline-color:#d6246e55;border-color:var(--pink)}
+.fab button.share{background:linear-gradient(180deg,#14a0ab,#0b6870);border-color:#bfeeea}
+.sound{border-color:var(--marigold)}
+.petal:nth-child(3n){background:linear-gradient(135deg,#ffd166,#f4a300)}
+.petal:nth-child(4n){background:linear-gradient(135deg,#ff9fc4,#d6246e)}
+.cover .door{background:radial-gradient(ellipse at 100% 45%,#c2265f,#7a1236 65%,#4a0c1a)}
+.cover .door.r{background:radial-gradient(ellipse at 0 45%,#c2265f,#7a1236 65%,#4a0c1a)}
+.cover-inner{border-color:#f4a300aa;outline-color:#f4a30055}
+.cover .tap{border-color:var(--marigold)}
+.cover .mr.top,.cover .tap .mr{color:#ffd166}
+.toast{background:linear-gradient(90deg,#a8174e,#d6246e)}
+
+/* ===== bright, colourful base (no beige) ===== */
+body{background:
+  radial-gradient(ellipse 60% 40% at 0% 0%,#ffd1e6,transparent 65%),
+  radial-gradient(ellipse 50% 40% at 100% 12%,#fff1a8,transparent 65%),
+  radial-gradient(ellipse 55% 40% at 100% 55%,#bff0ee,transparent 65%),
+  radial-gradient(ellipse 60% 40% at 0% 70%,#e6dcff,transparent 65%),
+  radial-gradient(ellipse 60% 35% at 50% 100%,#ffd1e6,transparent 65%),
+  #fff8fc;background-attachment:fixed}
+body:before{display:none}
+nav{background:linear-gradient(#fffffff2,#ffffffd9 75%,transparent)}
+nav a{color:var(--ink)}
+.parch{background:linear-gradient(160deg,#ffffff,#fff7fb 60%,#fff9e6);
+  box-shadow:0 18px 40px #a8174e1f,inset 0 0 0 7px #fff,inset 0 0 0 9px var(--marigold),inset 0 0 0 12px #fff,inset 0 0 0 14px var(--pink)}
+.scene .sky{background:radial-gradient(ellipse at 70% 25%,#ffffff,transparent 50%),radial-gradient(ellipse at 25% 75%,#ffc9de,transparent 55%),linear-gradient(#8fd3f4,#c9ecff 55%,#ffe1ef 85%)}
+.polaroid{background:#fff}
+.invite .mr{color:var(--ink)}
+.muhurat{color:#6b3a5e}
+.fact b{color:var(--ink)}
+.fab .count{background:#fff;border-color:#f3b6cf;color:var(--pink)}
+.lightbox{background:#3d1036e6}
+.names{font-size:clamp(2.6rem,6vw,4.4rem)}
+.names .amp{font-size:.62em}
 
 @media (max-width:820px){
  .hero,.bless,.story{grid-template-columns:1fr}
@@ -300,6 +406,7 @@ footer small{display:block;margin-top:6px;color:#7a5a4a}
 <div class="petals" id="petals" aria-hidden="true"></div>
 <div class="fx" id="fx" aria-hidden="true"></div>
 
+<div class="toran" aria-hidden="true"></div>
 <nav id="nav">
  <a href="#story">Our Story<small>आमची गोष्ट</small></a>
  <a href="#details">Wedding Details<small>लग्नसोहळा</small></a>
@@ -344,7 +451,7 @@ footer small{display:block;margin-top:6px;color:#7a5a4a}
    <h2 class="script h2">We're Getting Married!</h2>
    <div class="h2-mr">आमचं लग्न ठरलंय!</div>
    <div class="scratch" id="scratch">
-    <div class="under"><span class="mr" style="color:#7a4a3a">शुभ दिवस</span><b>7 February 2027</b><span class="mr">रविवार · ७ फेब्रुवारी २०२७</span></div>
+    <div class="under"><span class="mr" style="color:#6b3a5e">शुभ दिवस</span><b>7 February 2027</b><span class="mr">रविवार · ७ फेब्रुवारी २०२७</span></div>
     <canvas id="scratchCanvas" tabindex="0" role="button" aria-label="Scratch to reveal the wedding date (or press Enter)"></canvas>
    </div>
    <div class="facts">
@@ -431,7 +538,7 @@ footer small{display:block;margin-top:6px;color:#7a5a4a}
  <section class="section wall" id="wishes">
   <h2 class="script h2">Send Your Blessings</h2>
   <div class="h2-mr">तुमच्या शुभेच्छा लिहा</div>
-  <p style="font-size:1.05rem;color:#6b4a3e;margin-top:6px">Your blessing goes straight to Akash &amp; Akshada 💌</p>
+  <p style="font-size:1.05rem;color:#6b3a5e;margin-top:6px">Your blessing goes straight to Akash &amp; Akshada 💌</p>
   <form class="wish-form" id="wishForm">
    <div class="chips" id="chips">
     <button type="button" class="chip">सुखी संसार!</button>
@@ -445,7 +552,6 @@ footer small{display:block;margin-top:6px;color:#7a5a4a}
     <button class="btn" type="submit">Send Blessing <span class="mr">· शुभेच्छा पाठवा</span></button>
    </div>
   </form>
-  <div class="wishes" id="wishes"></div>
  </section>
 </main>
 
@@ -583,9 +689,9 @@ $$(".bell").forEach(b=>b.addEventListener("click",e=>{b.classList.remove("ring")
 (function(){
   const wrap=$("#scratch"),c=$("#scratchCanvas"),g=c.getContext("2d");let drawn=false,down=false,checks=0;
   function paint(){const r=wrap.getBoundingClientRect(),dpr=devicePixelRatio||1;c.width=r.width*dpr;c.height=r.height*dpr;g.scale(dpr,dpr);
-    const grd=g.createLinearGradient(0,0,r.width,r.height);grd.addColorStop(0,"#d9a441");grd.addColorStop(.5,"#f6d98e");grd.addColorStop(1,"#c68a2e");
+    const grd=g.createLinearGradient(0,0,r.width,r.height);grd.addColorStop(0,"#f7a8c8");grd.addColorStop(.5,"#ffe08a");grd.addColorStop(1,"#f48fb1");
     g.fillStyle=grd;g.fillRect(0,0,r.width,r.height);
-    g.fillStyle="#7a3a14";g.textAlign="center";g.font="22px 'Tiro Devanagari Marathi', serif";g.fillText("इथे घासा ✨",r.width/2,r.height/2-4);
+    g.fillStyle="#7a1240";g.textAlign="center";g.font="700 24px 'Amita', serif";g.fillText("इथे घासा ✨",r.width/2,r.height/2-4);
     g.font="italic 16px 'Cormorant Garamond', serif";g.fillText("scratch to reveal the date",r.width/2,r.height/2+20);drawn=true}
   const pos=e=>{const r=c.getBoundingClientRect();return[e.clientX-r.left,e.clientY-r.top]};
   function scratch(e){if(!down)return;const[x,y]=pos(e);g.globalCompositeOperation="destination-out";g.beginPath();g.arc(x,y,22,0,7);g.fill();
@@ -635,20 +741,16 @@ $$(".polaroid").forEach(p=>p.addEventListener("click",()=>{lb.querySelector("img
 lb.addEventListener("click",()=>lb.classList.remove("on"));
 addEventListener("keydown",e=>{if(e.key==="Escape")lb.classList.remove("on")});
 
-/* ---------- wishes wall (saved on this device) ---------- */
-const wishesEl=$("#wishes");let wishes=JSON.parse(localStorage.getItem("wishes")||"[]");
-const esc=s=>s.replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
-function addWish(w){const d=document.createElement("div");d.className="wish";d.style.setProperty("--r",(Math.random()*6-3)+"deg");
-  d.innerHTML=`<p>${esc(w.text)}</p><b>— ${esc(w.name)}</b>`;wishesEl.prepend(d)}
-wishes.forEach(addWish);
+/* ---------- blessings form (saved privately to the Google Sheet only) ---------- */
+localStorage.removeItem("wishes"); // older version kept blessings on the device
 $$("#chips .chip").forEach(c=>c.addEventListener("click",()=>{const t=$("#wishText");t.value=(t.value?t.value+" ":"")+c.textContent;t.focus()}));
 $("#wishForm").addEventListener("submit",async e=>{e.preventDefault();const w={name:$("#wishName").value.trim(),text:$("#wishText").value.trim()};if(!w.name||!w.text)return;
   const btn=e.submitter||$("#wishForm button[type=submit]");btn.disabled=true;
   const ok=await send({action:"blessing",name:w.name,message:w.text,visitor,device});
   btn.disabled=false;
   if(wedding.backendUrl&&!ok){toast("नेटवर्क अडचण — पुन्हा प्रयत्न करा 🙏");return}
-  wishes.push(w);localStorage.setItem("wishes",JSON.stringify(wishes.slice(-30)));addWish(w);$("#wishText").value="";
-  const r=wishesEl.getBoundingClientRect();hearts(innerWidth/2,Math.min(r.top+40,innerHeight-80));chime();toast("शुभेच्छा पोहोचल्या! धन्यवाद 💕")});
+  $("#wishText").value="";
+  const r=$("#wishForm").getBoundingClientRect();hearts(innerWidth/2,Math.min(r.top+40,innerHeight-80));chime();toast("शुभेच्छा पोहोचल्या! धन्यवाद 💕")});
 
 /* ---------- ambient petals ---------- */
 const petals=$("#petals");

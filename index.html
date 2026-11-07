@@ -12,11 +12,11 @@
 <link rel="preload" as="image" href="assets/cartoon-hero.webp" fetchpriority="high">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Alex+Brush&family=Amita:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Alex+Brush&family=Kurale&display=swap" rel="stylesheet">
 <style>
 :root{
  --wine:#8a1c34;--wine-d:#6a1226;--saffron:#f08a24;--gold:#c69a52;--ink:#3d1036;--paper:#fbefd9;
- --script:'Alex Brush',cursive;--serif:'Cormorant Garamond',Georgia,serif;--mr:'Amita','Noto Serif Devanagari',serif;--mr-d:'Amita','Noto Serif Devanagari',serif;
+ --script:'Alex Brush',cursive;--serif:'Cormorant Garamond',Georgia,serif;--mr:'Kurale','Noto Serif Devanagari',serif;--mr-d:'Kurale','Noto Serif Devanagari',serif;
  --pink:#d6246e;--pink-l:#fde0ec;--marigold:#f4a300;--marigold-l:#fff1cc;--peacock:#0e7c86;--peacock-l:#dcf3f1;--leaf:#3f8f3a;--leaf-l:#e3f3dc;
 }
 *{box-sizing:border-box}
@@ -334,7 +334,7 @@ nav a{color:var(--ink)}
 /* Marathi: Gotu with a graceful cursive slant (single weight, so no faux-bold) */
 .mr,nav a small,.scene .hint,.shree,.subhead,.names-mr,.tag-mr,.poem-mr,.h2-mr,.countdown small,.polaroid span,
 .invite .families,.jay,.chip,.fab .count,.toast,.cover h1,footer .mr,.steps .mr,.fact .mr{font-style:normal;font-weight:400!important;letter-spacing:0}
-.shree,.subhead,.h2-mr,.cover h1,.jay,footer .mr,.polaroid span,.invite .families,.names-mr b{font-weight:700!important}
+.shree,.subhead,.h2-mr,.cover h1,.jay,footer .mr,.polaroid span,.invite .families,.names-mr b{font-weight:400!important}
 .names-mr b{font-weight:400}
 .subhead{font-size:clamp(1.9rem,4.6vw,2.6rem)}
 .h2-mr{font-size:clamp(1.35rem,3vw,1.8rem)}
@@ -970,7 +970,7 @@ $$(".bell").forEach(b=>b.addEventListener("click",e=>{b.classList.remove("ring")
   function paint(){const r=wrap.getBoundingClientRect(),dpr=devicePixelRatio||1;c.width=r.width*dpr;c.height=r.height*dpr;g.scale(dpr,dpr);
     const grd=g.createLinearGradient(0,0,r.width,r.height);grd.addColorStop(0,"#b8862f");grd.addColorStop(.45,"#f6e3a1");grd.addColorStop(.55,"#e9cc7a");grd.addColorStop(1,"#a8771f");
     g.fillStyle=grd;g.fillRect(0,0,r.width,r.height);
-    g.fillStyle="#4a0d22";g.textAlign="center";g.font="700 25px 'Amita', serif";g.fillText("इथे घासा ✨",r.width/2,r.height/2-4);
+    g.fillStyle="#4a0d22";g.textAlign="center";g.font="26px 'Kurale', serif";g.fillText("इथे घासा ✨",r.width/2,r.height/2-4);
     g.font="italic 16px 'Cormorant Garamond', serif";g.fillText("scratch to reveal the date",r.width/2,r.height/2+20);drawn=true}
   const pos=e=>{const r=c.getBoundingClientRect();return[e.clientX-r.left,e.clientY-r.top]};
   function scratch(e){if(!down)return;const[x,y]=pos(e);g.globalCompositeOperation="destination-out";g.beginPath();g.arc(x,y,22,0,7);g.fill();

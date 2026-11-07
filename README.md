@@ -11,8 +11,8 @@ Theme: watercolor parchment + Marathi touches (॥ श्री गणेशा�
 - "अक्षता टाका" button, share button, blessings wall (saved on the guest's device) + Send on WhatsApp
 - Sound toggle (sounds are synthesised, no audio files)
 
-## Swap in your cartoon portraits
-The scenes load these files. Replace them with transparent-background PNG/WebP cartoons
+## Cartoon portraits
+The scenes load these files (cut-outs of the couple's own cartoons). To change them, use transparent-background PNG/WebP cartoons
 (same file names, portrait orientation, ~900–1000 px tall):
 
 | File | Scene | Pose (from your photos) |
